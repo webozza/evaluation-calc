@@ -107,6 +107,7 @@
   flex-direction: column;
   position: relative;
   max-height: 455px;
+  max-width: 125px;
 }
 #time_meter {
   transform: rotate(-90deg);
