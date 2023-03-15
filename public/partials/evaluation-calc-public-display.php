@@ -297,7 +297,7 @@
                     </div>
                     <div>
                         <input type="checkbox" name="question_11[]" value="b">
-                        <label>We have no relevant data available and/or data systems collective information during the delivery.</label>
+                        <label>We have no relevant data available and/or data systems collecting information during the delivery.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_11[]" value="c">
