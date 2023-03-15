@@ -17,7 +17,7 @@
 
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != '1') { ?>
-    <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
+    <?php $plugin_dir = '/evaluation-calculator/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
@@ -322,7 +322,7 @@
 <!-- THE EVALUATION -->
 <?php if(isset($_POST['do_evaluation']) == '1') { ?>
 
-    <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
+    <?php $plugin_dir = '/evaluation-calculator/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
