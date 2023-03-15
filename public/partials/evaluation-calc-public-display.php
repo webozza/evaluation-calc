@@ -41,19 +41,19 @@
 
             <!-- QUESTION 1 -->
             <div class="question-1 evaluation-question">
-                <label>1. How large or complex is the programme, policy, activity or intervention (the 'evaluand')? </label>
+                <label>1. How large or complex is the programme, policy, activity or intervention (the <strong>EVALUAND</strong>) ? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_1[]" value="a">
-                        <label> The delivery is small, usually involving few people or groups (n&lt;5) in the delivery, and benefiting small cohorts (e.g. pilot-size initiatives, or a simple activity or output).</label>
+                        <label> The evaluand is small, involving few people or groups in the delivery, and benefiting small cohorts (e.g. pilot-size initiatives, or a simple activity or output).</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="b">
-                        <label> The evaluand involves either many people and beneficiaries, but have a simple design and delivery; or it involves few people, albeit with a complex design and delivery approach. </label>
+                        <label> The evaluand is simple in design and delivery, but involves many people; or it is a complex design involving few people. </label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="c">
-                        <label> The delivery is large and complex, involving many different components of a system or systems, and/or across sectors or populations of people</label>
+                        <label> The evaluand is large and complex, involving many different components of a system or systems, and/or across sectors or populations of people</label>
                     </div>
                 </div>
                 <!-- Pass Form Data -->
@@ -66,15 +66,15 @@
                 <div class="evaluation-mcq allow-multiple">
                     <div>
                         <input type="checkbox" name="question_2[]" value="a">
-                        <label> Funders (or otherwise) want to decide about ongoing funding decisions and understand what was achieved.</label>
+                        <label> Funders want to decide about ongoing funding decisions and understand what was achieved.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="b">
-                        <label> Our delivery teams and others want to learn to make adjustments to the evaluand </label>
+                        <label> Our delivery teams and/or designers want to learn to make adjustments to the evaluand </label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="c">
-                        <label> Monitoring: we want to periodically track progress against a range of indicators.</label>
+                        <label> People want to periodically track progress against a range of indicators.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="d">
@@ -131,7 +131,7 @@
 
             <!-- QUESTION 4 -->
             <div class="question-4 evaluation-question">
-                <label>3. How well is your programme, policy, activity or intervention understood and documented? </label>
+                <label>3. How well is the evaluand understood and documented? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_4[]" value="a">
@@ -141,10 +141,10 @@
                         <input type="checkbox" name="question_4[]" value="b">
                         <label>We understand the activities, the expected outputs or deliverables and what you'd expect to achieve, but require this to be pulled together as a logic model or theory of change. </label>
                     </div>
-                    <div>
+                    <!-- <div>
                         <input type="checkbox" name="question_4[]" value="c">
                         <label>We understand the activities and the expected outputs or deliverables, but require this to be well mapped out onto the expected and longer-term outcomes.</label>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Pass Form Data -->
                 <input type="hidden" class="selected_answer" name="selected_answer_4" value="">
@@ -188,7 +188,7 @@
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_6[]" value="a">
-                        <label>We want the evaluation team to design the plan independently, with minimal effort from our teams.</label>
+                        <label>We want the evaluation team to design the plan independently, with minimal effort from our team(s).</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_6[]" value="b">
@@ -205,7 +205,7 @@
 
             <!-- QUESTION 7 -->
             <div class="question-7 evaluation-question">
-                <label>5. Apart from the evaluation team, how many people or groups would you like to be involved in the review and development of the monitoring and evaluation plan design? </label>
+                <label>5. Apart from the evaluation team, how many people would you like to be involved in the development of the monitoring and evaluation plan? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_7[]" value="a">
@@ -247,7 +247,7 @@
 
             <!-- QUESTION 9 -->
             <div class="question-9 evaluation-question">
-                <label>7. Do you know what success is expected to look like, and is this agreed among all relevant stakeholders? </label>
+                <label>7. Do your stakeholders know and agree what success is expected to look like? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_9[]" value="a">
@@ -255,7 +255,7 @@
                     </div>
                     <div>
                         <input type="checkbox" name="question_9[]" value="b">
-                        <label>Yes, but this is not yet agreed internally.</label>
+                        <label>Yes, but this is not yet agreed.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_9[]" value="c">
@@ -268,7 +268,7 @@
 
             <!-- QUESTION 10 -->
             <div class="question-10 evaluation-question">
-                <label>8. Do you know the range of indicators that would suggest your programme, policy or intervention has achieved what it set out to achieve? </label>
+                <label>8. Do you know the range of indicators that would suggest the evaluand has achieved what is expected? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_10[]" value="a">
@@ -297,7 +297,7 @@
                     </div>
                     <div>
                         <input type="checkbox" name="question_11[]" value="b">
-                        <label>We have no relevant data and/or data system available.</label>
+                        <label>We have no relevant data available and/or data systems collective information during the delivery.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_11[]" value="c">
