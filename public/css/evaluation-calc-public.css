@@ -1,0 +1,189 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* Testing - remove later on production....
+ ---------------------------------------------------------------*/
+#modal-1-content {
+  /* display: none; */
+}
+
+/* Form Containers
+--------------------------------------------------------*/
+.evaluation-form-container {
+  border: 1px solid #eeee;
+  padding: 2% 3%;
+  border-radius: 15px;
+}
+.calculated-evalution-container {
+  box-shadow: 0 0 7px rgb(0 0 0 / 15%);
+  padding: 2% 3%;
+  border-radius: 5px;
+}
+
+/* Form Buttons
+--------------------------------------------------------*/
+.evaluation-form-container button,
+.calculated-evalution-container button {
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: green;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.evaluation-form-container button:hover,
+.calculated-evalution-container button:hover {
+  box-shadow: 0 0 7px rgb(0 0 0 / 50%);
+}
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+/* Form Fields
+--------------------------------------------------------*/
+.evaluation-field {
+  display: flex;
+  flex-direction: column;
+}
+.evaluation-form-container :where(input[type="text"], input[type="email"]),
+.calculated-evalution-container
+  :where(input[type="text"], input[type="email"]) {
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-size: 1em;
+}
+.evaluation-form-container
+  :where(input[type="text"], input[type="email"]):focus,
+.calculated-evalution-container
+  :where(input[type="text"], input[type="email"]):focus {
+  outline: none;
+  border-bottom: 2px solid #000;
+}
+.calculated-evalution-container
+  :where(input[type="text"], input[type="email"]) {
+  width: 50%;
+}
+.evaluation-mcq {
+  margin-top: 12px;
+}
+.evaluation-mcq > div {
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+/* Evaluation Questions
+--------------------------------------------------------*/
+.evaluation-question {
+  margin-bottom: 30px;
+}
+
+/* Time Meter
+--------------------------------------------------------*/
+.time-estimate.left-box {
+  border-right: 1px solid rgba(0, 0, 0, 30%);
+  width: 90%;
+  padding-right: 40px;
+}
+.time-estimate {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+.right-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  max-height: 455px;
+}
+#time_meter {
+  transform: rotate(-90deg);
+  width: 250%;
+}
+.right-box meter {
+  display: flex;
+  align-items: center;
+}
+.right-box meter:before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  left: -33px;
+  border-radius: 50%;
+  background-color: #aa2423;
+  box-shadow: 0 5px 5px -5px #333 inset;
+  position: absolute;
+  z-index: 2;
+}
+.right-box h5 {
+  text-align: center;
+  white-space: nowrap;
+}
+.outer-meter {
+  position: absolute;
+  width: 50px;
+  height: 80%;
+  bottom: 4px;
+  border-radius: 25px;
+  background-color: rgba(87, 89, 90, 20%);
+}
+meter::-webkit-meter-bar {
+  background: none; /* Required to get rid of the default background property */
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+meter::-webkit-meter-optimum-value {
+  background-color: #aa2423;
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+.outer-meter:before {
+  content: "--- 200 hrs";
+  position: absolute;
+  white-space: nowrap;
+  font-size: 0.8em;
+  left: 32px;
+  top: 3px;
+}
+.outer-meter:after {
+  content: "16 hrs ---";
+  position: absolute;
+  white-space: nowrap;
+  font-size: 0.8em;
+  left: -42px;
+  bottom: 39px;
+}
+.right-box > h5 {
+  visibility: hidden;
+}
+
+/* Content
+--------------------------------------------------------*/
+.initial--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.initial--content img {
+  width: 50%;
+}
+.initial--content h4 {
+  margin: 0;
+  text-decoration: underline;
+}
+.initial--content p {
+  opacity: 0.5;
+}
