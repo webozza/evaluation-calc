@@ -46,15 +46,15 @@
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_1[]" value="a">
-                        <label> The evaluand is small, involving few people or groups in the delivery, and benefiting small cohorts (e.g. pilot-size initiatives, or a simple activity or output).</label>
+                        <label> The <i>evaluand</i> is small, involving few people or groups in the delivery, and benefiting small cohorts (e.g. pilot-size initiatives, or a simple activity or output).</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="b">
-                        <label> The evaluand is simple in design and delivery, but involves many people; or it is a complex design involving few people. </label>
+                        <label> The <i>evaluand</i> is simple in design and delivery, but involves many people; or it is a complex design involving few people. </label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="c">
-                        <label> The evaluand is large and complex, involving many different components of a system or systems, and/or across sectors or populations of people</label>
+                        <label> The <i>evaluand</i> is large and complex, involving many different components of a system or systems, and/or across sectors or populations of people</label>
                     </div>
                 </div>
                 <!-- Pass Form Data -->
