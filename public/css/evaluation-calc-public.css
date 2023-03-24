@@ -3,10 +3,11 @@
  * included in this file.
  */
 
-/* Testing - remove later on production....
+/* Variables
  ---------------------------------------------------------------*/
-#modal-1-content {
-  /* display: none; */
+:root {
+  --odd-bg: rgba(0, 0, 0, 20%);
+  --even-bg: rgba(0, 0, 0, 10%);
 }
 
 /* Form Containers
@@ -186,4 +187,7 @@ meter::-webkit-meter-optimum-value {
 }
 .initial--content p {
   opacity: 0.5;
+}
+.initial--content h5 {
+  margin: 10px;
 }
