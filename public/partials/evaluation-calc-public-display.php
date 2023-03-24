@@ -42,21 +42,18 @@
 
             <!-- QUESTION 1 -->
             <div class="question-1 evaluation-question">
-                <label>1. How large or complex is the programme, policy, activity or intervention (the <strong>EVALUAND</strong>) ? </label>
+                <label>1. How large or complex is the programme, policy, activity or intervention (the <i>'evaluand'</i>) ? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_1[]" value="a">
-                        <span class="checkmark"></span>
                         <label> The evaluand is small, involving few people or groups in the delivery, and benefiting small cohorts (e.g. pilot-size initiatives, or a simple activity or output).</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="b">
-                        <span class="checkmark"></span>
                         <label> The evaluand is simple in design and delivery, but involves many people; or it is a complex design involving few people. </label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_1[]" value="c">
-                        <span class="checkmark"></span>
                         <label> The evaluand is large and complex, involving many different components of a system or systems, and/or across sectors or populations of people</label>
                     </div>
                 </div>
