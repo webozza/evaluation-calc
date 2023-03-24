@@ -2,7 +2,7 @@
 
 /**
  * Provide a public-facing view for the plugin
- * testing auto de[p;ayoing]
+ *
  * This file is used to markup the public-facing aspects of the plugin.
  *
  * @link       https://webozza.com
