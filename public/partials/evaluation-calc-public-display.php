@@ -846,7 +846,7 @@
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
-            <a href="/evaluation-calculator">Evaluate Again</a>
+            <a href="/plugins/evaluation-calculator">Evaluate Again</a>
         </div>
         <div class="btn-print">
             <a href="javascript:void()" onclick="window.print()">Print</a>
