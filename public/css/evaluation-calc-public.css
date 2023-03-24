@@ -124,7 +124,8 @@
   top: -4px;
 }
 
-.evaluation-form-container input[type="checkbox"]:checked:after {
+.evaluation-form-container input[type="checkbox"]:checked:after,
+.evaluation-form-container input[type="checkbox"]:hover:after {
   background-image: url(/wp-content/plugins/evaluation-calc/public/img/check.png);
   background-size: cover;
   border: 2px solid lightgreen;
