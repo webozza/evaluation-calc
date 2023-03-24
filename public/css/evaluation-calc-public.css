@@ -3,6 +3,12 @@
  * included in this file.
  */
 
+/* Temporary - for dev stage only, remove in live
+ ---------------------------------------------------------------*/
+.single-post .wp-block-template-part {
+  display: none;
+}
+
 /* Variables
  ---------------------------------------------------------------*/
 :root {

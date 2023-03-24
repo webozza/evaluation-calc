@@ -16,7 +16,7 @@
 ?>
 
 <!-- THE FORM -->
-<?php if(isset($_POST['do_evaluation']) != '1') { ?>
+<?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
     <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
@@ -321,7 +321,7 @@
 <?php } ?>
 
 <!-- THE EVALUATION -->
-<?php if(isset($_POST['do_evaluation']) == '1') { ?>
+<?php if(isset($_POST['do_evaluation']) == 1) { ?>
 
     <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
@@ -894,4 +894,10 @@
             <a href="javascript:void()" onclick="window.print()">Print my results</a>
         </div>
     </div>
+
+<?php } ?>
+
+<!-- THANK YOU MSG -->
+<?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
+    <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
 <?php } ?>
