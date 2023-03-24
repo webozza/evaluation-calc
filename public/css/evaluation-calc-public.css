@@ -120,7 +120,6 @@
 
 .evaluation-form-container input[type="checkbox"]:checked:after {
   content: url("/wp-content/plugins/evaluation-calc/img/checkmark.png");
-  background-color: transparent;
 }
 
 /* Time Meter
