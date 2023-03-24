@@ -229,4 +229,6 @@ meter::-webkit-meter-optimum-value {
 }
 .initial--content h5 {
   margin: 10px;
+  opacity: 0.6;
+  text-transform: capitalize;
 }

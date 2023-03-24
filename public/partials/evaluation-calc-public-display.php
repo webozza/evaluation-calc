@@ -356,7 +356,7 @@
         $result2_b = "<li>an evaluation focused on learning</li>";
         $result2_c = "<li>a monitoring programme</li>";
         $result2_d = "<li>advice, support and capability development (note, the time required to provide this type of support would need to be considered seperately)</li>";
-        $result2_e = "<li>other purposes (note, the time required to provide the specific support you need would require separate consideration)</li>";
+        $result2_e = "<li>other M&E support (<li>note, the time required to provide this other support would need to be considered separately</i>)</li>";
 
         // need to do the time calculation for Q1 & Q2
         
@@ -626,12 +626,12 @@
     <!-- THE RENDERING -->
     <div class="calculated-evalution-container">
 
-        <h4>Monitoring and evaluation plan requirements</h4>
+        <h5>Monitoring and evaluation plan requirements</h5>
 
         <!-- OUTPUT RENDER -->
         <div class="main-calc">
             <div class="evaluation-outputs">
-                We have a <?= $output_1 ?> (the 'evaluand'), requiring: <br>
+                We have <?= $output_1 ?>, and our team requires: <br>
                 <ul>
                     <?php 
                         foreach($answer_2 as $answer) {
