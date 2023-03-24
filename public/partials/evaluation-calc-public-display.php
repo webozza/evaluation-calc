@@ -723,7 +723,7 @@
                     </ul>
                 </div> -->
                 <div class="evaluation-outputs">
-                    For the framework and plan, we would likely need: <br>
+                    We would likely need a/an <?= $output_6 ?>. Given what we already have to may be relevant to the plan, the design process would likely involve: <br>
                     <ul>
                         <?= $output_4 ?>
                         <li><?= $output_6 . ', involving ' . $output_7 ?></li>
@@ -782,10 +782,10 @@
 
         <div class="time-estimate">
             <div class="left-box">
-                <h5>Time Estimate</h5>
+                <h5>Time requirements</h5>
                 <?php
                     if($total_hours <= 70) { ?>
-                        <p>It looks like your project would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that this contribution would be up to 70 hours of time to finalise a plan for you.</p>
+                        <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
                         <p>Please provide your name and email below if you'd like to talk to an evaluation specialist about your specific needs. Your summary and estimate above will be sent to you, and your provided information will be matched to one of our evaluation specialists. Our specialist will then contact you within a few days.</p>
                         <form action="" method="post">
                             <div class="evaluation-field">
