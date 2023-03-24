@@ -321,7 +321,7 @@
 <?php } ?>
 
 <!-- THE EVALUATION -->
-<?php if(isset($_POST['do_evaluation']) == 1) { ?>
+<?php if(isset($_POST['do_evaluation']) == 1 || isset($_POST['time_estimate']) == 1) { ?>
 
     <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
