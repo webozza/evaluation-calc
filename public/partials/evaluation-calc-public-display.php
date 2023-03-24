@@ -787,7 +787,7 @@
                     if($total_hours <= 70) { ?>
                         <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
                         
-                        <h4>Contact an evaluation specialist</h4>
+                        <h5>Contact an evaluation specialist</h5>
 
                         <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
@@ -812,7 +812,7 @@
                 <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
                         <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
                         
-                        <h4>Contact an evaluation specialist</h4>
+                        <h5>Contact an evaluation specialist</h5>
 
                         <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
@@ -833,7 +833,7 @@
                 <?php } elseif($total_hours > 120) { ?>
                         <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
 
-                        <h4>Contact an evaluation specialist</h4>
+                        <h5>Contact an evaluation specialist</h5>
 
                         <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
