@@ -6,17 +6,17 @@
 /* Variables
  ---------------------------------------------------------------*/
 :root {
-  --odd-bg: rgba(0, 0, 0, 20%);
-  --even-bg: rgba(0, 0, 0, 10%);
+  --odd-bg: rgba(0, 0, 0, 3%);
+  --even-bg: rgba(0, 0, 0, 5%);
 }
 
 /* Form Containers
 --------------------------------------------------------*/
-.evaluation-form-container {
+/* .evaluation-form-container {
   border: 1px solid #eeee;
   padding: 2% 3%;
   border-radius: 15px;
-}
+} */
 .calculated-evalution-container {
   box-shadow: 0 0 7px rgb(0 0 0 / 15%);
   padding: 2% 3%;
