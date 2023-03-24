@@ -802,10 +802,6 @@
                                 <label>Your Email</label>
                                 <input required type="email" name="client_email" value="">
                             </div>
-                            <div class="evaluation-field">
-                                <label>Phone number (optional)</label>
-                                <input type="text" name="" value="">
-                            </div>
                             <button type="submit">Submit</button>
                             <input type="hidden" name="time_estimate" value="1">
                         </form>
@@ -861,30 +857,6 @@
         </div>
     </div>
 
-    <!-- EMAIL FUNC -->
-    <?php
-        //user posted variables
-        $name = $_POST['client_name'];
-        $email = $_POST['client_email'];
-        $message = $name . 'just made a calculation.';
-
-        //php mailer variables
-        $to = 'webozza@gmail.com';
-        $subject = $name . 'just made a calculation.';
-        $headers = 'From: '. $email . "\r\n" .
-            'Reply-To: ' . $email . "\r\n";
-
-        //Here put your Validation and send mail
-        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
-            
-        if($sent) {
-        //message sent!       
-        }
-        else  {
-        //message wasn't sent       
-        }
-    ?>
-
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
@@ -908,4 +880,29 @@
         <a href="/plugins/evaluation-calculator">Try again</a>
     </div>
 <?php } ?>
+
+<!-- EMAIL FUNC -->
+<?php if ( isset($_POST['time_estimate']) == 1 ) {
+        //user posted variables
+        $name = $_POST['client_name'];
+        $email = $_POST['client_email'];
+        $message = $name . 'just made a calculation.';
+
+        //php mailer variables
+        $to = 'webozza@gmail.com';
+        $subject = $name . 'just made a calculation.';
+        $headers = 'From: '. $email . "\r\n" .
+            'Reply-To: ' . $email . "\r\n";
+
+        //Here put your Validation and send mail
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+            
+        if($sent) {
+        //message sent!       
+        }
+        else  {
+        //message wasn't sent       
+        }
+    }
+?>
 
