@@ -796,18 +796,18 @@
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your Name</label>
-                                <input required type="text" name="" value="<?= $_POST['your-name'] ?>">
+                                <input required type="text" name="client_name" value="">
                             </div>
                             <div class="evaluation-field">
                                 <label>Your Email</label>
-                                <input required type="email" name="" value="<?= $_POST['your-email'] ?>">
+                                <input required type="email" name="client_email" value="">
                             </div>
                             <div class="evaluation-field">
                                 <label>Phone number (optional)</label>
                                 <input type="text" name="" value="">
                             </div>
                             <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate_1" value="1">
+                            <input type="hidden" name="time_estimate" value="1">
                         </form>
                 <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
                         <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
@@ -821,14 +821,14 @@
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your Name</label>
-                                <input required type="text" name="" value="">
+                                <input required type="text" name="client_name" value="">
                             </div>
                             <div class="evaluation-field">
                                 <label>Your Email</label>
-                                <input required type="email" name="" value="">
+                                <input required type="email" name="client_email" value="">
                             </div>
                             <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate_2" value="1">
+                            <input type="hidden" name="time_estimate" value="1">
                         </form>
                 <?php } elseif($total_hours > 120) { ?>
                         <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
@@ -842,14 +842,14 @@
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your name</label>
-                                <input required type="text" name="" value="">
+                                <input required type="text" name="client_name" value="">
                             </div>
                             <div class="evaluation-field">
                                 <label>Your email contact</label>
-                                <input required type="email" name="" value="">
+                                <input required type="email" name="client_email" value="">
                             </div>
                             <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate_3" value="1">
+                            <input type="hidden" name="time_estimate" value="1">
                         </form>
                 <?php } ?>
             </div>
@@ -860,6 +860,30 @@
             </div>
         </div>
     </div>
+
+    <!-- EMAIL FUNC -->
+    <?php
+        //user posted variables
+        $name = $_POST['client_name'];
+        $email = $_POST['client_email'];
+        $message = $name . 'just made a calculation.';
+
+        //php mailer variables
+        $to = 'webozza@gmail.com';
+        $subject = $name . 'just made a calculation.';
+        $headers = 'From: '. $email . "\r\n" .
+            'Reply-To: ' . $email . "\r\n";
+
+        //Here put your Validation and send mail
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+            
+        if($sent) {
+        //message sent!       
+        }
+        else  {
+        //message wasn't sent       
+        }
+    ?>
 
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
