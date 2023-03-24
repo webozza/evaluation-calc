@@ -108,8 +108,8 @@
 
 .evaluation-form-container input[type="checkbox"]:after {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -119,7 +119,9 @@
 }
 
 .evaluation-form-container input[type="checkbox"]:checked:after {
-  content: url("/wp-content/plugins/evaluation-calc/public/img/check.png");
+  background-image: url(/wp-content/plugins/evaluation-calc/public/img/check.png);
+  background-size: cover;
+  border: 2px solid lightgreen;
 }
 
 /* Time Meter
