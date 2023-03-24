@@ -67,11 +67,11 @@
                 <div class="evaluation-mcq allow-multiple">
                     <div>
                         <input type="checkbox" name="question_2[]" value="a">
-                        <label> Funders want to decide about ongoing funding decisions and understand what was achieved.</label>
+                        <label> Funders want to decide about ongoing funding decisions and understand what was achieved through the <i>evaluand<i>.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="b">
-                        <label> Our delivery teams and/or designers want to learn to make adjustments to the evaluand </label>
+                        <label> Our delivery teams and/or designers want to learn to make adjustments to the <i>evaluand</i>.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="c">
@@ -79,11 +79,11 @@
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="d">
-                        <label> Advice and technical support, or capability building in relation to monitoring and evaluation.</label>
+                        <label> Advice and technical support for our team, or capability building in relation to monitoring and evaluation.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="e">
-                        <label> other purposes</label>
+                        <label> Other purposes</label>
                     </div>
                 </div>
                 <!-- Pass Form Data -->
@@ -132,15 +132,15 @@
 
             <!-- QUESTION 4 -->
             <div class="question-4 evaluation-question">
-                <label>3. How well is the evaluand understood and documented? </label>
+                <label>3. How well is the <i>evaluand</i> understood and documented? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_4[]" value="a">
-                        <label>We understand the activities, the expected outputs or deliverables and what you'd expect to achieve, and this is documented through a logic model or theory of change.</label>
+                        <label>We understand the activities, the expected outputs or deliverables, and what and what we expect to achieve as a result. This is well documented in our logic model or theory of change.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_4[]" value="b">
-                        <label>We understand the activities, the expected outputs or deliverables and what you'd expect to achieve, but require this to be pulled together as a logic model or theory of change. </label>
+                        <label>We need our activities, the expected outputs and outcomes to be pulled together as a logic model of theory of change. </label>
                     </div>
                     <!-- <div>
                         <input type="checkbox" name="question_4[]" value="c">
@@ -189,15 +189,15 @@
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_6[]" value="a">
-                        <label>We want the evaluation team to design the plan independently, with minimal effort from our team(s).</label>
+                        <label>We want an evaluation specialist to design the plan independently, with minimal effort from our team(s).</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_6[]" value="b">
-                        <label>We want to review and contribute information, but for the evaluation team to design the plan. </label>
+                        <label>Our team wants to contribute information for the plan, but we want an evaluation specialist to design the plan.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_6[]" value="c">
-                        <label>We want the plan to be co-designed with the evaluation team.</label>
+                        <label>We want the plan to be co-designed with an evaluation specialist.</label>
                     </div>
                 </div>
                 <!-- Pass Form Data -->
@@ -206,15 +206,15 @@
 
             <!-- QUESTION 7 -->
             <div class="question-7 evaluation-question">
-                <label>5. Apart from the evaluation team, how many people would you like to be involved in the development of the monitoring and evaluation plan? </label>
+                <label>5. Apart from an evaluation specialist, how many people in your team(s) would like to involved in developing the monitoring and evaluation plan? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_7[]" value="a">
-                        <label>Approximately 1-2 people</label>
+                        <label>1 or 2 people</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_7[]" value="b">
-                        <label>Approximately 3-6 people</label>
+                        <label>3 to 6 people</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_7[]" value="c">
@@ -248,7 +248,7 @@
 
             <!-- QUESTION 9 -->
             <div class="question-9 evaluation-question">
-                <label>7. Do your stakeholders know and agree what success is expected to look like? </label>
+                <label>7. Do you know what success looks like for the <i>evaluand</i>? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_9[]" value="a">
@@ -269,15 +269,15 @@
 
             <!-- QUESTION 10 -->
             <div class="question-10 evaluation-question">
-                <label>8. Do you know the range of indicators that would suggest the evaluand has achieved what is expected? </label>
+                <label>8. Do you know the range of indicators that would suggest the <i>evaluand</i> has achieved what was expected? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_10[]" value="a">
-                        <label>Yes, these are clearly identified</label>
+                        <label>Yes, and these indicators are clearly defined.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_10[]" value="b">
-                        <label>Yes, but these are not yet agreed or well documented</label>
+                        <label>Yes, but these indicators are not yet documented or agreed.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_10[]" value="c">
