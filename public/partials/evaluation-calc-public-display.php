@@ -67,7 +67,7 @@
                 <div class="evaluation-mcq allow-multiple">
                     <div>
                         <input type="checkbox" name="question_2[]" value="a">
-                        <label> Funders want to decide about ongoing funding decisions and understand what was achieved through the <i>evaluand<i>.</label>
+                        <label> Funders want to decide about ongoing funding decisions and understand what was achieved through the <i>evaluand</i>.</label>
                     </div>
                     <div>
                         <input type="checkbox" name="question_2[]" value="b">
