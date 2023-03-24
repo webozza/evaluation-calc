@@ -16,7 +16,7 @@
  * Plugin Name:       Evaluation Calculator
  * Plugin URI:        https://webozza.com
  * Description:       Custom plugin developed by @webozza
- * Version:           7.0.8
+ * Version:           7.0.9
  * Author:            Webozza
  * Author URI:        https://webozza.com
  * License:           GPL-2.0+

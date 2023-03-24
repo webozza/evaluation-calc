@@ -12,8 +12,8 @@
 /* Variables
  ---------------------------------------------------------------*/
 :root {
-  --odd-bg: rgba(0, 0, 0, 3%);
-  --even-bg: rgba(0, 0, 0, 5%);
+  --odd-bg: rgba(0, 0, 0, 2%);
+  --even-bg: rgba(0, 0, 0, 1%);
 }
 
 /* Form Containers
