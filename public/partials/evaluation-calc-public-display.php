@@ -21,7 +21,8 @@
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>Monitoring and evaluation planning calculator</h4>
+        <h4>Monitoring and Evaluation Plan</h4>
+        <h5>Capacity calculator</h5>
         <p>The following calculator estimates the amount of time it will take to develop an evaluation and/or monitoring plan relevant to your specific needs. The calculator estimates the required time based on your responses to a series of 9 questions.</p>
     </div>
     <div class="evaluation-form-container">

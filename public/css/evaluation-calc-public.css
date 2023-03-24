@@ -183,7 +183,6 @@ meter::-webkit-meter-optimum-value {
 }
 .initial--content h4 {
   margin: 0;
-  text-decoration: underline;
 }
 .initial--content p {
   opacity: 0.5;
