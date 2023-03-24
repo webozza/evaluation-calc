@@ -723,7 +723,7 @@
                     </ul>
                 </div> -->
                 <div class="evaluation-outputs">
-                    We would likely need a/an <?= $output_6 ?>. Given what we already have to may be relevant to the plan, the design process would likely involve: <br>
+                    We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
                     <ul>
                         <?= $output_4 ?>
                         <li><?= $output_6 . ', involving ' . $output_7 ?></li>
@@ -786,7 +786,13 @@
                 <?php
                     if($total_hours <= 70) { ?>
                         <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
-                        <p>Please provide your name and email below if you'd like to talk to an evaluation specialist about your specific needs. Your summary and estimate above will be sent to you, and your provided information will be matched to one of our evaluation specialists. Our specialist will then contact you within a few days.</p>
+                        
+                        <h4>Contact an evaluation specialist</h4>
+
+                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+
+                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your Name</label>
@@ -804,8 +810,14 @@
                             <input type="hidden" name="time_estimate_1" value="1">
                         </form>
                 <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
-                        <p>It looks like your project would require some contribution to get you to an agreed M&E framework and plan. We estimate that this contribution would be approximately 60-120 of time to finalise a plan for you.</p>
-                        <p>Please provide your name and email below if you'd like to talk to an evaluation specialist about your specific needs. Your summary and estimate above will be sent to you and to one of our evaluation specialists. Our specialist will then contact you within a few days.</p>
+                        <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+                        
+                        <h4>Contact an evaluation specialist</h4>
+
+                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+
+                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your Name</label>
@@ -819,8 +831,14 @@
                             <input type="hidden" name="time_estimate_2" value="1">
                         </form>
                 <?php } elseif($total_hours > 120) { ?>
-                        <p>It looks like your project would require significant design and facilitation support to get you to an agreed M&E framework and plan. From the information you provided, we estimate this will require at least 120 hours of time from an evaluation team.</p>
-                        <p>Please provide your name and email below if you'd like to talk to an evaluation specialist about your specific needs. Your summary and estimate above will be sent to you and to one of our evaluation specialists. Our specialist will then contact you within a few days.</p>
+                        <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+
+                        <h4>Contact an evaluation specialist</h4>
+
+                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+
+                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+
                         <form action="" method="post">
                             <div class="evaluation-field">
                                 <label>Your name</label>
@@ -846,10 +864,10 @@
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
-            <a href="/plugins/evaluation-calculator">Evaluate Again</a>
+            <a href="/plugins/evaluation-calculator">Try again</a>
         </div>
         <div class="btn-print">
-            <a href="javascript:void()" onclick="window.print()">Print</a>
+            <a href="javascript:void()" onclick="window.print()">Print my results</a>
         </div>
     </div>
 <?php } ?>
