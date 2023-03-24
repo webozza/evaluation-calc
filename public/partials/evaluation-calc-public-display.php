@@ -860,7 +860,7 @@
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
-            <a href="/plugins/evaluation-calculator">Try again</a>
+            <a href="/plugins/capacity-calculator">Try again</a>
         </div>
         <div class="btn-print">
             <a href="javascript:void()" onclick="window.print()">Print my results</a>
@@ -877,7 +877,7 @@
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
     </div>
     <div class="tu btn-refresh">
-        <a href="/plugins/evaluation-calculator">Try again</a>
+        <a href="/plugins/capacity-calculator">Try again</a>
     </div>
 <?php } ?>
 
