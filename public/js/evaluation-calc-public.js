@@ -144,6 +144,12 @@
     let meterHeight = $(".main-calc .left-box").height();
   };
 
+  let labelClickable = () => {
+    $(".evaluation-mcq > div > label").click(function () {
+      $(this).prev().click();
+    });
+  };
+
   // Functions fired on initialization
   $(window).on("load", function () {
     // do_evaluation();
@@ -154,6 +160,7 @@
     multipleAnswers5();
     do_validation();
     initiateMeter();
+    labelClickable();
   });
 
   // ENDS

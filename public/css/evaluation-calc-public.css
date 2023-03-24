@@ -99,7 +99,7 @@
   margin-bottom: 30px;
 }
 
-/* Evaluation Questions
+/* Checkbox
 --------------------------------------------------------*/
 .evaluation-form-container input[type="checkbox"] {
   position: relative;
@@ -122,6 +122,10 @@
   background-image: url(/wp-content/plugins/evaluation-calc/public/img/check.png);
   background-size: cover;
   border: 2px solid lightgreen;
+}
+
+.evaluation-mcq > div > label {
+  cursor: pointer;
 }
 
 /* Time Meter
