@@ -895,9 +895,10 @@
         </div>
     </div>
 
+    <!-- THANK YOU MSG -->
+    <?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
+        <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
+    <?php } ?>
+
 <?php } ?>
 
-<!-- THANK YOU MSG -->
-<?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
-    <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
-<?php } ?>
