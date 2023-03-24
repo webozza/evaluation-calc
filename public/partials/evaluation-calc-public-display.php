@@ -22,7 +22,7 @@
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
         <h4>Monitoring and Evaluation Plan</h4>
-        <h5>Capacity c`alculator</h5>
+        <h5>Capacity calculator</h5>
         <p>This calculator estimates the number of hours that may be required to design your evaluation and/or monitoring plan. The result is only an estimate, but your responses to these 9 questions are vital to form an initial view of what may be required.</p>
     </div>
     <div class="evaluation-form-container">
@@ -327,8 +327,8 @@
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>Monitoring and evaluation planning calculator</h4>
-        <p>You have provided us with the following information.</p>
+        <h4>Monitoring and Evaluation Plan</h4>
+        <h5>Capacity calculator</h5>
     </div>
 
     <!-- THE MATH HAPPENS HERE -->
@@ -625,6 +625,8 @@
 
     <!-- THE RENDERING -->
     <div class="calculated-evalution-container">
+
+        <h4>Monitoring and evaluation plan requirements</h4>
 
         <!-- OUTPUT RENDER -->
         <div class="main-calc">
