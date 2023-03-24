@@ -99,6 +99,30 @@
   margin-bottom: 30px;
 }
 
+/* Evaluation Questions
+--------------------------------------------------------*/
+.evaluation-form-container input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+
+.evaluation-form-container input[type="checkbox"]:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #000;
+  left: -6px;
+  top: -4px;
+}
+
+.evaluation-form-container input[type="checkbox"]:checked:after {
+  content: url("/wp-content/plugins/evaluation-calc/img/checkmark.png");
+  background-color: transparent;
+}
+
 /* Time Meter
 --------------------------------------------------------*/
 .time-estimate.left-box {
