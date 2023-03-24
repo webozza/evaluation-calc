@@ -904,7 +904,7 @@
         <img src="/wp-content/plugins/evaluation-calc/public/img/check.png">
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
     </div>
-    <div class="btn-refresh">
+    <div class="tu btn-refresh">
         <a href="/plugins/evaluation-calculator">Try again</a>
     </div>
 <?php } ?>
