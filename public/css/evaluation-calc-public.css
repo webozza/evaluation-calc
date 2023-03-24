@@ -119,7 +119,7 @@
 }
 
 .evaluation-form-container input[type="checkbox"]:checked:after {
-  content: url("/wp-content/plugins/evaluation-calc/public/img/checkmark.png");
+  content: url("/wp-content/plugins/evaluation-calc/public/img/check.png");
 }
 
 /* Time Meter
