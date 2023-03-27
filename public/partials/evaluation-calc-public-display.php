@@ -885,11 +885,32 @@
 
 <!-- GENERATE THE PDF FOR MAIL -->
 <?php 
-    // foasdkfsjfdi
+    function generate_pdf() {
+        include($plugin_dir . '/public/fpdf/fpdf.php');
+
+        ob_end_clean();
+        
+        // Instantiate and use the FPDF class 
+        $pdf = new FPDF();
+        
+        //Add a new page
+        $pdf->AddPage();
+        
+        // Set the font for the text
+        $pdf->SetFont('Arial', 'B', 18);
+        
+        // Prints a cell with given text 
+        $pdf->Cell(60,20,'Hello GeeksforGeeks!');
+        
+        // return the generated output
+        $pdf->Output($_SERVER['DOCUMENT_ROOT'].'calculated-response.pdf', 'F');
+    }
 ?>
 
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
+
+        generate_pdf();
 
         add_filter( 'wp_mail_from', 'sender_email' );
         function sender_email( $original_email_address ) {
