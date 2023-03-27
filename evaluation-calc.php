@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EVALUATION_CALC_VERSION', '5.0.0' );
+define( 'EVALUATION_CALC_VERSION', '7.1.4' );
 
 /**
  * The code that runs during plugin activation.
