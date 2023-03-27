@@ -883,7 +883,7 @@
 
 <!-- GENERATE THE PDF FOR MAIL -->
 <?php 
-    require plugin_dir_path( __FILE__ ) . "public/fpdf/pdf.php";
+    echo plugin_dir_path( __FILE__ ) . "public/fpdf/pdf.php";
 ?>
 
 <!-- EMAIL FUNC -->
