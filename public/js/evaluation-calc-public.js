@@ -145,8 +145,8 @@
   };
 
   let labelClickable = () => {
-    $(".evaluation-mcq > div").click(function () {
-      $(this).find("input").click();
+    $(".evaluation-mcq > div > label").click(function () {
+      $(this).prev().click();
     });
   };
 
