@@ -901,21 +901,6 @@
         $email = $_POST['client_email'];
         $message = $name . ' just made a calculation.';
 
-        // PDF Stuff
-        require plugin_dir_path( __FILE__ ) . 'public/fpdf/fpdf.php';
-        $pdf = new FPDF('P', 'pt', array(500,233));
-        $pdf->AddFont('Georgiai','','georgiai.php');
-        $pdf->AddPage();
-        $pdf->Image('lib/fpdf/image.jpg',0,0,500);
-        $pdf->SetFont('georgiai','',16);
-        $pdf->Cell(40,10,'Hello World!');
-
-        $separator = md5(time());
-
-        $filename = plugin_dir_path( __FILE__ ) . "test.pdf";
-        $pdf->Output($filename, "F");
-        $attachment = array($filename);
-
         //php mailer variables
         $to = 'webozza@gmail.com';
         $subject = $name . ' just made a calculation.';
@@ -923,10 +908,7 @@
             'Reply-To: ' . $email . "\r\n";
 
         // Here put your Validation and send mail
-        $sent = wp_mail($to, $subject, strip_tags($message), $headers, $attachment);
-
-        // Delet the pdf from server after emailing it
-        unlink($filename);
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
             
         if($sent) {
         //message sent!       
