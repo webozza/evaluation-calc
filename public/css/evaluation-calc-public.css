@@ -239,6 +239,9 @@ meter::-webkit-meter-optimum-value {
   opacity: 0.6;
   text-transform: capitalize;
 }
+.initial--content h4:first-of-type {
+  font-size: 1.3em;
+}
 
 /* Thank you page
 --------------------------------------------------------*/
