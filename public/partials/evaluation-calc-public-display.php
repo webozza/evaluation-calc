@@ -885,14 +885,14 @@
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
         add_filter( 'wp_mail_from', 'sender_email' );
-            function sender_email( $original_email_address ) {
+        function sender_email( $original_email_address ) {
             return 'team@standardofproof.nz';
-        }
+        };
 
         add_filter( 'wp_mail_from_name', 'sender_name' );
-            function sender_name( $original_email_from ) {
+        function sender_name( $original_email_from ) {
             return 'Standard of Proof';
-        }
+        };
 
         //user posted variables
         $name = $_POST['client_name'];
