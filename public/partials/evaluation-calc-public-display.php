@@ -910,8 +910,6 @@
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
-        generate_pdf();
-
         add_filter( 'wp_mail_from', 'sender_email' );
         function sender_email( $original_email_address ) {
             return 'team@standardofproof.nz';
