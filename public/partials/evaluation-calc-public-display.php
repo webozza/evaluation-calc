@@ -888,7 +888,6 @@
     include($plugin_dir . '/public/fpdf/fpdf.php');
 
     ob_end_clean();
-    require('fpdf/fpdf.php');
     
     // Instantiate and use the FPDF class 
     $pdf = new FPDF();
