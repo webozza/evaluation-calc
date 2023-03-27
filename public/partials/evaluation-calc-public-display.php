@@ -883,30 +883,6 @@
     </div>
 <?php } ?>
 
-<!-- GENERATE THE PDF FOR MAIL -->
-<?php 
-    function generate_pdf() {
-        include($plugin_dir . '/public/fpdf/fpdf.php');
-
-        ob_end_clean();
-        
-        // Instantiate and use the FPDF class 
-        $pdf = new FPDF();
-        
-        //Add a new page
-        $pdf->AddPage();
-        
-        // Set the font for the text
-        $pdf->SetFont('Arial', 'B', 18);
-        
-        // Prints a cell with given text 
-        $pdf->Cell(60,20,'Hello GeeksforGeeks!');
-        
-        // return the generated output
-        $pdf->Output($_SERVER['DOCUMENT_ROOT'].'calculated-response.pdf', 'F');
-    }
-?>
-
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
@@ -925,14 +901,32 @@
         $email = $_POST['client_email'];
         $message = $name . ' just made a calculation.';
 
+        // PDF Stuff
+        require plugin_dir_path( __FILE__ ) . 'public/fpdf/fpdf.php';
+        $pdf = new FPDF('P', 'pt', array(500,233));
+        $pdf->AddFont('Georgiai','','georgiai.php');
+        $pdf->AddPage();
+        $pdf->Image('lib/fpdf/image.jpg',0,0,500);
+        $pdf->SetFont('georgiai','',16);
+        $pdf->Cell(40,10,'Hello World!');
+
+        $separator = md5(time());
+
+        $filename = plugin_dir_path( __FILE__ ) . "test.pdf";
+        $pdf->Output($filename, "F");
+        $attachment = array($filename);
+
         //php mailer variables
         $to = 'webozza@gmail.com';
         $subject = $name . ' just made a calculation.';
         $headers = 'From: '. $email . "\r\n" .
             'Reply-To: ' . $email . "\r\n";
 
-        //Here put your Validation and send mail
-        $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+        // Here put your Validation and send mail
+        $sent = wp_mail($to, $subject, strip_tags($message), $headers, $attachment);
+
+        // Delet the pdf from server after emailing it
+        unlink($filename);
             
         if($sent) {
         //message sent!       
