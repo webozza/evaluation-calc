@@ -15,9 +15,11 @@
  */
 ?>
 
+<!-- GLOBAL VARS -->
+<?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
+
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
-    <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
@@ -883,7 +885,21 @@
 
 <!-- GENERATE THE PDF FOR MAIL -->
 <?php 
-    echo plugin_dir_path( __FILE__ ) . "public/fpdf/pdf.php";
+    require($plugin_dir . '/public/fpdf/fpdf.php');
+    // Instantiate and use the FPDF class 
+    $pdf = new FPDF();
+    
+    //Add a new page
+    $pdf->AddPage();
+    
+    // Set the font for the text
+    $pdf->SetFont('Arial', 'B', 18);
+    
+    // Prints a cell with given text 
+    $pdf->Cell(60,20,'Hello GeeksforGeeks!');
+    
+    // return the generated output
+    $pdf->Output();
 ?>
 
 <!-- EMAIL FUNC -->
