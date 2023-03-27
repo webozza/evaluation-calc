@@ -885,11 +885,7 @@
 
 <!-- GENERATE THE PDF FOR MAIL -->
 <?php 
-    require($plugin_dir . '/public/fpdf/fpdf.php');
-    // Instantiate and use the FPDF class 
-    $pdf = new FPDF();
-    
-    var_dump($pdf);
+    // require($plugin_dir . '/public/fpdf/fpdf.php');
 ?>
 
 <!-- EMAIL FUNC -->
