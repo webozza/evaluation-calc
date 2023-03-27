@@ -331,7 +331,7 @@
         <h4>Capacity calculator</h4>
     </div>
 
-    <!-- THE MATH HAPPENS HERE -->
+    <!-- THE MATH HAPPENS OVER HERE -->
     <?php
 
         /* OUTPUT 1 CALCULATION
