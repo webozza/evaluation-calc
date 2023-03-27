@@ -21,7 +21,7 @@
     <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h5>Monitoring and Evaluation Plan</h5>
+        <h4>Monitoring and Evaluation Plan</h4>
         <h4>Capacity calculator</h4>
         <p>This calculator estimates the number of hours that may be required to design your evaluation and/or monitoring plan. The result is only an estimate, but your responses to these 9 questions are vital to form an initial view of what may be required.</p>
     </div>
@@ -206,7 +206,7 @@
 
             <!-- QUESTION 7 -->
             <div class="question-7 evaluation-question">
-                <label>5. Apart from an evaluation specialist, how many people in your team(s) would like to involved in developing the monitoring and evaluation plan? </label>
+                <label>5. How many people in your team(s) would like to be involved in developing the monitoring and evaluation plan? </label>
                 <div class="evaluation-mcq">
                     <div>
                         <input type="checkbox" name="question_7[]" value="a">
@@ -328,7 +328,7 @@
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
         <h4>Monitoring and Evaluation Plan</h4>
-        <h5>Capacity calculator</h5>
+        <h4>Capacity calculator</h4>
     </div>
 
     <!-- THE MATH HAPPENS HERE -->
@@ -356,7 +356,7 @@
         $result2_b = "<li>an evaluation focused on learning</li>";
         $result2_c = "<li>a monitoring programme</li>";
         $result2_d = "<li>advice, support and capability development (note, the time required to provide this type of support would need to be considered seperately)</li>";
-        $result2_e = "<li>other M&E support (<li>note, the time required to provide this other support would need to be considered separately</i>)</li>";
+        $result2_e = "<li>other M&E support (<i>note, the time required to provide this other support would need to be considered separately</i>)</li>";
 
         // need to do the time calculation for Q1 & Q2
         
