@@ -885,9 +885,7 @@
 
 <!-- GENERATE THE PDF FOR MAIL -->
 <?php 
-    include($plugin_dir . '/public/fpdf/fpdf.php');
-
-   
+    // foasdkfsjfdi
 ?>
 
 <!-- EMAIL FUNC -->
