@@ -881,6 +881,9 @@
     </div>
 <?php } ?>
 
+<!-- GENERATE THE PDF FOR MAIL -->
+<?php echo plugin_dir_path(); ?>
+
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
@@ -897,11 +900,11 @@
         //user posted variables
         $name = $_POST['client_name'];
         $email = $_POST['client_email'];
-        $message = $name . 'just made a calculation.';
+        $message = $name . ' just made a calculation.';
 
         //php mailer variables
         $to = 'webozza@gmail.com';
-        $subject = $name . 'just made a calculation.';
+        $subject = $name . ' just made a calculation.';
         $headers = 'From: '. $email . "\r\n" .
             'Reply-To: ' . $email . "\r\n";
 
