@@ -328,304 +328,304 @@
 <!-- THE EVALUATION -->
 <?php if(isset($_POST['do_evaluation']) == 1) { ?>
 
-    <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
-    <style>h1.wp-block-post-title {display:none;}</style>
-    <div class="initial--content">
-        <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>Monitoring and Evaluation Plan</h4>
-        <h4>Capacity calculator</h4>
-    </div>
+    <div class="evaluation-output">
+        <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
+        <style>h1.wp-block-post-title {display:none;}</style>
+        <div class="initial--content">
+            <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
+            <h4>Monitoring and Evaluation Plan</h4>
+            <h4>Capacity calculator</h4>
+        </div>
 
-    <!-- THE MATH HAPPENS OVER HERE -->
-    <?php
+        <!-- THE MATH HAPPENS OVER HERE -->
+        <?php
 
-        /* OUTPUT 1 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_1 = $_POST['selected_answer_1'];
-        if ($answer_1 == "a") {
-            $output_1 = "small programme, policy, activity or intervention";
-        } elseif ($answer_1 == "b") {
-            $output_1 = "mixed or medium-sized programme, policy, activity or intervention";
-        } elseif ($answer_1 == "c") {
-            $output_1 = "large programme, policy, activity or intervention";
-        } else {
-            $output_1 = "";
-        }
-
-        /* OUTPUT 2 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_2 = $_POST['selected_answer_2'];
-        $answer_2 = explode(",", $answer_2);
-
-        $result2_a = "<li>a high-stakes evaluation, focused on accountability</li>";
-        $result2_b = "<li>an evaluation focused on learning</li>";
-        $result2_c = "<li>a monitoring programme</li>";
-        $result2_d = "<li>advice, support and capability development (note, the time required to provide this type of support would need to be considered seperately)</li>";
-        $result2_e = "<li>other M&E support (<i>note, the time required to provide this other support would need to be considered separately</i>)</li>";
-
-        // need to do the time calculation for Q1 & Q2
-        
-
-        /* OUTPUT 3 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        // $answer_3 = $_POST['selected_answer_3'];
-        // $answer_3 = explode(",", $answer_3);
-
-        // $result3_a = "<li>efficiency</li>";
-        // $result3_b = "<li>relevance</li>";
-        // $result3_c = "<li>coherence</li>";
-        // $result3_d = "<li>effectiveness</li>";
-        // $result3_e = "<li>impact</li>";
-        // $result3_f = "<li>longer-term, unexpected and expected outcomes</li>";
-        // $result3_g = "<li>sustainability of the evaluand</li>";
-        // $result3_h = "<li>aspects of merit, worth and significance</li>";
-
-        /* OUTPUT 4 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_4 = $_POST['selected_answer_4'];
-
-        if($answer_4 == "a") {
-            $output_4 = "<li>no logic model or programme theory required</li>";
-            // Time Calculation
-            if($answer_1 == "a" || $answer_1 == "b" || $answer_1 == "c") {
-                $duration_4 = 0;
+            /* OUTPUT 1 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_1 = $_POST['selected_answer_1'];
+            if ($answer_1 == "a") {
+                $output_1 = "small programme, policy, activity or intervention";
+            } elseif ($answer_1 == "b") {
+                $output_1 = "mixed or medium-sized programme, policy, activity or intervention";
+            } elseif ($answer_1 == "c") {
+                $output_1 = "large programme, policy, activity or intervention";
+            } else {
+                $output_1 = "";
             }
-        } elseif ( $answer_4 == "b" ) {
-            $output_4 = "<li>logic model or programme theory collated from documents</li>";
-            // Time Calculation
-            if( $answer_1 == "a" ) {
-                $duration_4 = 10;
-            } elseif( $answer_1 == "b" ) {
-                $duration_4 = 14;
-            } elseif( $answer_1 == "c" ) {
-                $duration_4 = 17;
-            }
-        } elseif ( $answer_4 == "c" ) {
-            $output_4 = "<li>a workshop to document our logic model and programme theory</li>";
-            // Time Calculation
-            if( $answer_1 == "a" ) {
-                $duration_4 = 20;
-            } elseif( $answer_1 == "b" ) {
-                $duration_4 = 24;
-            } elseif( $answer_1 == "c" ) {
-                $duration_4 = 27;
-            }
-        }
 
-        /* OUTPUT 5 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        // $answer_5 = $_POST['selected_answer_5'];
-        // $answer_5 = explode(",", $answer_5);
+            /* OUTPUT 2 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_2 = $_POST['selected_answer_2'];
+            $answer_2 = explode(",", $answer_2);
 
-        // $result5_a = "<li>numbers and statistics</li>";
-        // $result5_b = "<li>case-level information</li>";
-        // $result5_c = "<li>strengths-focused approaches</li>";
-        // $result5_d = "<li>balanced approaches</li>";
-        // $result5_e = "<li>embedded monitoring systems</li>";
-        // $result5_f = "<li>comparative methods</li>";
+            $result2_a = "<li>a high-stakes evaluation, focused on accountability</li>";
+            $result2_b = "<li>an evaluation focused on learning</li>";
+            $result2_c = "<li>a monitoring programme</li>";
+            $result2_d = "<li>advice, support and capability development (note, the time required to provide this type of support would need to be considered seperately)</li>";
+            $result2_e = "<li>other M&E support (<i>note, the time required to provide this other support would need to be considered separately</i>)</li>";
 
-        /* OUTPUT 6 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_6 = $_POST['selected_answer_6'];
+            // need to do the time calculation for Q1 & Q2
+            
 
-        if($answer_6 == "a") {
-            $output_6 = "independent M&E plan designed with a final review from us";
-        } elseif ( $answer_6 == "b" ) {
-            $output_6 = "independent M&E plan designed and reviewed by us at different stages of the design process";
-        } elseif ( $answer_6 == "c" ) {
-            $output_6 = "co-designed M&E plan";
-        }
+            /* OUTPUT 3 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            // $answer_3 = $_POST['selected_answer_3'];
+            // $answer_3 = explode(",", $answer_3);
 
-        /* OUTPUT 7 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_7 = $_POST['selected_answer_7'];
+            // $result3_a = "<li>efficiency</li>";
+            // $result3_b = "<li>relevance</li>";
+            // $result3_c = "<li>coherence</li>";
+            // $result3_d = "<li>effectiveness</li>";
+            // $result3_e = "<li>impact</li>";
+            // $result3_f = "<li>longer-term, unexpected and expected outcomes</li>";
+            // $result3_g = "<li>sustainability of the evaluand</li>";
+            // $result3_h = "<li>aspects of merit, worth and significance</li>";
 
-        if($answer_7 == "a") {
-            $output_7 = "approximately 1-2 people";
-            // Time Calculation if a
-            if( $answer_6 == "a" ) {
-                $duration_7 = 20;
-            } elseif( $answer_6 == "b" ) {
-                $duration_7 = 14;
-            } elseif( $answer_6 == "c" ) {
-                $duration_7 = 20;
-            }
-        } elseif ( $answer_7 == "b" ) {
-            $output_7 = "approximately 3-6 people";
-            // Time Calculation if b
-            if( $answer_6 == "a" ) {
-                $duration_7 = 27;
-            } elseif( $answer_6 == "b" ) {
-                $duration_7 = 20;
-            } elseif( $answer_6 == "c" ) {
-                $duration_7 = 27;
-            }
-        } elseif ( $answer_7 == "c" ) {
-            $output_7 = "likely more than 6 people";
-            // Time Calculation if c
-            if( $answer_6 == "a" ) {
-                $duration_7 = 34;
-            } elseif( $answer_6 == "b" ) {
-                $duration_7 = 27;
-            } elseif( $answer_6 == "c" ) {
-                $duration_7 = 34;
-            }
-        }
+            /* OUTPUT 4 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_4 = $_POST['selected_answer_4'];
 
-        /* OUTPUT 8 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_8 = $_POST['selected_answer_8'];
+            if($answer_4 == "a") {
+                $output_4 = "<li>no logic model or programme theory required</li>";
+                // Time Calculation
+                if($answer_1 == "a" || $answer_1 == "b" || $answer_1 == "c") {
+                    $duration_4 = 0;
+                }
+            } elseif ( $answer_4 == "b" ) {
+                $output_4 = "<li>logic model or programme theory collated from documents</li>";
+                // Time Calculation
+                if( $answer_1 == "a" ) {
+                    $duration_4 = 10;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_4 = 14;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_4 = 17;
+                }
+            } elseif ( $answer_4 == "c" ) {
+                $output_4 = "<li>a workshop to document our logic model and programme theory</li>";
+                // Time Calculation
+                if( $answer_1 == "a" ) {
+                    $duration_4 = 20;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_4 = 24;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_4 = 27;
+                }
+            }
 
-        if($answer_8 == "a") {
-            $output_8 = "no question design support other than a review against objectives";
-            // Time Calculation if a
-            if( $answer_7 == "a" ) {
-                $duration_8 = 0;
-            } elseif( $answer_7 == "b" ) {
-                $duration_8 = 0;
-            } elseif( $answer_7 == "c" ) {
-                $duration_8 = 0;
-            }
-        } elseif ( $answer_8 == "b" ) {
-            $output_8 = "facilitation to confirm the questions";
-            // Time Calculation if b
-            if( $answer_7 == "a" ) {
-                $duration_8 = 4;
-            } elseif( $answer_7 == "b" ) {
-                $duration_8 = 7;
-            } elseif( $answer_7 == "c" ) {
-                $duration_8 = 10;
-            }
-        } elseif ( $answer_8 == "c" ) {
-            $output_8 = "facilitation to design relevant and appropriate questions";
-            // Time Calculation if c
-            if( $answer_7 == "a" ) {
-                $duration_8 = 7;
-            } elseif( $answer_7 == "b" ) {
-                $duration_8 = 10;
-            } elseif( $answer_7 == "c" ) {
-                $duration_8 = 14;
-            }
-        }
+            /* OUTPUT 5 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            // $answer_5 = $_POST['selected_answer_5'];
+            // $answer_5 = explode(",", $answer_5);
 
-        /* OUTPUT 9 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_9 = $_POST['selected_answer_9'];
+            // $result5_a = "<li>numbers and statistics</li>";
+            // $result5_b = "<li>case-level information</li>";
+            // $result5_c = "<li>strengths-focused approaches</li>";
+            // $result5_d = "<li>balanced approaches</li>";
+            // $result5_e = "<li>embedded monitoring systems</li>";
+            // $result5_f = "<li>comparative methods</li>";
 
-        if($answer_9 == "a") {
-            $output_9 = "no support for defining success, other than a review of the standards of success";
-            // Time Calculation if a
-            if( $answer_7 == "a" ) {
-                $duration_9 = 1;
-            } elseif( $answer_7 == "b" ) {
-                $duration_9 = 1;
-            } elseif( $answer_7 == "c" ) {
-                $duration_9 = 2;
-            }
-        } elseif ( $answer_9 == "b" ) {
-            $output_9 = "facilitation to confirm the standards of success";
-            // Time Calculation if b
-            if( $answer_7 == "a" ) {
-                $duration_9 = 2;
-            } elseif( $answer_7 == "b" ) {
-                $duration_9 = 4;
-            } elseif( $answer_7 == "c" ) {
-                $duration_9 = 6;
-            }
-        } elseif ( $answer_9 == "c" ) {
-            $output_9 = "identify potential standards of success, and facilitate for agreement";
-            // Time Calculation if c
-            if( $answer_7 == "a" ) {
-                $duration_9 = 4;
-            } elseif( $answer_7 == "b" ) {
-                $duration_9 = 6;
-            } elseif( $answer_7 == "c" ) {
-                $duration_9 = 8;
-            }
-        }
+            /* OUTPUT 6 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_6 = $_POST['selected_answer_6'];
 
-        /* OUTPUT 10 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_10 = $_POST['selected_answer_10'];
+            if($answer_6 == "a") {
+                $output_6 = "independent M&E plan designed with a final review from us";
+            } elseif ( $answer_6 == "b" ) {
+                $output_6 = "independent M&E plan designed and reviewed by us at different stages of the design process";
+            } elseif ( $answer_6 == "c" ) {
+                $output_6 = "co-designed M&E plan";
+            }
 
-        if($answer_10 == "a") {
-            $output_10 = "<li>no support for describing success</li>";
-            // Time Calculation if a
-            if( $answer_1 == "a" ) {
-                $duration_10 = 1;
-            } elseif( $answer_1 == "b" ) {
-                $duration_10 = 1;
-            } elseif( $answer_1 == "c" ) {
-                $duration_10 = 2;
-            }
-        } elseif ( $answer_10 == "b" ) {
-            $output_10 = "<li>facilitation to confirm indicators of success</li>";
-            // Time Calculation if b
-            if( $answer_1 == "a" ) {
-                $duration_10 = 2;
-            } elseif( $answer_1 == "b" ) {
-                $duration_10 = 4;
-            } elseif( $answer_1 == "c" ) {
-                $duration_10 = 6;
-            }
-        } elseif ( $answer_10 == "c" ) {
-            $output_10 = "<li>identify potentially relevant indicators of success, and facilitate for agreement</li>";
-            // Time Calculation if c
-            if( $answer_1 == "a" ) {
-                $duration_10 = 4;
-            } elseif( $answer_1 == "b" ) {
-                $duration_10 = 6;
-            } elseif( $answer_1 == "c" ) {
-                $duration_10 = 8;
-            }
-        }
+            /* OUTPUT 7 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_7 = $_POST['selected_answer_7'];
 
-        /* OUTPUT 11 CALCULATION
-        ------------------------------------------------------------------------------------------------*/
-        $answer_11 = $_POST['selected_answer_11'];
+            if($answer_7 == "a") {
+                $output_7 = "approximately 1-2 people";
+                // Time Calculation if a
+                if( $answer_6 == "a" ) {
+                    $duration_7 = 20;
+                } elseif( $answer_6 == "b" ) {
+                    $duration_7 = 14;
+                } elseif( $answer_6 == "c" ) {
+                    $duration_7 = 20;
+                }
+            } elseif ( $answer_7 == "b" ) {
+                $output_7 = "approximately 3-6 people";
+                // Time Calculation if b
+                if( $answer_6 == "a" ) {
+                    $duration_7 = 27;
+                } elseif( $answer_6 == "b" ) {
+                    $duration_7 = 20;
+                } elseif( $answer_6 == "c" ) {
+                    $duration_7 = 27;
+                }
+            } elseif ( $answer_7 == "c" ) {
+                $output_7 = "likely more than 6 people";
+                // Time Calculation if c
+                if( $answer_6 == "a" ) {
+                    $duration_7 = 34;
+                } elseif( $answer_6 == "b" ) {
+                    $duration_7 = 27;
+                } elseif( $answer_6 == "c" ) {
+                    $duration_7 = 34;
+                }
+            }
 
-        if($answer_11 == "a") {
-            $output_11 = "<li>mapping available data to the framework</li>";
-            // Time Calculation if a
-            if( $answer_1 == "a" ) {
-                $duration_11 = 4;
-            } elseif( $answer_1 == "b" ) {
-                $duration_11 = 8;
-            } elseif( $answer_1 == "c" ) {
-                $duration_11 = 12;
+            /* OUTPUT 8 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_8 = $_POST['selected_answer_8'];
+
+            if($answer_8 == "a") {
+                $output_8 = "no question design support other than a review against objectives";
+                // Time Calculation if a
+                if( $answer_7 == "a" ) {
+                    $duration_8 = 0;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_8 = 0;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_8 = 0;
+                }
+            } elseif ( $answer_8 == "b" ) {
+                $output_8 = "facilitation to confirm the questions";
+                // Time Calculation if b
+                if( $answer_7 == "a" ) {
+                    $duration_8 = 4;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_8 = 7;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_8 = 10;
+                }
+            } elseif ( $answer_8 == "c" ) {
+                $output_8 = "facilitation to design relevant and appropriate questions";
+                // Time Calculation if c
+                if( $answer_7 == "a" ) {
+                    $duration_8 = 7;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_8 = 10;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_8 = 14;
+                }
             }
-        } elseif ( $answer_11 == "b" ) {
-            $output_11 = "<li>developing measures and/or data systems</li>";
-            // Time Calculation if b
-            if( $answer_1 == "a" ) {
-                $duration_11 = 14;
-            } elseif( $answer_1 == "b" ) {
-                $duration_11 = 20;
-            } elseif( $answer_1 == "c" ) {
-                $duration_11 = 30;
+
+            /* OUTPUT 9 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_9 = $_POST['selected_answer_9'];
+
+            if($answer_9 == "a") {
+                $output_9 = "no support for defining success, other than a review of the standards of success";
+                // Time Calculation if a
+                if( $answer_7 == "a" ) {
+                    $duration_9 = 1;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_9 = 1;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_9 = 2;
+                }
+            } elseif ( $answer_9 == "b" ) {
+                $output_9 = "facilitation to confirm the standards of success";
+                // Time Calculation if b
+                if( $answer_7 == "a" ) {
+                    $duration_9 = 2;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_9 = 4;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_9 = 6;
+                }
+            } elseif ( $answer_9 == "c" ) {
+                $output_9 = "identify potential standards of success, and facilitate for agreement";
+                // Time Calculation if c
+                if( $answer_7 == "a" ) {
+                    $duration_9 = 4;
+                } elseif( $answer_7 == "b" ) {
+                    $duration_9 = 6;
+                } elseif( $answer_7 == "c" ) {
+                    $duration_9 = 8;
+                }
             }
-        } elseif ( $answer_11 == "c" ) {
-            $output_11 = "<li>mapping available data to the framework</li><li>developing measures and/or data systems to ensure coverage</li>";
-            // Time Calculation if b
-            if( $answer_1 == "a" ) {
-                $duration_11 = 18;
-            } elseif( $answer_1 == "b" ) {
-                $duration_11 = 28;
-            } elseif( $answer_1 == "c" ) {
-                $duration_11 = 42;
+
+            /* OUTPUT 10 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_10 = $_POST['selected_answer_10'];
+
+            if($answer_10 == "a") {
+                $output_10 = "<li>no support for describing success</li>";
+                // Time Calculation if a
+                if( $answer_1 == "a" ) {
+                    $duration_10 = 1;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_10 = 1;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_10 = 2;
+                }
+            } elseif ( $answer_10 == "b" ) {
+                $output_10 = "<li>facilitation to confirm indicators of success</li>";
+                // Time Calculation if b
+                if( $answer_1 == "a" ) {
+                    $duration_10 = 2;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_10 = 4;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_10 = 6;
+                }
+            } elseif ( $answer_10 == "c" ) {
+                $output_10 = "<li>identify potentially relevant indicators of success, and facilitate for agreement</li>";
+                // Time Calculation if c
+                if( $answer_1 == "a" ) {
+                    $duration_10 = 4;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_10 = 6;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_10 = 8;
+                }
             }
-        } elseif ( $answer_11 == "d" ) {
-            $output_11 = "<li>scoping data availability and relevance</li>";
-            // Time Calculation if b
-            if( $answer_1 == "a" ) {
-                $duration_11 = 7;
-            } elseif( $answer_1 == "b" ) {
-                $duration_11 = 14;
-            } elseif( $answer_1 == "c" ) {
-                $duration_11 = 27;
+
+            /* OUTPUT 11 CALCULATION
+            ------------------------------------------------------------------------------------------------*/
+            $answer_11 = $_POST['selected_answer_11'];
+
+            if($answer_11 == "a") {
+                $output_11 = "<li>mapping available data to the framework</li>";
+                // Time Calculation if a
+                if( $answer_1 == "a" ) {
+                    $duration_11 = 4;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_11 = 8;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_11 = 12;
+                }
+            } elseif ( $answer_11 == "b" ) {
+                $output_11 = "<li>developing measures and/or data systems</li>";
+                // Time Calculation if b
+                if( $answer_1 == "a" ) {
+                    $duration_11 = 14;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_11 = 20;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_11 = 30;
+                }
+            } elseif ( $answer_11 == "c" ) {
+                $output_11 = "<li>mapping available data to the framework</li><li>developing measures and/or data systems to ensure coverage</li>";
+                // Time Calculation if b
+                if( $answer_1 == "a" ) {
+                    $duration_11 = 18;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_11 = 28;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_11 = 42;
+                }
+            } elseif ( $answer_11 == "d" ) {
+                $output_11 = "<li>scoping data availability and relevance</li>";
+                // Time Calculation if b
+                if( $answer_1 == "a" ) {
+                    $duration_11 = 7;
+                } elseif( $answer_1 == "b" ) {
+                    $duration_11 = 14;
+                } elseif( $answer_1 == "c" ) {
+                    $duration_11 = 27;
+                }
             }
-        }
-        
     ?>
 
     <!-- THE RENDERING -->
@@ -849,6 +849,7 @@
                                 <label>Your email contact</label>
                                 <input required type="email" name="client_email" value="">
                             </div>
+                            <input type="hidden" name="the_report" value="">
                             <button type="submit">Submit</button>
                             <input type="hidden" name="time_estimate" value="1">
                         </form>
@@ -860,6 +861,7 @@
                 <meter id="time_meter" value="" min="16" max="200"></meter><br>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- REFRESH BUTTON -->
