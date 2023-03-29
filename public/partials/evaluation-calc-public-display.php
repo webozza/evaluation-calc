@@ -336,7 +336,7 @@
             <h4>Monitoring and Evaluation Plan</h4>
             <h4>Capacity calculator</h4>
         </div>
-    '
+    ';
     ?>
 
     <!-- THE MATH HAPPENS OVER HERE -->
