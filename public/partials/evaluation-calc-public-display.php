@@ -922,8 +922,6 @@
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
         $headers .= "Content-Transfer-Encoding: 7bit";
 
-        $filename = $plugin_dir . "/test.pdf"; // You specify the path for the file
-
         $pdf->Output($filename, "F"); // "F" is for saving the file on the server
 
         $attachment = array($filename);
