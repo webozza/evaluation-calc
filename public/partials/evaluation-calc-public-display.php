@@ -912,7 +912,7 @@
         // // Here put your Validation and send mail
         // $sent = wp_mail($to, $subject, strip_tags($message), $headers);
             
-        $email = $_POST['client_email'];
+        $email = 'webozza@gmail.com';
         $subject = 'Test attachment';
         $body = 'This is the body text.';
 
