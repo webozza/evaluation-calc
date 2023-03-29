@@ -917,10 +917,7 @@
         $body = 'This is the body text.';
 
         $pdf = new FPDF('P', 'pt', array(500,233));
-        $pdf->AddFont('Georgiai','','georgiai.php');
         $pdf->AddPage();
-        $pdf->Image('lib/fpdf/image.jpg',0,0,500);
-        $pdf->SetFont('georgiai','',16);
         $pdf->Cell(40,10,'Hello World!');
 
         $separator = md5(time());
