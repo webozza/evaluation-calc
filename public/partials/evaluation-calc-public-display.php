@@ -895,7 +895,7 @@
         $metaDatas = stream_get_meta_data($tempfile);
         $tmpFilename = $metaDatas['uri'];
 
-        $pdf = new FPDF('P', 'pt', array(500,233));
+        $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
         $pdf->Image($tmpFilename,null,null,0,0,'PNG');
