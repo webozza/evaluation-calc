@@ -875,22 +875,8 @@
         </div>
     </div>
 
-<?php } ?>
-
-<!-- THANK YOU MSG -->
-<?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
-    <style>h1.wp-block-post-title {display:none;}</style>
-    <div class="thank you message">
-        <img src="/wp-content/plugins/evaluation-calc/public/img/check.png">
-        <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
-    </div>
-    <div class="tu btn-refresh">
-        <a href="/plugins/capacity-calculator">Try again</a>
-    </div>
-<?php } ?>
-
-<!-- EMAIL FUNC -->
-<?php if ( isset($_POST['time_estimate']) == 1 ) {
+    <!-- EMAIL FUNC -->
+    <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
         add_filter( 'wp_mail_from', 'sender_email' );
         function sender_email( $original_email_address ) {
@@ -946,6 +932,22 @@
         wp_mail( $email, $subject, $body, $headers, $attachment );
 
         unlink($filename); // Deletion of the created file.
-    }
-?>
+        }
+    ?>
+
+<?php } ?>
+
+<!-- THANK YOU MSG -->
+<?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
+    <style>h1.wp-block-post-title {display:none;}</style>
+    <div class="thank you message">
+        <img src="/wp-content/plugins/evaluation-calc/public/img/check.png">
+        <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
+    </div>
+    <div class="tu btn-refresh">
+        <a href="/plugins/capacity-calculator">Try again</a>
+    </div>
+<?php } ?>
+
+
 
