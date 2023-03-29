@@ -897,8 +897,6 @@
 
         $pdf = new FPDF();
 
-        $pdf->setPrintHeader(false);
-        $pdf->SetPrintFooter(false);
         $pdf->SetMargins(0, 0, 0);
         $pdf->SetAutoPageBreak(false, 0);
 
