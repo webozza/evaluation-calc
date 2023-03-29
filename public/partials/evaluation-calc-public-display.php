@@ -16,7 +16,10 @@
 ?>
 
 <!-- GLOBAL VARS -->
-<?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
+<?php 
+    $plugin_dir = '/wp-content/plugins/evaluation-calc';
+    include($plugin_dir . '/public/fpdf/fpdf.php');
+?>
 
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
