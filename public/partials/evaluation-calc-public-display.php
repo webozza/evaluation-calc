@@ -875,7 +875,7 @@
         </div>
     <?php } ?>
 
-<?php $contents = ob_end_clean(); ?>
+<?php $contents = ob_end_clean(); echo $contents; ?>
 
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
