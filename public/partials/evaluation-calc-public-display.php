@@ -332,7 +332,7 @@
     <?php
     $testhtml = '
         <div class="initial--content">
-            <img src="' $plugin_dir . '/public/img/logo.jpeg' '">
+            <img src="' .$plugin_dir. ' /public/img/logo.jpeg">
             <h4>Monitoring and Evaluation Plan</h4>
             <h4>Capacity calculator</h4>
         </div>
