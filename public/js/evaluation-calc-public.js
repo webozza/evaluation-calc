@@ -137,13 +137,6 @@
     });
   };
 
-  let initiateMeter = () => {
-    let timeOutput = $('[name="time_meter"]').val();
-    $("#time_meter").val(timeOutput);
-
-    let meterHeight = $(".main-calc .left-box").height();
-  };
-
   let labelClickable = () => {
     $(".evaluation-mcq > div > label").click(function () {
       $(this).prev().click();
@@ -159,7 +152,6 @@
     multipleAnswers3();
     multipleAnswers5();
     do_validation();
-    initiateMeter();
     labelClickable();
   });
 
