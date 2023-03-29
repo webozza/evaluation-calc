@@ -916,7 +916,12 @@
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
-        $pdf = new FPDF('P', 'pt', array(500,233));
+        // $pdf = new FPDF('P', 'pt', array(500,233));
+        $pdf = new PDF_HTML();
+        $pdf->AliasNbPages();
+
+        $pdf->SetAutoPageBreak(true, 15);
+
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
         // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
