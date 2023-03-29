@@ -875,6 +875,13 @@
             <a href="javascript:void()" onclick="window.print()">Print my results</a>
         </div>
     </div>
+
+    <script>
+        jQuery(document).ready(function($) {
+            let report = $('.evaluation-output').html();
+            $('[name="the_report"]').val(report);
+        });
+    </script>
 <?php } ?>
 
 <!-- EMAIL FUNC -->
@@ -921,7 +928,7 @@
     // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
     $pdf->SetFont('helvetica','',16);
     // $pdf->Cell(40,10,'Hello World!');
-    $pdf->WriteHTML($html);
+    $pdf->WriteHTML($_POST['the_report']);
 
     $separator = md5(time());
 
@@ -949,6 +956,8 @@
     <div class="tu btn-refresh">
         <a href="/plugins/capacity-calculator">Try again</a>
     </div>
+
+    <?= $_POST['the_report']; ?>
 <?php } ?>
 
 
