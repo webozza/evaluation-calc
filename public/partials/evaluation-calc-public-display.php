@@ -902,7 +902,7 @@
 
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage('L');
-        $pdf->Image($tmpFilename, null, null, 0, 0, 'PNG');
+        $pdf->Image($tmpFilename, null, null, 840, 1260, 'PNG');
         $pdf->SetFont('helvetica','',16);
 
         $separator = md5(time());
