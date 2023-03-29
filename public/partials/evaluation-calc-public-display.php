@@ -965,7 +965,7 @@
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
     </div>
     <div class="tu btn-refresh">
-        <a href="/plugins/capacity-calculator">Try again</a>
+        <a href="/me-plan-estimator/">Try again</a>
     </div>
 
 <?php } ?>
