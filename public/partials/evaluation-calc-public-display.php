@@ -919,7 +919,7 @@
         $pdf = new FPDF('P', 'pt', array(500,233));
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
-        $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
+        // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
         $pdf->SetFont('helvetica','',16);
         $pdf->Cell(40,10,'Hello World!');
 
