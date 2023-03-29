@@ -765,12 +765,9 @@
 
         <hr style="margin:30px 0">
 
-        <!-- TIME RESULT -->
-        <?php 
+        <?php
             $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
         ?>
-
-        <hr style="margin:30px 0">
 
         <div class="time-estimate">
             <div class="left-box">
@@ -847,7 +844,7 @@
             <div class="right-box">
                 <h5> Time estimate </h5>
                 <div class="outer-meter"></div>
-                <meter id="time_meter" value="" min="16" max="200"></meter><br>
+                <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
             </div>
         </div>
     </div>
