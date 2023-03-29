@@ -16,7 +16,7 @@
  * Plugin Name:       Evaluation Calculator
  * Plugin URI:        https://webozza.com
  * Description:       Custom plugin developed by @webozza
- * Version:           7.4.43
+ * Version:           7.4.44
  * Author:            Webozza
  * Author URI:        https://webozza.com
  * License:           GPL-2.0+
@@ -35,9 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EVALUATION_CALC_VERSION', '7.4.43' );
-
-$plugindir = '/wp-content/plugins/evaluation-calc/';
+define( 'EVALUATION_CALC_VERSION', '7.4.44' );
 
 /**
  * The code that runs during plugin activation.
@@ -70,7 +68,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-evaluation-calc.php';
  * Enqueue Scripts
  */
 function add_scripts() {
-	wp_enqueue_script( 'html2pdf', $plugindir . 'public/js/html2pdf.bundle.min.js' );
+	wp_enqueue_script( 'html2pdf', plugins_url( '/public/js/html2pdf.bundle.min.js' , __FILE__ ) );
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
