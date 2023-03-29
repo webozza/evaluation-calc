@@ -19,10 +19,7 @@
 <?php 
     $plugin_dir = '/wp-content/plugins/evaluation-calc';
     $pdf = new FPDF();
-    $pdf->AddPage();
-    $pdf->SetFont('Arial','B',16);
-    $pdf->Cell(40,10,'Hello World!');
-    $pdf->Output();
+    var_dump($pdf);
 ?>
 
 <!-- THE FORM -->
