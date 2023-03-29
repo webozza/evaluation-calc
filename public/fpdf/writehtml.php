@@ -4,6 +4,8 @@
 //webmaster@streetpc.tk
 //http://www.streetpc.tk
 
+$kuku = 'fadsfadsfds';
+
 //function hex2dec
 //returns an associative array (keys: R,G,B) from
 //a hex html code (e.g. #3FE5AA)

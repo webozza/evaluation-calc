@@ -18,6 +18,7 @@
 <!-- GLOBAL VARS -->
 <?php 
     $plugin_dir = '/wp-content/plugins/evaluation-calc';
+    echo $kuku;
 ?>
 
 <!-- THE FORM -->
