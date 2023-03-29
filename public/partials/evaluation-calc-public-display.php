@@ -763,7 +763,7 @@
         <hr style="margin:30px 0">
 
         <!-- TIME RESULT -->
-        <div class="time-calc">
+        <!-- <div class="time-calc">
             <h5>Just for calculation purposes (will remove once development is completed)</h5>
             (Q1 & Q2)  = <?= $duration_2 ?> hours <br>
             (Q1 & Q4)  = <?= $duration_4 ?> hours <br>
@@ -780,7 +780,7 @@
             ?>
         </div>
 
-        <hr style="margin:30px 0">
+        <hr style="margin:30px 0"> -->
 
         <div class="time-estimate">
             <div class="left-box">
