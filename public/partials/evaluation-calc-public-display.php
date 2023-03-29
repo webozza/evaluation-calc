@@ -807,6 +807,7 @@
                                 <label>Your Email</label>
                                 <input required type="email" name="client_email" value="">
                             </div>
+                            <input type="hidden" name="the_report" value="">
                             <button type="submit">Submit</button>
                             <input type="hidden" name="time_estimate" value="1">
                         </form>
@@ -828,6 +829,7 @@
                                 <label>Your Email</label>
                                 <input required type="email" name="client_email" value="">
                             </div>
+                            <input type="hidden" name="the_report" value="">
                             <button type="submit">Submit</button>
                             <input type="hidden" name="time_estimate" value="1">
                         </form>
