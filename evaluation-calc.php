@@ -16,7 +16,7 @@
  * Plugin Name:       Evaluation Calculator
  * Plugin URI:        https://webozza.com
  * Description:       Custom plugin developed by @webozza
- * Version:           7.4.39
+ * Version:           7.4.40
  * Author:            Webozza
  * Author URI:        https://webozza.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EVALUATION_CALC_VERSION', '7.4.39' );
+define( 'EVALUATION_CALC_VERSION', '7.4.40' );
 
 /**
  * The code that runs during plugin activation.
@@ -68,7 +68,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-evaluation-calc.php';
  * Enqueue Scripts
  */
 function add_scripts() {
-	wp_enqueue_script( 'html2pdf', plugin_dir_path( __FILE__ ) . 'public/js/html2pdf.bundle.min.js' );
+	wp_enqueue_script( 'html2pdf', plugin_dir_uri( __DIR__ ) . 'public/js/html2pdf.bundle.min.js' );
 }
 add_action('wp_enqueue_scripts', 'add_scripts');
 
@@ -77,7 +77,7 @@ add_action('wp_enqueue_scripts', 'add_scripts');
  * this shortcode is for displaying the calculator on any page
  */
 function sc_evaluation_calc() {
-	$filename = plugin_dir_path( __FILE__ ) . "test.pdf"; // You specify the path for the file
+	$filename = plugin_dir_url() . "test.pdf"; // You specify the path for the file
 	ob_start();
 	include( plugin_dir_path( __FILE__ ) . 'public/fpdf/fpdf.php');
 	include( plugin_dir_path( __FILE__ ) . 'public/fpdf/writeHTML.php');
