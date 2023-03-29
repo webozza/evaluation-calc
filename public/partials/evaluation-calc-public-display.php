@@ -895,11 +895,7 @@
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
         $pdf->SetFont('helvetica','',16);
-        $pdf->WriteHTML('
-            <pre>
-                <img src="https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg">
-            </pre>
-        ');
+        $pdf->WriteHTML('<img src="https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg">');
 
         $separator = md5(time());
 
