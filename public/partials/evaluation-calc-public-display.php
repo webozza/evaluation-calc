@@ -22,7 +22,7 @@
     echo $plugin_dir . '/public/fpdf/fpdf.php';
     echo $dogo;
     $pdf = new FPDF();
-    echo $pdf;
+    var_dump($pdf);
 ?>
 
 <!-- THE FORM -->
