@@ -23,7 +23,6 @@
 
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
-    <style>h1.wp-block-post-title {display:none;}</style>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
         <h4>Monitoring and Evaluation Plan</h4>
@@ -330,7 +329,7 @@
 
     <div class="evaluation-output">
         <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
-        <style>h1.wp-block-post-title {display:none;}</style>
+
         <div class="initial--content">
             <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
             <h4>Monitoring and Evaluation Plan</h4>
@@ -932,7 +931,6 @@
 
 <!-- THANK YOU MSG -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
-    <style>h1.wp-block-post-title {display:none;}</style>
     <div class="thank you message">
         <img src="/wp-content/plugins/evaluation-calc/public/img/check.png">
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
@@ -941,7 +939,6 @@
         <a href="/plugins/capacity-calculator">Try again</a>
     </div>
 
-    <?= $_POST['the_report']; ?>
 <?php } ?>
 
 
