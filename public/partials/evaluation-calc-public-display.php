@@ -889,15 +889,16 @@
         $body = 'Please find your attached evaluation.';
 
         $dataURI = $_POST['the_report'];
+        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
         $tempfile = tmpfile(); // create temporary file
-        fwrite($tempfile, $dataURI); // fill data to temporary file
+        fwrite($tempfile, $image_content); // fill data to temporary file
         $metaDatas = stream_get_meta_data($tempfile);
         $tmpFilename = $metaDatas['uri'];
 
         $pdf = new FPDF('P', 'pt', array(500,233));
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
-        $pdf->Image($tmpFilename,null,null,0,0);
+        $pdf->Image($tmpFilename,null,null,0,0,'PNG');
         $pdf->SetFont('helvetica','',16);
 
         $separator = md5(time());
