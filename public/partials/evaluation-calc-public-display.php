@@ -869,10 +869,8 @@
     </script>
 <?php } ?>
 
-<!-- EMAIL FUNC -->
+<!-- EMAIL FUNC TO USER -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
-    
-        $html = file_get_contents('https://wp.webozza.com/plugins/capacity-calculator-v7-3-04/');
 
         add_filter( 'wp_mail_from', 'sender_email' );
         function sender_email( $original_email_address ) {
@@ -920,46 +918,56 @@
         wp_mail( $email, $subject, $body, $headers, $attachment );
 
         unlink($filename); // Deletion of the created file.
-
-        /* Email to Client (backend)
-        ---------------------------------------------------------------------------*/
-        $email = array('team@standardofproof.nz', 'webozza@gmail.com');
-        $subject = 'Your Evaluation is Ready';
-        $body = 'Please find your attached evaluation.';
-
-        $dataURI = $_POST['the_report'];
-        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
-        $tempfile = tmpfile(); // create temporary file
-        fwrite($tempfile, $image_content); // fill data to temporary file
-        $metaDatas = stream_get_meta_data($tempfile);
-        $tmpFilename = $metaDatas['uri'];
-
-        $pdf = new FPDF();
-
-        $pdf->SetMargins(0, 0, 0);
-        $pdf->SetAutoPageBreak(false, 0);
-
-        $pdf->AddFont('Helvetica','','helvetica.php');
-        $pdf->AddPage();
-        $pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
-        $pdf->SetFont('helvetica','',16);
-
-        $separator = md5(time());
-
-        $headers = "MIME-Version: 1.0"; 
-        $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
-        $headers .= "Content-Transfer-Encoding: 7bit";
-
-        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
-
-        $attachment = array($filename);
-
-        wp_mail( $email, $subject, $body, $headers, $attachment );
-
-        unlink($filename); // Deletion of the created file.
-
     }
 ?>
+
+<!-- EMAIL TO USER -->
+<?php if ( isset($_POST['time_estimate']) == 1 ) {
+    add_filter( 'wp_mail_from', 'sender_email' );
+    function sender_email( $original_email_address ) {
+        return 'team@standardofproof.nz';
+    };
+
+    add_filter( 'wp_mail_from_name', 'sender_name' );
+    function sender_name( $original_email_from ) {
+        return 'Standard of Proof';
+    };
+
+    $email = array('team@standardofproof.nz', 'webozza@gmail.com');
+    $subject = $_POST['client_name'] . ' just made an evaluation';
+    $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $['client_email'];
+
+    $dataURI = $_POST['the_report'];
+    $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
+    $tempfile = tmpfile(); // create temporary file
+    fwrite($tempfile, $image_content); // fill data to temporary file
+    $metaDatas = stream_get_meta_data($tempfile);
+    $tmpFilename = $metaDatas['uri'];
+
+    $pdf = new FPDF();
+
+    $pdf->SetMargins(0, 0, 0);
+    $pdf->SetAutoPageBreak(false, 0);
+
+    $pdf->AddFont('Helvetica','','helvetica.php');
+    $pdf->AddPage();
+    $pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
+    $pdf->SetFont('helvetica','',16);
+
+    $separator = md5(time());
+
+    $headers = "MIME-Version: 1.0"; 
+    $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
+    $headers .= "Content-Transfer-Encoding: 7bit";
+
+    $pdf->Output($filename, "F"); // "F" is for saving the file on the server
+
+    $attachment = array($filename);
+
+    wp_mail( $email, $subject, $body, $headers, $attachment );
+
+    unlink($filename); // Deletion of the created file.
+} ?>
 
 <!-- THANK YOU MSG -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) { ?>
