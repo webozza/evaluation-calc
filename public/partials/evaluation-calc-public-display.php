@@ -888,11 +888,15 @@
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
+        $dataURI = $_POST['the_report'];
+        $img = explode(',',$dataURI,2)[1];
+        $pic = 'data://text/plain;base64,'. $img;
+
         $pdf = new FPDF('P', 'pt', array(500,233));
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
+        $pdf->Image($pic, 10,30,0,0,'png');
         $pdf->SetFont('helvetica','',16);
-        $pdf->Image($_POST['the_report']);
 
         $separator = md5(time());
 
