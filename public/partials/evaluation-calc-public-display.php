@@ -901,7 +901,7 @@
         $pdf->SetAutoPageBreak(false, 0);
 
         $pdf->AddFont('Helvetica','','helvetica.php');
-        $pdf->AddPage('L');
+        $pdf->AddPage();
         $pdf->Image($tmpFilename, null, null, 840, 1260, 'PNG');
         $pdf->SetFont('helvetica','',16);
 
