@@ -918,13 +918,12 @@
         wp_mail( $email, $subject, $body, $headers, $attachment );
 
         unlink($filename); // Deletion of the created file.
-        exit;
 
-        /* Email to User
+        /* Email to Admin
         ---------------------------------------------------------------------------*/
         $email = array('team@standardofproof.nz', 'webozza@gmail.com');
         $subject = $_POST['client_name'] . ' just made an evaluation';
-        $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $['client_email'];
+        $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
 
         $dataURI = $_POST['the_report'];
         $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
@@ -956,7 +955,6 @@
         wp_mail( $email, $subject, $body, $headers, $attachment );
 
         unlink($filename); // Deletion of the created file.
-        exit;
     }
 ?>
 
