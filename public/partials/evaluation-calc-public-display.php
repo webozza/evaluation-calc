@@ -884,7 +884,46 @@
             return 'Standard of Proof';
         };
             
-        $email = 'webozza@gmail.com';
+        /* Email to User
+        ---------------------------------------------------------------------------*/
+        $email = $_POST['client_email'];
+        $subject = 'Your Evaluation is Ready';
+        $body = 'Please find your attached evaluation.';
+
+        $dataURI = $_POST['the_report'];
+        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
+        $tempfile = tmpfile(); // create temporary file
+        fwrite($tempfile, $image_content); // fill data to temporary file
+        $metaDatas = stream_get_meta_data($tempfile);
+        $tmpFilename = $metaDatas['uri'];
+
+        $pdf = new FPDF();
+
+        $pdf->SetMargins(0, 0, 0);
+        $pdf->SetAutoPageBreak(false, 0);
+
+        $pdf->AddFont('Helvetica','','helvetica.php');
+        $pdf->AddPage();
+        $pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
+        $pdf->SetFont('helvetica','',16);
+
+        $separator = md5(time());
+
+        $headers = "MIME-Version: 1.0"; 
+        $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
+        $headers .= "Content-Transfer-Encoding: 7bit";
+
+        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
+
+        $attachment = array($filename);
+
+        wp_mail( $email, $subject, $body, $headers, $attachment );
+
+        unlink($filename); // Deletion of the created file.
+
+        /* Email to Client (backend)
+        ---------------------------------------------------------------------------*/
+        $email = array('team@standardofproof.nz', 'webozza@gmail.com');
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
