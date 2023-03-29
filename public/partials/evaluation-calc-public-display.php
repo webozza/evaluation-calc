@@ -861,7 +861,7 @@
 
     <script>
         jQuery(document).ready(function($) {
-            html2canvas(document.body).then(function(canvas) {
+            html2canvas($('.evaluation-output')[0]).then(function(canvas) {
             let imageFile = canvas.toDataURL("image/png");
                 $('[name="the_report"]').val(imageFile);
             });
@@ -902,7 +902,7 @@
 
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage('L');
-        $pdf->Image($tmpFilename, 0, 0, 600, 0, 'PNG');
+        $pdf->Image($tmpFilename, null, null, 0, 0, 'PNG');
         $pdf->SetFont('helvetica','',16);
 
         $separator = md5(time());
