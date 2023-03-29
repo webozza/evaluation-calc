@@ -329,11 +329,15 @@
 
     <?php $plugin_dir = '/wp-content/plugins/evaluation-calc'; ?>
     <style>h1.wp-block-post-title {display:none;}</style>
-    <div class="initial--content">
-        <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>Monitoring and Evaluation Plan</h4>
-        <h4>Capacity calculator</h4>
-    </div>
+    <?php
+    $testhtml = '
+        <div class="initial--content">
+            <img src="' $plugin_dir . '/public/img/logo.jpeg' '">
+            <h4>Monitoring and Evaluation Plan</h4>
+            <h4>Capacity calculator</h4>
+        </div>
+    '
+    ?>
 
     <!-- THE MATH HAPPENS OVER HERE -->
     <?php
@@ -927,7 +931,7 @@
         // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
         $pdf->SetFont('helvetica','',16);
         // $pdf->Cell(40,10,'Hello World!');
-        $pdf->WriteHTML('<para><h1>PHPGang Programming Blog, Tutorials, jQuery, Ajax, PHP, MySQL and Demos</h1><br>Website: <u>www.phpgang.com</u></para><br><br>How to Convert HTML to PDF with fpdf example');
+        $pdf->WriteHTML($testhtml);*-021
 
         $separator = md5(time());
 
