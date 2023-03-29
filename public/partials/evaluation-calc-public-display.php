@@ -897,7 +897,7 @@
         $pdf->SetFont('helvetica','',16);
         $pdf->WriteHTML('
             <pre>
-                <img src="'. $plugin_dir . '/wp-content/plugins/evaluation-calc' '">
+                <img src="https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg">
             </pre>
         ');
 
