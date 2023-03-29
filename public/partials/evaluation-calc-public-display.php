@@ -948,6 +948,7 @@
     <div class="tu btn-refresh">
         <a href="/plugins/capacity-calculator">Try again</a>
     </div>
+    <?php echo $testhtml ?>
 <?php } ?>
 
 
