@@ -19,6 +19,7 @@
 <?php 
     $plugin_dir = '/wp-content/plugins/evaluation-calc';
     include($plugin_dir . '/public/fpdf/fpdf.php');
+    echo $dogo;
 ?>
 
 <!-- THE FORM -->

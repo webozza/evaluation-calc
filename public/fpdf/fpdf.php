@@ -7,6 +7,8 @@
 * Author:  Olivier PLATHEY                                                     *
 *******************************************************************************/
 
+$dogo = 'abcdefg';
+
 class FPDF
 {
 const VERSION = '1.85';
