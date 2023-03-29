@@ -21,6 +21,8 @@
     include($plugin_dir . '/public/fpdf/fpdf.php');
     echo $plugin_dir . '/public/fpdf/fpdf.php';
     echo $dogo;
+    $pdf = new FPDF();
+    echo $pdf;
 ?>
 
 <!-- THE FORM -->
