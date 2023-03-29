@@ -898,59 +898,39 @@
             return 'Standard of Proof';
         };
 
-        $pdf = new FPDF('P', 'pt', array(500,233));
-        $pdf->AddFont('Georgiai','','georgiai.php');
-        $pdf->AddPage();
-        $pdf->Image('lib/fpdf/image.jpg',0,0,500);
-        $pdf->SetFont('georgiai','',16);
-        $pdf->Cell(40,10,'Hello World!');
+        // //user posted variables
+        // $name = $_POST['client_name'];
+        // $email = $_POST['client_email'];
+        // $message = $name . ' just made a calculation.';
 
-        // email stuff (change data below)
-        $to = $_POST['client_email'];;
-        $from = "me@example.com"; 
-        $subject = "send email with pdf attachment"; 
-        $message = "<p>Please see the attachment.</p>";
+        // //php mailer variables
+        // $to = 'webozza@gmail.com';
+        // $subject = $name . ' just made a calculation.';
+        // $headers = 'From: '. $email . "\r\n" .
+        //     'Reply-To: ' . $email . "\r\n";
 
-        // a random hash will be necessary to send mixed content
+        // // Here put your Validation and send mail
+        // $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+            
+        $email = $_POST['client_email'];
+        $subject = 'Test attachment';
+        $body = 'This is the body text.';
+
         $separator = md5(time());
 
-        // carriage return type (we use a PHP end of line constant)
-        $eol = PHP_EOL;
-
-        // attachment name
-        $filename = "test.pdf";
-
-        // encode data (puts attachment in proper format)
-        $pdfdoc = $pdf->Output("", "S");
-        $attachment = chunk_split(base64_encode($pdfdoc));
-
-        // main header
-        $headers  = "From: ".$from.$eol;
-        $headers .= "MIME-Version: 1.0".$eol; 
+        $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
+        $headers .= "Content-Transfer-Encoding: 7bit";
 
-        // no more headers after this, we start the body! //
+        $filename = $plugin_dir . "/test.pdf"; // You specify the path for the file
 
-        $body = "--".$separator.$eol;
-        $body .= "Content-Transfer-Encoding: 7bit".$eol.$eol;
-        $body .= "This is a MIME encoded message.".$eol;
+        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
 
-        // message
-        $body .= "--".$separator.$eol;
-        $body .= "Content-Type: text/html; charset=\"iso-8859-1\"".$eol;
-        $body .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
-        $body .= $message.$eol;
+        $attachment = array($filename);
 
-        // attachment
-        $body .= "--".$separator.$eol;
-        $body .= "Content-Type: application/octet-stream; name=\"".$filename."\"".$eol; 
-        $body .= "Content-Transfer-Encoding: base64".$eol;
-        $body .= "Content-Disposition: attachment".$eol.$eol;
-        $body .= $attachment.$eol;
-        $body .= "--".$separator."--";
+        wp_mail( $email, $subject, $body, $headers, $attachment );
 
-        // send message
-        wp_mail($to, $subject, $body, $headers);
+        unlink($filename); // Deletion of the created file.
     }
 ?>
 
