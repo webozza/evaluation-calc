@@ -18,9 +18,11 @@
 <!-- GLOBAL VARS -->
 <?php 
     $plugin_dir = '/wp-content/plugins/evaluation-calc';
-    include( plugin_dir_path( __FILE__ ) . 'public/fpdf/fpdf.php');
-    echo $plugin_dir . '/public/fpdf/fpdf.php';
-    echo $dogo;
+    $pdf = new FPDF();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial','B',16);
+    $pdf->Cell(40,10,'Hello World!');
+    $pdf->Output();
 ?>
 
 <!-- THE FORM -->
