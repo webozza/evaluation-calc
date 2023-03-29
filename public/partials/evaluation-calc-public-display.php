@@ -861,8 +861,10 @@
 
     <script>
         jQuery(document).ready(function($) {
-            let report = $('.evaluation-output').html();
-            $('[name="the_report"]').val(report);
+            html2canvas(document.body).then(function(canvas) {
+            let imageFile = canvas.toDataURL("image/png");
+                $('[name="the_report"]').val(imageFile);
+            });
         });
     </script>
 <?php } ?>
@@ -886,16 +888,11 @@
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
-        // $pdf = new FPDF('P', 'pt', array(500,233));
-        $pdf = new PDF_HTML();
-        $pdf->AliasNbPages();
-
-        $pdf->SetAutoPageBreak(true, 15);
-
+        $pdf = new FPDF('P', 'pt', array(500,233));
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
         $pdf->SetFont('helvetica','',16);
-        $pdf->WriteHTML('<img src="https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg">');
+        $pdf->Image($_POST['the_report']);
 
         $separator = md5(time());
 
