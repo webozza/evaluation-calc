@@ -870,62 +870,51 @@
 <!-- EMAIL FUNC -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
     
-    $html = file_get_contents('https://wp.webozza.com/plugins/capacity-calculator-v7-3-04/');
+        $html = file_get_contents('https://wp.webozza.com/plugins/capacity-calculator-v7-3-04/');
 
-    add_filter( 'wp_mail_from', 'sender_email' );
-    function sender_email( $original_email_address ) {
-        return 'team@standardofproof.nz';
-    };
+        add_filter( 'wp_mail_from', 'sender_email' );
+        function sender_email( $original_email_address ) {
+            return 'team@standardofproof.nz';
+        };
 
-    add_filter( 'wp_mail_from_name', 'sender_name' );
-    function sender_name( $original_email_from ) {
-        return 'Standard of Proof';
-    };
+        add_filter( 'wp_mail_from_name', 'sender_name' );
+        function sender_name( $original_email_from ) {
+            return 'Standard of Proof';
+        };
+            
+        $email = 'webozza@gmail.com';
+        $subject = 'Your Evaluation is Ready';
+        $body = 'Please find your attached evaluation.';
 
-    // //user posted variables
-    // $name = $_POST['client_name'];
-    // $email = $_POST['client_email'];
-    // $message = $name . ' just made a calculation.';
+        // $pdf = new FPDF('P', 'pt', array(500,233));
+        $pdf = new PDF_HTML();
+        $pdf->AliasNbPages();
 
-    // //php mailer variables
-    // $to = 'webozza@gmail.com';
-    // $subject = $name . ' just made a calculation.';
-    // $headers = 'From: '. $email . "\r\n" .
-    //     'Reply-To: ' . $email . "\r\n";
+        $pdf->SetAutoPageBreak(true, 15);
 
-    // // Here put your Validation and send mail
-    // $sent = wp_mail($to, $subject, strip_tags($message), $headers);
-        
-    $email = 'webozza@gmail.com';
-    $subject = 'Your Evaluation is Ready';
-    $body = 'Please find your attached evaluation.';
+        $pdf->AddFont('Helvetica','','helvetica.php');
+        $pdf->AddPage();
+        $pdf->SetFont('helvetica','',16);
+        $pdf->WriteHTML('
+            <pre>
+                <img src="'. $plugin_dir . '/wp-content/plugins/evaluation-calc' '">
+            </pre>
+        ');
 
-    // $pdf = new FPDF('P', 'pt', array(500,233));
-    $pdf = new PDF_HTML();
-    $pdf->AliasNbPages();
+        $separator = md5(time());
 
-    $pdf->SetAutoPageBreak(true, 15);
+        $headers = "MIME-Version: 1.0"; 
+        $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
+        $headers .= "Content-Transfer-Encoding: 7bit";
 
-    $pdf->AddFont('Helvetica','','helvetica.php');
-    $pdf->AddPage();
-    // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
-    $pdf->SetFont('helvetica','',16);
-    // $pdf->Cell(40,10,'Hello World!');
-    $pdf->WriteHTML($_POST['the_report']);
+        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
 
-    $separator = md5(time());
+        $attachment = array($filename);
 
-    $headers = "MIME-Version: 1.0"; 
-    $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
-    $headers .= "Content-Transfer-Encoding: 7bit";
+        wp_mail( $email, $subject, $body, $headers, $attachment );
 
-    $pdf->Output($filename, "F"); // "F" is for saving the file on the server
+        unlink($filename); // Deletion of the created file.
 
-    $attachment = array($filename);
-
-    wp_mail( $email, $subject, $body, $headers, $attachment );
-
-    unlink($filename); // Deletion of the created file.
     }
 ?>
 
