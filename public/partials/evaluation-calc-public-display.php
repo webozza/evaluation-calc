@@ -766,24 +766,11 @@
         <hr style="margin:30px 0">
 
         <!-- TIME RESULT -->
-        <!-- <div class="time-calc">
-            <h5>Just for calculation purposes (will remove once development is completed)</h5>
-            (Q1 & Q2)  = <?= $duration_2 ?> hours <br>
-            (Q1 & Q4)  = <?= $duration_4 ?> hours <br>
-            (Q6 & Q7)  = <?= $duration_7 ?> hours <br>
-            (Q7 & Q8)  = <?= $duration_8 ?> hours <br>
-            (Q7 & Q9)  = <?= $duration_9 ?> hours <br>
-            (Q1 & Q10) = <?= $duration_10 ?> hours <br>
-            (Q1 & Q11) = <?= $duration_11 ?> hours <br>
+        <?php 
+            $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
+        ?>
 
-            <?php 
-                $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
-                echo 'total hours = ' . $total_hours;
-                echo '<input type="hidden" name="time_meter" value="'.$total_hours.'">'
-            ?>
-        </div>
-
-        <hr style="margin:30px 0"> -->
+        <hr style="margin:30px 0">
 
         <div class="time-estimate">
             <div class="left-box">
