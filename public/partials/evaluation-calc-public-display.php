@@ -931,7 +931,7 @@
         // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
         $pdf->SetFont('helvetica','',16);
         // $pdf->Cell(40,10,'Hello World!');
-        $pdf->WriteHTML($testhtml);*-021
+        $pdf->WriteHTML($testhtml);
 
         $separator = md5(time());
 
