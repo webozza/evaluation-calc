@@ -18,11 +18,9 @@
 <!-- GLOBAL VARS -->
 <?php 
     $plugin_dir = '/wp-content/plugins/evaluation-calc';
-    include($plugin_dir . '/public/fpdf/fpdf.php');
+    include( plugin_dir_path( __FILE__ ) . 'public/fpdf/fpdf.php');
     echo $plugin_dir . '/public/fpdf/fpdf.php';
     echo $dogo;
-    $pdf = new FPDF();
-    var_dump($pdf);
 ?>
 
 <!-- THE FORM -->
