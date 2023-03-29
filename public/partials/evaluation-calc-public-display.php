@@ -921,9 +921,8 @@
         $pdf->AddPage();
         // $pdf->Image($plugin_dir . '/public/img/logo.jpeg',0,0,500);
         $pdf->SetFont('helvetica','',16);
-        $pdf->Cell(40,10,'Hello World!');
-        $pdf->WriteHTML('<para><h1>PHPGang Programming Blog, Tutorials, jQuery, Ajax, PHP, MySQL and Demos</h1><br>
-Website: <u>www.phpgang.com</u></para><br><br>How to Convert HTML to PDF with fpdf example');
+        // $pdf->Cell(40,10,'Hello World!');
+        $pdf->WriteHTML('<para><h1>PHPGang Programming Blog, Tutorials, jQuery, Ajax, PHP, MySQL and Demos</h1><br>Website: <u>www.phpgang.com</u></para><br><br>How to Convert HTML to PDF with fpdf example');
 
         $separator = md5(time());
 
