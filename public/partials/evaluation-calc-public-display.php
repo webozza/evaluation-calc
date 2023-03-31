@@ -777,7 +777,7 @@
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
-                            let totalHours = `<?= $total_hours ?>px`;
+                            let totalHours = `<?= $total_hours ?>%`;
                             $('.ev-line > div').css('height', totalHours);
                         });
                     </script>

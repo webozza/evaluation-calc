@@ -260,6 +260,7 @@ meter::-webkit-meter-optimum-value {
   width: 100%;
   border-radius: 25px;
   background-color: #aa2423;
+  height: 0%;
 }
 
 /* Content
