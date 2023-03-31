@@ -860,7 +860,7 @@
         jQuery(document).ready(function($) {
             let snapReport = $('.evaluation-output');
 
-            $('.time-estimate form button').click(function() {
+            $('.time-estimate form button').submit(function() {
                 snapReport.find('.time-estimate *:not(:nth-child(1))').hide();
                 html2canvas(snapReport[0]).then(function(canvas) {
                 let imageFile = canvas.toDataURL("image/png");
