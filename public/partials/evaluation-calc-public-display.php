@@ -632,142 +632,144 @@
     <!-- THE RENDERING -->
     <div class="calculated-evalution-container">
 
-        <h5>Monitoring and evaluation plan requirements</h5>
+        <div class="for-pdf">
+            <h5>Monitoring and evaluation plan requirements</h5>
 
-        <!-- OUTPUT RENDER -->
-        <div class="main-calc">
-            <div class="left-box">
-                <div class="evaluation-outputs">
-                    We have <?= $output_1 ?>, and our team requires: <br>
-                    <ul>
-                        <?php 
-                            foreach($answer_2 as $answer) {
-                                if($answer == "a") {
-                                    echo $result2_a;
-
-                                    // Time Calculation if a
-                                    if( $answer_1 == "a" ) {
-                                        $duration_2a1a = 27;
-                                    } elseif( $answer_1 == "b" ) {
-                                        $duration_2a1b = 34;
-                                    } elseif( $answer_1 == "c" ) {
-                                        $duration_2a1c = 40;
-                                    }
-                                } elseif($answer == "b") {
-                                    echo $result2_b;
-
-                                    // Time Calculation if a
-                                    if( $answer_1 == "a" ) {
-                                        $duration_2b1a = 14;
-                                    } elseif( $answer_1 == "b" ) {
-                                        $duration_2b1b = 14;
-                                    } elseif( $answer_1 == "c" ) {
-                                        $duration_2b1c = 17;
-                                    }
-                                } elseif($answer == "c") {
-                                    echo $result2_c;
-
-                                    // Time Calculation if a
-                                    if( $answer_1 == "a" ) {
-                                        $duration_2c1a = 14;
-                                    } elseif( $answer_1 == "b" ) {
-                                        $duration_2c1b = 14;
-                                    } elseif( $answer_1 == "c" ) {
-                                        $duration_2c1c = 17;
-                                    }
-                                } elseif($answer == "d") {
-                                    echo $result2_d;
-
-                                    // Time Calculation if a
-                                    if( $answer_1 == "a" ) {
-                                        $duration_2d1a = 0;
-                                    } elseif( $answer_1 == "b" ) {
-                                        $duration_2d1b = 0;
-                                    } elseif( $answer_1 == "c" ) {
-                                        $duration_2d1c = 0;
-                                    }
-                                } elseif($answer == "e") {
-                                    echo $result2_e;
-
-                                    // Time Calculation if a
-                                    if( $answer_1 == "a" ) {
-                                        $duration_2e1a = 0;
-                                    } elseif( $answer_1 == "b" ) {
-                                        $duration_2e1b = 0;
-                                    } elseif( $answer_1 == "c" ) {
-                                        $duration_2e1c = 0;
-                                    }
-                                }
-                            }
-
-                            $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
-                        ?>
-                    </ul>
-                    <!-- <div class="evaluation-outputs">
-                        In relation to the evaluation, the plan would likely focus on: <br>
-                        <ul>
-                            <?php 
-                                foreach($answer_3 as $answer) {
-                                    if($answer == "a") {
-                                        echo $result3_a;
-                                    } elseif($answer == "b") {
-                                        echo $result3_b;
-                                    } elseif($answer == "c") {
-                                        echo $result3_c;
-                                    } elseif($answer == "d") {
-                                        echo $result3_d;
-                                    } elseif($answer == "e") {
-                                        echo $result3_e;
-                                    } elseif($answer == "f") {
-                                        echo $result3_f;
-                                    } elseif($answer == "g") {
-                                        echo $result3_g;
-                                    } elseif($answer == "h") {
-                                        echo $result3_h;
-                                    }
-                                }
-                            ?>
-                        </ul>
-                    </div> -->
+            <!-- OUTPUT RENDER -->
+            <div class="main-calc">
+                <div class="left-box">
                     <div class="evaluation-outputs">
-                        We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
-                        <ul>
-                            <?= $output_4 ?>
-                            <li><?= $output_6 . ', involving ' . $output_7 ?></li>
-                            <li><?= $output_8 ?></li>
-                            <li><?= $output_9 ?></li>
-                            <?= $output_10 ?>
-                            <?= $output_11 ?>
-                        </ul>
-                    </div>
-                    <!-- <div class="evaluation-outputs">
-                        Our teams would value for this work: <br>
+                        We have <?= $output_1 ?>, and our team requires: <br>
                         <ul>
                             <?php 
-                                foreach($answer_5 as $answer) {
+                                foreach($answer_2 as $answer) {
                                     if($answer == "a") {
-                                        echo $result5_a;
+                                        echo $result2_a;
+
+                                        // Time Calculation if a
+                                        if( $answer_1 == "a" ) {
+                                            $duration_2a1a = 27;
+                                        } elseif( $answer_1 == "b" ) {
+                                            $duration_2a1b = 34;
+                                        } elseif( $answer_1 == "c" ) {
+                                            $duration_2a1c = 40;
+                                        }
                                     } elseif($answer == "b") {
-                                        echo $result5_b;
+                                        echo $result2_b;
+
+                                        // Time Calculation if a
+                                        if( $answer_1 == "a" ) {
+                                            $duration_2b1a = 14;
+                                        } elseif( $answer_1 == "b" ) {
+                                            $duration_2b1b = 14;
+                                        } elseif( $answer_1 == "c" ) {
+                                            $duration_2b1c = 17;
+                                        }
                                     } elseif($answer == "c") {
-                                        echo $result5_c;
+                                        echo $result2_c;
+
+                                        // Time Calculation if a
+                                        if( $answer_1 == "a" ) {
+                                            $duration_2c1a = 14;
+                                        } elseif( $answer_1 == "b" ) {
+                                            $duration_2c1b = 14;
+                                        } elseif( $answer_1 == "c" ) {
+                                            $duration_2c1c = 17;
+                                        }
                                     } elseif($answer == "d") {
-                                        echo $result5_d;
+                                        echo $result2_d;
+
+                                        // Time Calculation if a
+                                        if( $answer_1 == "a" ) {
+                                            $duration_2d1a = 0;
+                                        } elseif( $answer_1 == "b" ) {
+                                            $duration_2d1b = 0;
+                                        } elseif( $answer_1 == "c" ) {
+                                            $duration_2d1c = 0;
+                                        }
                                     } elseif($answer == "e") {
-                                        echo $result5_e;
-                                    } elseif($answer == "f") {
-                                        echo $result5_f;
+                                        echo $result2_e;
+
+                                        // Time Calculation if a
+                                        if( $answer_1 == "a" ) {
+                                            $duration_2e1a = 0;
+                                        } elseif( $answer_1 == "b" ) {
+                                            $duration_2e1b = 0;
+                                        } elseif( $answer_1 == "c" ) {
+                                            $duration_2e1c = 0;
+                                        }
                                     }
                                 }
+
+                                $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
                             ?>
                         </ul>
-                    </div> -->
+                        <!-- <div class="evaluation-outputs">
+                            In relation to the evaluation, the plan would likely focus on: <br>
+                            <ul>
+                                <?php 
+                                    foreach($answer_3 as $answer) {
+                                        if($answer == "a") {
+                                            echo $result3_a;
+                                        } elseif($answer == "b") {
+                                            echo $result3_b;
+                                        } elseif($answer == "c") {
+                                            echo $result3_c;
+                                        } elseif($answer == "d") {
+                                            echo $result3_d;
+                                        } elseif($answer == "e") {
+                                            echo $result3_e;
+                                        } elseif($answer == "f") {
+                                            echo $result3_f;
+                                        } elseif($answer == "g") {
+                                            echo $result3_g;
+                                        } elseif($answer == "h") {
+                                            echo $result3_h;
+                                        }
+                                    }
+                                ?>
+                            </ul>
+                        </div> -->
+                        <div class="evaluation-outputs">
+                            We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
+                            <ul>
+                                <?= $output_4 ?>
+                                <li><?= $output_6 . ', involving ' . $output_7 ?></li>
+                                <li><?= $output_8 ?></li>
+                                <li><?= $output_9 ?></li>
+                                <?= $output_10 ?>
+                                <?= $output_11 ?>
+                            </ul>
+                        </div>
+                        <!-- <div class="evaluation-outputs">
+                            Our teams would value for this work: <br>
+                            <ul>
+                                <?php 
+                                    foreach($answer_5 as $answer) {
+                                        if($answer == "a") {
+                                            echo $result5_a;
+                                        } elseif($answer == "b") {
+                                            echo $result5_b;
+                                        } elseif($answer == "c") {
+                                            echo $result5_c;
+                                        } elseif($answer == "d") {
+                                            echo $result5_d;
+                                        } elseif($answer == "e") {
+                                            echo $result5_e;
+                                        } elseif($answer == "f") {
+                                            echo $result5_f;
+                                        }
+                                    }
+                                ?>
+                            </ul>
+                        </div> -->
+                    </div>
                 </div>
-            </div>
-            <div class="right-box">
-                <h5> Time estimate </h5>
-                <div class="outer-meter"></div>
-                <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
+                <div class="right-box">
+                    <h5> Time estimate </h5>
+                    <div class="outer-meter"></div>
+                    <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
+                </div>
             </div>
         </div>
 
@@ -857,17 +859,18 @@
     </div>
 
     <script>
-        jQuery(document).ready(function($) {
-            let snapReport = $('.evaluation-output');
+        jQuery(document).ready(async function($) {
+            // Prepare the print
+            let timeContent = $('.time-estimate p').eq(0);
+            timeContent.appendTo('.main-calc .left-box');
 
-            $('.time-estimate form button').submit(function() {
-                snapReport.find('.time-estimate *:not(:nth-child(1))').hide();
-                html2canvas(snapReport[0]).then(function(canvas) {
-                let imageFile = canvas.toDataURL("image/png");
-                    $('[name="the_report"]').val(imageFile);
-                });
-            })
-            
+            // Print the Image
+            let snapReport1 = $('.evaluation-output .initial--content');
+            let snapReport2 = $('.evaluation-output'); // need the data we want to print
+            html2canvas(snapReport1[0] + snapReport2[0]).then(function(canvas) {
+            let imageFile = canvas.toDataURL("image/png");
+                $('[name="the_report"]').val(imageFile);
+            });
         });
     </script>
 <?php } ?>
