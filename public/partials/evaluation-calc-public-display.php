@@ -634,131 +634,138 @@
 
         <!-- OUTPUT RENDER -->
         <div class="main-calc">
-            <div class="evaluation-outputs">
-                We have <?= $output_1 ?>, and our team requires: <br>
-                <ul>
-                    <?php 
-                        foreach($answer_2 as $answer) {
-                            if($answer == "a") {
-                                echo $result2_a;
-
-                                // Time Calculation if a
-                                if( $answer_1 == "a" ) {
-                                    $duration_2a1a = 27;
-                                } elseif( $answer_1 == "b" ) {
-                                    $duration_2a1b = 34;
-                                } elseif( $answer_1 == "c" ) {
-                                    $duration_2a1c = 40;
-                                }
-                            } elseif($answer == "b") {
-                                echo $result2_b;
-
-                                // Time Calculation if a
-                                if( $answer_1 == "a" ) {
-                                    $duration_2b1a = 14;
-                                } elseif( $answer_1 == "b" ) {
-                                    $duration_2b1b = 14;
-                                } elseif( $answer_1 == "c" ) {
-                                    $duration_2b1c = 17;
-                                }
-                            } elseif($answer == "c") {
-                                echo $result2_c;
-
-                                // Time Calculation if a
-                                if( $answer_1 == "a" ) {
-                                    $duration_2c1a = 14;
-                                } elseif( $answer_1 == "b" ) {
-                                    $duration_2c1b = 14;
-                                } elseif( $answer_1 == "c" ) {
-                                    $duration_2c1c = 17;
-                                }
-                            } elseif($answer == "d") {
-                                echo $result2_d;
-
-                                // Time Calculation if a
-                                if( $answer_1 == "a" ) {
-                                    $duration_2d1a = 0;
-                                } elseif( $answer_1 == "b" ) {
-                                    $duration_2d1b = 0;
-                                } elseif( $answer_1 == "c" ) {
-                                    $duration_2d1c = 0;
-                                }
-                            } elseif($answer == "e") {
-                                echo $result2_e;
-
-                                // Time Calculation if a
-                                if( $answer_1 == "a" ) {
-                                    $duration_2e1a = 0;
-                                } elseif( $answer_1 == "b" ) {
-                                    $duration_2e1b = 0;
-                                } elseif( $answer_1 == "c" ) {
-                                    $duration_2e1c = 0;
-                                }
-                            }
-                        }
-
-                        $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
-                    ?>
-                </ul>
-                <!-- <div class="evaluation-outputs">
-                    In relation to the evaluation, the plan would likely focus on: <br>
-                    <ul>
-                        <?php 
-                            foreach($answer_3 as $answer) {
-                                if($answer == "a") {
-                                    echo $result3_a;
-                                } elseif($answer == "b") {
-                                    echo $result3_b;
-                                } elseif($answer == "c") {
-                                    echo $result3_c;
-                                } elseif($answer == "d") {
-                                    echo $result3_d;
-                                } elseif($answer == "e") {
-                                    echo $result3_e;
-                                } elseif($answer == "f") {
-                                    echo $result3_f;
-                                } elseif($answer == "g") {
-                                    echo $result3_g;
-                                } elseif($answer == "h") {
-                                    echo $result3_h;
-                                }
-                            }
-                        ?>
-                    </ul>
-                </div> -->
+            <div class="left-box">
                 <div class="evaluation-outputs">
-                    We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
-                    <ul>
-                        <?= $output_4 ?>
-                        <li><?= $output_6 . ', involving ' . $output_7 ?></li>
-                        <li><?= $output_8 ?></li>
-                        <li><?= $output_9 ?></li>
-                        <?= $output_10 ?>
-                        <?= $output_11 ?>
-                    </ul>
-                </div>
-                <!-- <div class="evaluation-outputs">
-                    Our teams would value for this work: <br>
+                    We have <?= $output_1 ?>, and our team requires: <br>
                     <ul>
                         <?php 
-                            foreach($answer_5 as $answer) {
+                            foreach($answer_2 as $answer) {
                                 if($answer == "a") {
-                                    echo $result5_a;
+                                    echo $result2_a;
+
+                                    // Time Calculation if a
+                                    if( $answer_1 == "a" ) {
+                                        $duration_2a1a = 27;
+                                    } elseif( $answer_1 == "b" ) {
+                                        $duration_2a1b = 34;
+                                    } elseif( $answer_1 == "c" ) {
+                                        $duration_2a1c = 40;
+                                    }
                                 } elseif($answer == "b") {
-                                    echo $result5_b;
+                                    echo $result2_b;
+
+                                    // Time Calculation if a
+                                    if( $answer_1 == "a" ) {
+                                        $duration_2b1a = 14;
+                                    } elseif( $answer_1 == "b" ) {
+                                        $duration_2b1b = 14;
+                                    } elseif( $answer_1 == "c" ) {
+                                        $duration_2b1c = 17;
+                                    }
                                 } elseif($answer == "c") {
-                                    echo $result5_c;
+                                    echo $result2_c;
+
+                                    // Time Calculation if a
+                                    if( $answer_1 == "a" ) {
+                                        $duration_2c1a = 14;
+                                    } elseif( $answer_1 == "b" ) {
+                                        $duration_2c1b = 14;
+                                    } elseif( $answer_1 == "c" ) {
+                                        $duration_2c1c = 17;
+                                    }
                                 } elseif($answer == "d") {
-                                    echo $result5_d;
+                                    echo $result2_d;
+
+                                    // Time Calculation if a
+                                    if( $answer_1 == "a" ) {
+                                        $duration_2d1a = 0;
+                                    } elseif( $answer_1 == "b" ) {
+                                        $duration_2d1b = 0;
+                                    } elseif( $answer_1 == "c" ) {
+                                        $duration_2d1c = 0;
+                                    }
                                 } elseif($answer == "e") {
-                                    echo $result5_e;
-                                } elseif($answer == "f") {
-                                    echo $result5_f;
+                                    echo $result2_e;
+
+                                    // Time Calculation if a
+                                    if( $answer_1 == "a" ) {
+                                        $duration_2e1a = 0;
+                                    } elseif( $answer_1 == "b" ) {
+                                        $duration_2e1b = 0;
+                                    } elseif( $answer_1 == "c" ) {
+                                        $duration_2e1c = 0;
+                                    }
                                 }
                             }
+
+                            $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
                         ?>
                     </ul>
-                </div> -->
+                    <!-- <div class="evaluation-outputs">
+                        In relation to the evaluation, the plan would likely focus on: <br>
+                        <ul>
+                            <?php 
+                                foreach($answer_3 as $answer) {
+                                    if($answer == "a") {
+                                        echo $result3_a;
+                                    } elseif($answer == "b") {
+                                        echo $result3_b;
+                                    } elseif($answer == "c") {
+                                        echo $result3_c;
+                                    } elseif($answer == "d") {
+                                        echo $result3_d;
+                                    } elseif($answer == "e") {
+                                        echo $result3_e;
+                                    } elseif($answer == "f") {
+                                        echo $result3_f;
+                                    } elseif($answer == "g") {
+                                        echo $result3_g;
+                                    } elseif($answer == "h") {
+                                        echo $result3_h;
+                                    }
+                                }
+                            ?>
+                        </ul>
+                    </div> -->
+                    <div class="evaluation-outputs">
+                        We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
+                        <ul>
+                            <?= $output_4 ?>
+                            <li><?= $output_6 . ', involving ' . $output_7 ?></li>
+                            <li><?= $output_8 ?></li>
+                            <li><?= $output_9 ?></li>
+                            <?= $output_10 ?>
+                            <?= $output_11 ?>
+                        </ul>
+                    </div>
+                    <!-- <div class="evaluation-outputs">
+                        Our teams would value for this work: <br>
+                        <ul>
+                            <?php 
+                                foreach($answer_5 as $answer) {
+                                    if($answer == "a") {
+                                        echo $result5_a;
+                                    } elseif($answer == "b") {
+                                        echo $result5_b;
+                                    } elseif($answer == "c") {
+                                        echo $result5_c;
+                                    } elseif($answer == "d") {
+                                        echo $result5_d;
+                                    } elseif($answer == "e") {
+                                        echo $result5_e;
+                                    } elseif($answer == "f") {
+                                        echo $result5_f;
+                                    }
+                                }
+                            ?>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="right-box">
+                <h5> Time estimate </h5>
+                <div class="outer-meter"></div>
+                <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
             </div>
         </div>
 
@@ -769,82 +776,75 @@
         ?>
 
         <div class="time-estimate">
-            <div class="left-box">
-                <h5>Time requirements</h5>
-                <?php
-                    if($total_hours <= 70) { ?>
-                        <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
-                        
-                        <h5>Contact an evaluation specialist</h5>
+            <h5>Time requirements</h5>
+            <?php
+                if($total_hours <= 70) { ?>
+                    <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+                    
+                    <h5>Contact an evaluation specialist</h5>
 
-                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+                    <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
-                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+                    <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
 
-                        <form action="" method="post">
-                            <div class="evaluation-field">
-                                <label>Your Name</label>
-                                <input required type="text" name="client_name" value="">
-                            </div>
-                            <div class="evaluation-field">
-                                <label>Your Email</label>
-                                <input required type="email" name="client_email" value="">
-                            </div>
-                            <input type="hidden" name="the_report" value="">
-                            <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate" value="1">
-                        </form>
-                <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
-                        <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
-                        
-                        <h5>Contact an evaluation specialist</h5>
+                    <form action="" method="post">
+                        <div class="evaluation-field">
+                            <label>Your Name</label>
+                            <input required type="text" name="client_name" value="">
+                        </div>
+                        <div class="evaluation-field">
+                            <label>Your Email</label>
+                            <input required type="email" name="client_email" value="">
+                        </div>
+                        <input type="hidden" name="the_report" value="">
+                        <button type="submit">Submit</button>
+                        <input type="hidden" name="time_estimate" value="1">
+                    </form>
+            <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
+                    <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+                    
+                    <h5>Contact an evaluation specialist</h5>
 
-                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+                    <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
-                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+                    <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
 
-                        <form action="" method="post">
-                            <div class="evaluation-field">
-                                <label>Your Name</label>
-                                <input required type="text" name="client_name" value="">
-                            </div>
-                            <div class="evaluation-field">
-                                <label>Your Email</label>
-                                <input required type="email" name="client_email" value="">
-                            </div>
-                            <input type="hidden" name="the_report" value="">
-                            <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate" value="1">
-                        </form>
-                <?php } elseif($total_hours > 120) { ?>
-                        <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+                    <form action="" method="post">
+                        <div class="evaluation-field">
+                            <label>Your Name</label>
+                            <input required type="text" name="client_name" value="">
+                        </div>
+                        <div class="evaluation-field">
+                            <label>Your Email</label>
+                            <input required type="email" name="client_email" value="">
+                        </div>
+                        <input type="hidden" name="the_report" value="">
+                        <button type="submit">Submit</button>
+                        <input type="hidden" name="time_estimate" value="1">
+                    </form>
+            <?php } elseif($total_hours > 120) { ?>
+                    <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <?= $total_hours ?> hours of an evaluation specialist's time to finalise a plan for your evaluand.</p>
 
-                        <h5>Contact an evaluation specialist</h5>
+                    <h5>Contact an evaluation specialist</h5>
 
-                        <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
+                    <p>Provide your name and email address below if you'd like to talk to an evaluation specialist about your plan.</p>
 
-                        <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
+                    <p>Your results will be emailed to you as a pdf. Your results will also be emailed to one of our evaluation specialists, who will contact you within the next few days.</p>
 
-                        <form action="" method="post">
-                            <div class="evaluation-field">
-                                <label>Your name</label>
-                                <input required type="text" name="client_name" value="">
-                            </div>
-                            <div class="evaluation-field">
-                                <label>Your email contact</label>
-                                <input required type="email" name="client_email" value="">
-                            </div>
-                            <input type="hidden" name="the_report" value="">
-                            <button type="submit">Submit</button>
-                            <input type="hidden" name="time_estimate" value="1">
-                        </form>
-                <?php } ?>
-            </div>
-            <div class="right-box">
-                <h5> Time estimate </h5>
-                <div class="outer-meter"></div>
-                <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
-            </div>
+                    <form action="" method="post">
+                        <div class="evaluation-field">
+                            <label>Your name</label>
+                            <input required type="text" name="client_name" value="">
+                        </div>
+                        <div class="evaluation-field">
+                            <label>Your email contact</label>
+                            <input required type="email" name="client_email" value="">
+                        </div>
+                        <input type="hidden" name="the_report" value="">
+                        <button type="submit">Submit</button>
+                        <input type="hidden" name="time_estimate" value="1">
+                    </form>
+            <?php } ?>
         </div>
     </div>
     </div>
