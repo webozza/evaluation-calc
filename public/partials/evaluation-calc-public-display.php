@@ -863,14 +863,21 @@
             // Prepare the print
             let timeContent = $('.time-estimate p').eq(0);
             timeContent.appendTo('.main-calc .left-box');
-            $('.time-estimate').hide();
 
-            // Print the Image
-            let snapShot = $('.evaluation-output');
-            html2canvas(snapShot[0]).then(function(canvas) {
-            let imageFile = canvas.toDataURL("image/png");
-                $('[name="the_report"]').val(imageFile);
+            $('.evaluation-output').on('submit', function(e) {
+                e.preventDefault();
+                $('.time-estimate').hide();
+                // Print the Image
+                let snapShot = $('.evaluation-output');
+                html2canvas(snapShot[0]).then(function(canvas) {
+                let imageFile = canvas.toDataURL("image/png");
+                    $('[name="the_report"]').val(imageFile);
+                });
+                $(this).unbind('submit');
+                $(this).submit();
             });
+            
+            
         });
     </script>
 <?php } ?>
