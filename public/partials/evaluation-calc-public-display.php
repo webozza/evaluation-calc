@@ -867,7 +867,7 @@
             // Print the Image
             let snapReport1 = $('.evaluation-output .initial--content');
             let snapReport2 = $('.for-pdf');
-            html2canvas(snapReport1.html() + snapReport2.html()).then(function(canvas) {
+            html2canvas(snapReport1[0], snapReport2[0]).then(function(canvas) {
             let imageFile = canvas.toDataURL("image/png");
                 $('[name="the_report"]').val(imageFile);
             });
