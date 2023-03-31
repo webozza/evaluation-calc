@@ -775,6 +775,8 @@
             <?php
                 if($total_hours <= 70) { ?>
                     <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <strong><?= $total_hours ?> hours</strong> of an evaluation specialist's time to finalise a plan for your evaluand.</p>
+
+                    <hr style="margin:30px 0">
                     
                     <h5>Contact an evaluation specialist</h5>
 
