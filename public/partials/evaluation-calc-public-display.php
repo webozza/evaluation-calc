@@ -25,8 +25,7 @@
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>Monitoring and Evaluation Plan</h4>
-        <h4>Capacity calculator</h4>
+        <h4>Monitoring and Evaluation (M&E) Plan Estimator</h4>
         <p>This M&E Plan Estimator provides guidance on what is required in terms of developing an M&E plan. The result is only an estimate, but your responses to these 9 questions are vital to form an initial view of what may be required.</p>
     </div>
     <div class="evaluation-form-container">
@@ -332,8 +331,7 @@
 
         <div class="initial--content">
             <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-            <h4>Monitoring and Evaluation Plan</h4>
-            <h4>Capacity calculator</h4>
+            <h4>Monitoring and Evaluation (M&E) Plan Estimator</h4>
         </div>
 
         <!-- THE MATH HAPPENS OVER HERE -->
@@ -769,14 +767,11 @@
             </div>
         </div>
 
-        <hr style="margin:30px 0">
-
         <?php
             $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
         ?>
 
         <div class="time-estimate">
-            <h5>Time requirements</h5>
             <?php
                 if($total_hours <= 70) { ?>
                     <p>It looks like your team would require a minor contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <strong><?= $total_hours ?> hours</strong> of an evaluation specialist's time to finalise a plan for your evaluand.</p>
