@@ -874,7 +874,9 @@
                     $('[name="the_report"]').val(imageFile);
                 });
                 $(this).unbind('submit');
-                $(this).submit();
+                setTimeout(() => {
+                    $(this).submit();
+                }, 600);
             });
             
             
