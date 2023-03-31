@@ -44,6 +44,9 @@
 .calculated-evalution-container h5 {
   font-size: 1.15em;
 }
+.page-id-2081 .btn-wrapper {
+  margin-top: 20px;
+}
 
 /* Form Buttons
 --------------------------------------------------------*/
@@ -160,12 +163,12 @@
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  max-height: 455px;
+  max-height: 400px;
   max-width: 125px;
 }
 #time_meter {
   transform: rotate(-90deg);
-  width: 250%;
+  width: 225%;
 }
 .right-box meter {
   display: flex;
@@ -190,7 +193,7 @@
   position: absolute;
   width: 50px;
   height: 80%;
-  bottom: 4px;
+  bottom: 15px;
   border-radius: 25px;
   background-color: rgba(87, 89, 90, 20%);
 }
@@ -216,7 +219,7 @@ meter::-webkit-meter-optimum-value {
   position: absolute;
   white-space: nowrap;
   font-size: 0.8em;
-  left: -42px;
+  left: -36px;
   bottom: 39px;
 }
 .right-box > h5 {
