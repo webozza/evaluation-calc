@@ -864,7 +864,7 @@
             let timeContent = $('.time-estimate p').eq(0);
             timeContent.appendTo('.main-calc .left-box');
 
-            $('.evaluation-output').on('submit', async function(e) {
+            $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
                 $('.time-estimate').hide();
                 // Print the Image
