@@ -873,7 +873,7 @@
                 let imageFile = canvas.toDataURL("image/png");
                     $('[name="the_report"]').val(imageFile);
                 });
-                $(this).unbind('click');
+                $(this).unbind('submit');
                 $(this).submit();
             });
             
