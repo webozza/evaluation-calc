@@ -866,8 +866,12 @@
 
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
+
+                // Prepare the PDF
                 $('.time-estimate').hide();
-                // Print the Image
+                $('.calculated-evalution-container').css('padding-top', '10px');
+
+                // Print the PDF
                 let snapShot = $('.evaluation-output');
                 html2canvas(snapShot[0]).then(function(canvas) {
                 let imageFile = canvas.toDataURL("image/png");
