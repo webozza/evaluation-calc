@@ -273,6 +273,7 @@ meter::-webkit-meter-optimum-value {
   flex-direction: row;
   align-items: center;
   column-gap: 20px;
+  margin-top: 25px;
 }
 
 .thank.you.message h5 {
