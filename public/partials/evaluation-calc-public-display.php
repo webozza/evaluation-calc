@@ -625,6 +625,10 @@
             }
     ?>
 
+    <?php
+        $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
+    ?>
+
     <!-- THE RENDERING -->
     <div class="calculated-evalution-container">
 
@@ -766,10 +770,6 @@
                 <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
             </div>
         </div>
-
-        <?php
-            $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
-        ?>
 
         <div class="time-estimate">
             <?php
