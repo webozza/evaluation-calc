@@ -858,10 +858,16 @@
 
     <script>
         jQuery(document).ready(function($) {
-            html2canvas($('.evaluation-output')[0]).then(function(canvas) {
-            let imageFile = canvas.toDataURL("image/png");
-                $('[name="the_report"]').val(imageFile);
-            });
+            let snapReport = $('.evaluation-output');
+
+            $('.time-estimate form button').click(function() {
+                snapReport.find('.time-estimate *:not(:nth-child(1))').hide();
+                html2canvas(snapReport[0]).then(function(canvas) {
+                let imageFile = canvas.toDataURL("image/png");
+                    $('[name="the_report"]').val(imageFile);
+                });
+            })
+            
         });
     </script>
 <?php } ?>
@@ -918,7 +924,7 @@
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
-        $email = array('team@standardofproof.nz', 'webozza@gmail.com');
+        $email = array('team@standardofproof.nz', 'webozza@gmail.com', 'mohammad@webozza.com');
         $subject = $_POST['client_name'] . ' just made an evaluation';
         $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
 
