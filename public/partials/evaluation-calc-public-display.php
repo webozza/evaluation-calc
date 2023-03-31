@@ -767,8 +767,20 @@
                 </div>
                 <div class="right-box">
                     <h5> Time estimate </h5>
-                    <div class="outer-meter"></div>
-                    <meter id="time_meter" value="<?= $total_hours ?>" min="16" max="200"></meter><br>
+                    <div class="outer-meter">
+                        <div class="ev-meter">
+                            <div class="ev-line">
+                                <div></div>
+                            </div>
+                            <div class="ev-circle"></div>
+                        </div>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            let totalHours = `<?= $total_hours ?>px`;
+                            $('.ev-line > div').css('height', totalHours);
+                        });
+                    </script>
                 </div>
             </div>
         </div>
