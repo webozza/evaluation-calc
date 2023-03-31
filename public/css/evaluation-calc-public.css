@@ -37,6 +37,7 @@
 .evaluation-form-container form > div {
   padding: 25px;
   border-radius: 10px;
+  font-size: 1.2em;
 }
 
 /* Form Buttons
@@ -225,15 +226,18 @@ meter::-webkit-meter-optimum-value {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 40px;
 }
 .initial--content img {
-  width: 50%;
+  width: 40%;
 }
 .initial--content h4 {
   margin: 0;
 }
 .initial--content p {
-  opacity: 0.5;
+  opacity: 0.8;
+  font-size: 1.1em;
+  max-width: 75%;
 }
 .initial--content h5 {
   margin: 10px;
@@ -241,7 +245,14 @@ meter::-webkit-meter-optimum-value {
   text-transform: capitalize;
 }
 .initial--content h4:first-of-type {
-  font-size: 1.3em;
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.initial--content h4:last-of-type {
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 8px;
 }
 
 /* Thank you page
@@ -263,4 +274,10 @@ meter::-webkit-meter-optimum-value {
 
 .btn-refresh.tu {
   text-align: center;
+}
+
+/* Evaluation Calc Page
+-------------------------------------------------------*/
+.page-id-2081 h1 {
+  display: none;
 }
