@@ -215,14 +215,6 @@
     });
   };
 
-  function printPageArea(areaID) {
-    var printContent = document.getElementById(areaID).innerHTML;
-    var originalContent = document.body.innerHTML;
-    document.body.innerHTML = printContent;
-    window.print();
-    document.body.innerHTML = originalContent;
-  }
-
   // Functions fired on initialization
   $(window).on("load", function () {
     // do_evaluation();
