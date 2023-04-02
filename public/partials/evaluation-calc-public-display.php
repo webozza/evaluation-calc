@@ -871,6 +871,10 @@
                 let img1;
                 let img2;
 
+                // Prepare the print
+                let timeContent = $('.time-estimate p').eq(0);
+                timeContent.appendTo('.main-calc .left-box');
+
                 // Prepare the Image Data
                 html2canvas($('.initial--content')[0]).then(function(canvas) {
                     let forPrint = canvas.toDataURL("image/png");
@@ -886,6 +890,7 @@
                     printJS({
                         printable: [img1, img2],
                         type: 'image',
+                        imageStyle: 'margin-bottom:20px';
                     });
                 });
             });
@@ -897,10 +902,6 @@
 
     <script>
         jQuery(document).ready(async function($) {
-            // Prepare the print
-            let timeContent = $('.time-estimate p').eq(0);
-            timeContent.appendTo('.main-calc .left-box');
-
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
 
