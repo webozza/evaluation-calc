@@ -191,6 +191,12 @@
     }
   };
 
+  let resubmitForm = () => {
+    $(".btn-refresh a").click(function () {
+      window.history.go($(this).data("back-count"));
+    });
+  };
+
   // Functions fired on initialization
   $(window).on("load", function () {
     // do_evaluation();
@@ -201,6 +207,7 @@
     multipleAnswers5();
     do_validation();
     labelClickable();
+    resubmitForm();
   });
 
   // ENDS

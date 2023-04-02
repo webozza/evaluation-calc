@@ -731,10 +731,10 @@
                             </ul>
                         </div> -->
                         <div class="evaluation-outputs">
-                            We would likely need a/an <?= $output_6 ?>. Given what we already have may be relevant to the plan, the design process would likely involve: <br>
+                            We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist: <br>
                             <ul>
-                                <?= $output_4 ?>
                                 <li><?= $output_6 . ', involving ' . $output_7 ?></li>
+                                <?= $output_4 ?>
                                 <li><?= $output_8 ?></li>
                                 <li><?= $output_9 ?></li>
                                 <?= $output_10 ?>
@@ -863,10 +863,10 @@
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
-            <a href="/plugins/capacity-calculator">Try again</a>
+            <a href="javascript:void(0)">Try again</a>
         </div>
         <div class="btn-print">
-            <a href="javascript:void()" onclick="window.print()">Print my results</a>
+            <a data-back-count="-1" href="javascript:void()" onclick="window.print()">Print my results</a>
         </div>
     </div>
 
@@ -894,8 +894,6 @@
                     $(this).submit();
                 }, 600);
             });
-            
-            
         });
     </script>
 <?php } ?>
@@ -996,7 +994,7 @@
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
     </div>
     <div class="tu btn-refresh">
-        <a href="/me-plan-estimator/">Try again</a>
+        <a data-back-count="-2" href="/me-plan-estimator/">Try again</a>
     </div>
 
 <?php } ?>
