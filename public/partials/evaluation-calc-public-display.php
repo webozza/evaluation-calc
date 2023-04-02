@@ -866,10 +866,12 @@
             <a data-back-count="-1" href="javascript:void(0)">Try again</a>
         </div>
         <script>
-            function printPageArea(areaID) {
+            async function printPageArea(areaID) {
                 var printContent = document.getElementById(areaID).innerHTML;
+                var originalContent = document.body.innerHTML;
                 document.body.innerHTML = printContent;
                 window.print();
+                document.body.innerHTML = originalContent;
             }
         </script>
         <div class="btn-print">
