@@ -884,7 +884,8 @@
 
                 $('.btn-print a').click(function() {
                     printJS({
-                        printable: [img1, img2];
+                        printable: [img1, img2],
+                        type: 'image',
                     });
                 });
             });
