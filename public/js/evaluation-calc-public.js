@@ -192,6 +192,24 @@
   };
 
   let resubmitForm = () => {
+    // after going back for single answer
+    $(".evaluation-question:not(.allow-multiple)").each(function () {
+      let checkedVal = $(this).find('input[type="checkbox"]:checked').val();
+      $(".selected_answer").val(checkedVal);
+    });
+
+    // after going back for multiple answer
+    let selectedAnswers = [];
+    $(
+      '.evaluation-question.allow-multiple input[type="checkbox"]:checked'
+    ).each(function () {
+      selectedAnswers.push($(this).val());
+      $(".evaluation-question.allow-multiple .selected_answer").val(
+        selectedAnswers.join(",")
+      );
+    });
+
+    // going back click
     $(".btn-refresh a").click(function () {
       window.history.go($(this).data("back-count"));
     });
