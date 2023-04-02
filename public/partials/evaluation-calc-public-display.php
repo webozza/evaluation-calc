@@ -777,7 +777,7 @@
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
-                            let totalHours = `<?= $total_hours ?>%`;
+                            let totalHours = `<?= $total_hours / 184 ?>%`;
                             $('.ev-line > div').css('height', totalHours);
                         });
                     </script>
@@ -863,10 +863,10 @@
     <!-- REFRESH BUTTON -->
     <div class="btn-wrapper">
         <div class="btn-refresh">
-            <a href="javascript:void(0)">Try again</a>
+            <a data-back-count="-1" href="javascript:void(0)">Try again</a>
         </div>
         <div class="btn-print">
-            <a data-back-count="-1" href="javascript:void()" onclick="window.print()">Print my results</a>
+            <a href="javascript:void()" onclick="window.print()">Print my results</a>
         </div>
     </div>
 
