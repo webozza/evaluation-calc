@@ -886,9 +886,6 @@
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
 
-                // Show the loader
-                $('.loading-screen').fadeIn().css('display','flex');
-
                 // Prepare the PDF
                 $('.time-estimate').hide();
                 $('.calculated-evalution-container').css('padding-top', '10px');
@@ -899,6 +896,10 @@
                 let imageFile = canvas.toDataURL("image/png");
                     $('[name="the_report"]').val(imageFile);
                 });
+
+                // Show the loader
+                $('.loading-screen').fadeIn().css('display','flex');
+
                 $(this).unbind('submit');
                 setTimeout(() => {
                     $(this).submit();
