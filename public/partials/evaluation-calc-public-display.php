@@ -865,8 +865,14 @@
         <div class="btn-refresh">
             <a data-back-count="-1" href="javascript:void(0)">Try again</a>
         </div>
+        <script>
+            html2canvas(snapShot[0]).then(function(canvas) {
+            let forPrint = canvas.toDataURL("image/png");
+                $('body').append(`<img id="for-print" src="${forPrint}">`);
+            });
+        </script>
         <div class="btn-print">
-            <a href="javascript:void(0)" onclick="printJS('#evaluation_output', 'html')">Print my results</a>
+            <a href="javascript:void(0)" onclick="printJS(forPrint, 'image')">Print my results</a>
         </div>
     </div>
 
