@@ -215,6 +215,17 @@
     });
   };
 
+  let loadingScreen = () => {
+    $("body").append(`
+        <div class="loading-screen" style="display:none;">
+            <div class="inner">
+                <img src="/wp-content/plugins/evaluation-calc/public/img/loading.gif">
+                <p>Please hold on while we prepare your document ...</p>
+            </div>
+        </div>
+    `);
+  };
+
   // Functions fired on initialization
   $(window).on("load", function () {
     // do_evaluation();
@@ -226,6 +237,7 @@
     do_validation();
     labelClickable();
     resubmitForm();
+    loadingScreen();
   });
 
   // ENDS

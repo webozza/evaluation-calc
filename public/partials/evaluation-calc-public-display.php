@@ -868,10 +868,8 @@
         <script>
             function printPageArea(areaID) {
                 var printContent = document.getElementById(areaID).innerHTML;
-                var originalContent = document.body.innerHTML;
-                document.body.innerHTML = printContent;
-                window.print();
                 document.body.innerHTML = originalContent;
+                window.print();
             }
         </script>
         <div class="btn-print">
@@ -887,6 +885,9 @@
 
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
+
+                // Show the loader
+                $('.loading-screen').fadeIn().css('display','flex');
 
                 // Prepare the PDF
                 $('.time-estimate').hide();
