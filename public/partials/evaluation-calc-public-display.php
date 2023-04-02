@@ -869,10 +869,13 @@
             html2canvas(document.getElementById('evaluation_output')).then(function(canvas) {
             let forPrint = canvas.toDataURL("image/png");
                 $('body').append(`<img id="for-print" src="${forPrint}">`);
+                $('.btn-print a').click(function() {
+                    printJS($('#for-print').attr('src'), 'image');
+                });
             });
         </script>
         <div class="btn-print">
-            <a href="javascript:void(0)" onclick="printJS(forPrint, 'image')">Print my results</a>
+            <a href="javascript:void(0)">Print my results</a>
         </div>
     </div>
 
