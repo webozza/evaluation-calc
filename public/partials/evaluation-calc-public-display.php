@@ -898,6 +898,7 @@
                 });
 
                 // Show the loader
+                $(window).scrollTop(0);
                 $('.loading-screen').fadeIn().css('display','flex');
 
                 $(this).unbind('submit');
