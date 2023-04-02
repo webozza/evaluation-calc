@@ -868,7 +868,8 @@
         <script>
             function printPageArea(areaID) {
                 var printContent = document.getElementById(areaID).innerHTML;
-                window.print(printContent);
+                document.body.innerHTML = printContent;
+                window.print();
             }
         </script>
         <div class="btn-print">
