@@ -867,10 +867,24 @@
         </div>
         <script>
             jQuery(document).ready(function($) {
-                html2canvas(document.getElementById('evaluation_output')).then(function(canvas) {
-                let forPrint = canvas.toDataURL("image/png");
-                    $('.btn-print a').click(function() {
-                        printJS(forPrint, 'image');
+                // Store the Image Data
+                let img1;
+                let img2;
+
+                // Prepare the Image Data
+                html2canvas($('.initial--content')[0]).then(function(canvas) {
+                    let forPrint = canvas.toDataURL("image/png");
+                    img1 = forPrint;
+                });
+
+                html2canvas($('.for-pdf')[0]).then(function(canvas) {
+                    let forPrint = canvas.toDataURL("image/png");
+                    img2 = forPrint;
+                });
+
+                $('.btn-print a').click(function() {
+                    printJS({
+                        printable: [img1, img2];
                     });
                 });
             });
