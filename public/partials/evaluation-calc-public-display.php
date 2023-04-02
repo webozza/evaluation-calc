@@ -994,7 +994,7 @@
         <h5>Thank you for getting in touch. One of our specialists will connect with you in a few days.</h5>
     </div>
     <div class="tu btn-refresh">
-        <a data-back-count="-2" href="/me-plan-estimator/">Try again</a>
+        <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
 
 <?php } ?>
