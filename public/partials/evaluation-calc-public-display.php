@@ -865,8 +865,18 @@
         <div class="btn-refresh">
             <a data-back-count="-1" href="javascript:void(0)">Try again</a>
         </div>
+        <script>
+            function print() {
+                var printDiv = document.getElementById("evaluation_output");
+                var printWindow = window.open('', '', 'left=0, top=0, width=800, height=500, toolbar=0, scrollbars=0, status=0');
+                printWindow.document.write(printDiv.innerHTML);
+                printWindow.document.close();
+                printWindow.focus();
+                printWindow.print();
+            }
+        </script>
         <div class="btn-print">
-            <a href="javascript:void(0)" onclick="window.print()">Print my results</a>
+            <a href="javascript:void(0)" onclick="print()">Print my results</a>
         </div>
     </div>
 
