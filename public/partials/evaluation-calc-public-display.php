@@ -777,7 +777,7 @@
                     </div>
                     <script>
                         jQuery(document).ready(function($) {
-                            let totalHours = `<?= ($total_hours / 184) * 100 ?>%`;
+                            let totalHours = `<?= $total_hours/184*100 ?>%`;
                             $('.ev-line > div').css('height', totalHours);
                         });
                     </script>
