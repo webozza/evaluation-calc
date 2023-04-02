@@ -866,7 +866,7 @@
             <a data-back-count="-1" href="javascript:void(0)">Try again</a>
         </div>
         <script>
-            html2canvas(document.getElementByID('evaluation_output')).then(function(canvas) {
+            html2canvas(document.getElementById('evaluation_output')).then(function(canvas) {
             let forPrint = canvas.toDataURL("image/png");
                 $('body').append(`<img id="for-print" src="${forPrint}">`);
             });
