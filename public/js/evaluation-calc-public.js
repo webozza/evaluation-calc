@@ -216,7 +216,7 @@
   };
 
   let loadingScreen = () => {
-    $("body").append(`
+    $("#main").append(`
         <div class="loading-screen" style="display:none;">
             <div class="inner">
                 <img src="/wp-content/plugins/evaluation-calc/public/img/loading.gif">
