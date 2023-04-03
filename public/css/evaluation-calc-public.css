@@ -350,3 +350,16 @@ meter::-webkit-meter-optimum-value {
 .loading-screen .inner img {
   width: 50px;
 }
+
+/*-- RESULT PAGE
+---------------------------_*/
+@media (max-width: 468px) {
+  .main-calc {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .calculated-evalution-container h5:first-child {
+    font-size: 1em;
+  }
+}
