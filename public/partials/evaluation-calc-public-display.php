@@ -981,7 +981,7 @@
         /* Email to Admin
         ---------------------------------------------------------------------------*/
         //$email = array('team@standardofproof.nz', 'webozza@gmail.com', 'mohammad@webozza.com');
-        $email = array('mohammad@webozza.com');
+        $email = 'team@standardofproof.nz';
         $subject = $_POST['client_name'] . ' just made an evaluation';
         $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
 
