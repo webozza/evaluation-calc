@@ -1000,7 +1000,7 @@
 
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
-        $pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
+        $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
         $pdf->SetFont('helvetica','',16);
 
         $separator = md5(time());
@@ -1028,7 +1028,6 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
-
 <?php } ?>
 
 
