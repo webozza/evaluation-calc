@@ -982,7 +982,7 @@
         ---------------------------------------------------------------------------*/
         //$email = array('team@standardofproof.nz', 'webozza@gmail.com', 'mohammad@webozza.com');
         //$email = 'team@standardofproof.nz';
-        $email = 'webozza@gmail.com';
+        $email = 'mohammad@webozza.com';
         $subject = $_POST['client_name'] . ' just made an evaluation';
         $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
 
