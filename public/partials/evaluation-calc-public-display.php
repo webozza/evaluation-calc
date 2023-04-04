@@ -23,6 +23,11 @@
 
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
+    <?php
+        // Check if the "mobile" word exists in User-Agent 
+        $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+        echo $isMob;
+    ?>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
         <h4>Monitoring and Evaluation (M&E) Plan Estimator</h4>
@@ -1005,6 +1010,7 @@
 
         // Check if the "mobile" word exists in User-Agent 
         $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+        echo $isMob;
         if ( $isMob ) { 
             $pdf->Image($tmpFilename, 0, 0, 10, 0, 'PNG');
         } else { 
