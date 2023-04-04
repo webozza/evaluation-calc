@@ -961,7 +961,16 @@
 
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
-        $pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
+        
+        //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
+        // Check if the "mobile" word exists in User-Agent 
+        $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+        if ( $isMob ) { 
+            $pdf->Image($tmpFilename, 0, 0, -72, 0, 'PNG');
+        } else { 
+            $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
+        }
+
         $pdf->SetFont('helvetica','',16);
 
         $separator = md5(time());
@@ -1006,9 +1015,9 @@
         // Check if the "mobile" word exists in User-Agent 
         $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
         if ( $isMob ) { 
-            $pdf->Image($tmpFilename, 0, 0, 0, 0, 'PNG');
+            $pdf->Image($tmpFilename, 0, 0, -72, 0, 'PNG');
         } else { 
-            // $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
+            $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
         }
 
         $pdf->SetFont('helvetica','',16);
