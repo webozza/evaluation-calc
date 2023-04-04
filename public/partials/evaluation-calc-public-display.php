@@ -1006,8 +1006,8 @@
         // Check if the "mobile" word exists in User-Agent 
         $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
         if ( $isMob ) { 
-            $pdf->Image($tmpFilename, 0, 0, 120, 0, 'PNG');
-        } else{ 
+            $pdf->Image($tmpFilename, 0, 0, 50, 0, 'PNG');
+        } else { 
             $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
         }
 
