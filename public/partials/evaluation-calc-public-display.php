@@ -959,14 +959,14 @@
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
-        $pdf->SetFont('helvetica','',16);
 
         // Add the Logo
         $pdf->Image( $logo, 55, 5, 100 );
         $pdf->Ln();
 
         // The Heading
-        $pdf->Cell(176, 5, 'Welcome to GeeksforGeeks!', 0, 0, 'C');
+        $pdf->SetFont('helvetica','B',16);
+        $pdf->Cell(176, 105, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'C');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
