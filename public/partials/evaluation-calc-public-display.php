@@ -954,13 +954,15 @@
         // $metaDatas = stream_get_meta_data($tempfile);
         // $tmpFilename = $metaDatas['uri'];
 
+        $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg';
+
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
         $pdf->SetFont('helvetica','',16);
 
         // Add the Logo
-        $pdf->Image( $plugin_dir . '/public/img/logo.jpeg', 0, 0, 0, 0, 'JPEG');
+        $pdf->Image( $logo, null, null, 100 );
         $pdf->Ln();
 
         // The Heading
