@@ -947,33 +947,36 @@
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
-        $dataURI = $_POST['the_report'];
-        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
-        $tempfile = tmpfile(); // create temporary file
-        fwrite($tempfile, $image_content); // fill data to temporary file
-        $metaDatas = stream_get_meta_data($tempfile);
-        $tmpFilename = $metaDatas['uri'];
+        // $dataURI = $_POST['the_report'];
+        // $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
+        // $tempfile = tmpfile(); // create temporary file
+        // fwrite($tempfile, $image_content); // fill data to temporary file
+        // $metaDatas = stream_get_meta_data($tempfile);
+        // $tmpFilename = $metaDatas['uri'];
 
         $pdf = new FPDF();
-
-        $pdf->SetMargins(0, 0, 0);
-        $pdf->SetAutoPageBreak(false, 0);
-
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
+        $pdf->SetFont('helvetica','',16);
+
+        // Add the Logo
+        $pdf->Image('/wp-content/plugins/evaluation-calc/public/img/logo.jpeg', 0, 0, 0, 0);
+        $pdf->Ln();
+
+        // The Heading
+        $pdf->Cell(176, 5, 'Welcome to GeeksforGeeks!', 0, 0, 'C');
+        $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
         // Check if the "mobile" word exists in User-Agent 
-        $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
-        if ( $isMob ) { 
-            $pdf->Image($tmpFilename, 0, 0, 110, 0, 'PNG');
-        } else { 
-            $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
-        }
+        // $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+        // if ( $isMob ) { 
+        //     $pdf->Image($tmpFilename, 0, 0, 110, 0, 'PNG');
+        // } else { 
+        //     $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
+        // }
 
-        $pdf->SetFont('helvetica','',16);
-
-        $separator = md5(time());
+        //$separator = md5(time());
 
         $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
@@ -991,46 +994,46 @@
         ---------------------------------------------------------------------------*/
         //$email = array('team@standardofproof.nz', 'webozza@gmail.com', 'mohammad@webozza.com');
         //$email = 'team@standardofproof.nz';
-        $email = 'mohammad@webozza.com';
-        $subject = $_POST['client_name'] . ' just made an evaluation';
-        $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
+        // $email = 'mohammad@webozza.com';
+        // $subject = $_POST['client_name'] . ' just made an evaluation';
+        // $body = $_POST['client_name'] . ' just made an evaluation. You can reply back to their email: ' . $_POST['client_email'];
 
-        $dataURI = $_POST['the_report'];
-        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
-        $tempfile = tmpfile(); // create temporary file
-        fwrite($tempfile, $image_content); // fill data to temporary file
-        $metaDatas = stream_get_meta_data($tempfile);
-        $tmpFilename = $metaDatas['uri'];
+        // $dataURI = $_POST['the_report'];
+        // $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
+        // $tempfile = tmpfile(); // create temporary file
+        // fwrite($tempfile, $image_content); // fill data to temporary file
+        // $metaDatas = stream_get_meta_data($tempfile);
+        // $tmpFilename = $metaDatas['uri'];
 
-        $pdf = new FPDF();
+        // $pdf = new FPDF();
 
-        $pdf->SetMargins(0, 0, 0);
-        $pdf->SetAutoPageBreak(false, 0);
+        // $pdf->SetMargins(0, 0, 0);
+        // $pdf->SetAutoPageBreak(false, 0);
 
-        $pdf->AddFont('Helvetica','','helvetica.php');
-        $pdf->AddPage();
+        // $pdf->AddFont('Helvetica','','helvetica.php');
+        // $pdf->AddPage();
 
-        $useragent=$_SERVER['HTTP_USER_AGENT'];
+        // $useragent=$_SERVER['HTTP_USER_AGENT'];
 
-        // Check if the "mobile" word exists in User-Agent 
-        $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
-        if ( $isMob ) { 
-            $pdf->Image($tmpFilename, 0, 0, -72, 0, 'PNG');
-        } else { 
-            $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
-        }
+        // // Check if the "mobile" word exists in User-Agent 
+        // $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
+        // if ( $isMob ) { 
+        //     $pdf->Image($tmpFilename, 0, 0, -72, 0, 'PNG');
+        // } else { 
+        //     $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
+        // }
 
-        $pdf->SetFont('helvetica','',16);
+        // $pdf->SetFont('helvetica','',16);
 
-        $separator = md5(time());
+        // $separator = md5(time());
 
-        $headers = "MIME-Version: 1.0"; 
-        $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
-        $headers .= "Content-Transfer-Encoding: 7bit";
+        // $headers = "MIME-Version: 1.0"; 
+        // $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
+        // $headers .= "Content-Transfer-Encoding: 7bit";
 
-        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
+        // $pdf->Output($filename, "F"); // "F" is for saving the file on the server
 
-        $attachment = array($filename);
+        // $attachment = array($filename);
 
         // wp_mail( $email, $subject, $body, $headers, $attachment );
 
