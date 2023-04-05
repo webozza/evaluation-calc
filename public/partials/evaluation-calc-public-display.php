@@ -23,7 +23,6 @@
 
 <!-- THE FORM -->
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
-    <?= plugin_dir_path('public/img/logo.jpeg') ?>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
         <h4>Monitoring and Evaluation (M&E) Plan Estimator</h4>
@@ -961,7 +960,7 @@
         $pdf->SetFont('helvetica','',16);
 
         // Add the Logo
-        $pdf->Image( plugin_dir_path('public/img/logo.jpeg'), 0, 0, 0, 0, 'JPEG');
+        $pdf->Image( $plugin_dir . '/public/img/logo.jpeg', 0, 0, 0, 0, 'JPEG');
         $pdf->Ln();
 
         // The Heading
