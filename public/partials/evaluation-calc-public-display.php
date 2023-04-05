@@ -960,7 +960,7 @@
         $pdf->SetFont('helvetica','',16);
 
         // Add the Logo
-        $pdf->Image('/wp-content/plugins/evaluation-calc/public/img/logo.jpeg', 0, 0, 0, 0, 'JPEG');
+        $pdf->Image('https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg', 0, 0, 0, 0, 'JPEG');
         $pdf->Ln();
 
         // The Heading
