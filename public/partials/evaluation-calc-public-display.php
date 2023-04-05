@@ -983,9 +983,9 @@
 
         $attachment = array($filename);
 
-        wp_mail( $email, $subject, $body, $headers, $attachment );
+        // wp_mail( $email, $subject, $body, $headers, $attachment );
 
-        unlink($filename); // Deletion of the created file.
+        // unlink($filename); // Deletion of the created file.
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
@@ -1032,9 +1032,9 @@
 
         $attachment = array($filename);
 
-        wp_mail( $email, $subject, $body, $headers, $attachment );
+        // wp_mail( $email, $subject, $body, $headers, $attachment );
 
-        unlink($filename); // Deletion of the created file.
+        // unlink($filename); // Deletion of the created file.
     }
 ?>
 
