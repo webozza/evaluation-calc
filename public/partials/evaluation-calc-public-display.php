@@ -323,10 +323,6 @@
     </div>
 <?php } ?>
 
-<?php
-    $global_output_1 = "";
-?>
-
 <!-- THE EVALUATION -->
 <?php if(isset($_POST['do_evaluation']) == 1) { ?>
 
@@ -353,8 +349,6 @@
             } else {
                 $output_1 = "";
             }
-
-            $global_output_1 = $output_1;
 
             /* OUTPUT 2 CALCULATION
             ------------------------------------------------------------------------------------------------*/
@@ -934,8 +928,6 @@
     </script>
 <?php } ?>
 
-<?= $output_1 ?>
-
 <!-- EMAIL FUNC TO USER -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
@@ -980,7 +972,7 @@
         // The Content
         $pdf->SetFont('helvetica','',12);
         $pdf_output_1 = 'We have '.$global_output_1.', and our team requires:';
-        $pdf->Cell(176, -105, $pdf_output_1, 0, 0, 'L');
+        $pdf->Cell(176, -105, $output_1, 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
