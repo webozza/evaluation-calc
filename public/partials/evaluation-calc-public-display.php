@@ -934,6 +934,8 @@
     </script>
 <?php } ?>
 
+<?= $output_1 ?>
+
 <!-- EMAIL FUNC TO USER -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
 
