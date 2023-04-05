@@ -323,6 +323,10 @@
     </div>
 <?php } ?>
 
+<?php
+    $global_output_1;
+?>
+
 <!-- THE EVALUATION -->
 <?php if(isset($_POST['do_evaluation']) == 1) { ?>
 
@@ -349,6 +353,8 @@
             } else {
                 $output_1 = "";
             }
+
+            $global_output_1 = $output_1;
 
             /* OUTPUT 2 CALCULATION
             ------------------------------------------------------------------------------------------------*/
@@ -971,7 +977,7 @@
 
         // The Content
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, 'We have '.$output_1.', and our team requires:', 0, 0, 'L');
+        $pdf->Cell(176, -105, 'We have '.$global_output_1.', and our team requires:', 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
