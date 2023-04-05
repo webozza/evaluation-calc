@@ -962,7 +962,7 @@
         $pdf->SetFont('helvetica','',16);
 
         // Add the Logo
-        $pdf->Image( $logo, 100, 0, 100 );
+        $pdf->Image( $logo, 55, 5, 100 );
         $pdf->Ln();
 
         // The Heading
