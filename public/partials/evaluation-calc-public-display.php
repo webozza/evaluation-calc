@@ -968,7 +968,7 @@
         if ( $isMob ) { 
             $pdf->Image($tmpFilename, 0, 0, 110, 0, 'PNG');
         } else { 
-            $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
+            $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
         }
 
         $pdf->SetFont('helvetica','',16);
@@ -1017,7 +1017,7 @@
         if ( $isMob ) { 
             $pdf->Image($tmpFilename, 0, 0, -72, 0, 'PNG');
         } else { 
-            $pdf->Image($tmpFilename, 0, 0, -300, 0, 'PNG');
+            $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
         }
 
         $pdf->SetFont('helvetica','',16);
