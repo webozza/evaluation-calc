@@ -932,8 +932,6 @@
             });
         });
     </script>
-
-    <?php echo $global_output_1 ?>
 <?php } ?>
 
 <!-- EMAIL FUNC TO USER -->
@@ -979,7 +977,8 @@
 
         // The Content
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, 'We have '.$global_output_1.', and our team requires:', 0, 0, 'L');
+        $pdf_output_1 = 'We have '.$global_output_1.', and our team requires:';
+        $pdf->Cell(176, -105, $pdf_output_1, 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
