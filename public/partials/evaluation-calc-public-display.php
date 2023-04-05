@@ -971,7 +971,7 @@
 
         // The Content
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -115, 'We have large programme, policy, activity or intervention, and our team requires:', 0, 0, 'L');
+        $pdf->Cell(176, -105, 'We have '.$output_1.', and our team requires:', 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
