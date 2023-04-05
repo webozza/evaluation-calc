@@ -324,7 +324,7 @@
 <?php } ?>
 
 <?php
-    $global_output_1;
+    $global_output_1 = "";
 ?>
 
 <!-- THE EVALUATION -->
@@ -932,6 +932,8 @@
             });
         });
     </script>
+
+    <?php echo $global_output_1 ?>
 <?php } ?>
 
 <!-- EMAIL FUNC TO USER -->
