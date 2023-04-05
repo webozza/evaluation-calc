@@ -954,7 +954,7 @@
         // $metaDatas = stream_get_meta_data($tempfile);
         // $tmpFilename = $metaDatas['uri'];
 
-        $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.jpeg';
+        $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.png';
 
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
