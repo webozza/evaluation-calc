@@ -971,33 +971,8 @@
         $list1_pos = 150;
         foreach($_POST['list__1'] as $list1) {
             $list1_pos = $list1_pos + 10;
-            $cellWidth = 80;
-            $cellHeight=5;
             $pdf->SetFont('helvetica','',12);
-            //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
-            if($pdf->GetStringWidth($item[2]) < $cellWidth) {
-                $line = 1;
-            } else {
-                $textLength = strlen($item[2]);
-                $errMargin = 10;
-                $startChar = 0;
-                $maxChar = 0;
-                $textArray = array();
-                $tmpString = "";
-
-                while($startChar < $textLength) {
-                    while ($pdf->GetStringWidth($tmpString) < ($cellWidth - $errMargin) && ($startChar+$maxChar) < $textLength) {
-                        $maxChar++;
-                        $tmpString = substr($item[2],$startChar,$maxChar);
-                    }
-                    $startChar = $startChar + $maxChar;
-                    array_push($textArray,$tmpString);
-                    $maxChar = 0;
-                    $tmpString = '';
-                }
-                $line = count($textArray);
-            }
-            $pdf->Cell(10, ($line * $cellHeight), $list1, 1, 0);
+            $pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
             $pdf->Ln(0.1);
         }
         
