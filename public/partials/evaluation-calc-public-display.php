@@ -916,6 +916,7 @@
                 let meterImg;
                 html2canvas(timeMeter).then((canvas) => {
                     let dataURL = canvas.toDataURL();
+                    console.log(dataURL);
                     meterImg = dataURL;
                 });
                 $('[name="the_meter"]').val(meterImg);
