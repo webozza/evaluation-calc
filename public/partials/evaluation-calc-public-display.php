@@ -991,13 +991,13 @@
             $pdf->MultiCell(150, 5, '- ' . $list1);
         }
 
-        // List 1
-        $pdf->SetY(130);
-
         // Output 2
+        $pdf->SetY(130);
         $pdf->SetFont('helvetica','',12);
         $pdf->MultiCell(150, 5, $_POST['output__2']);
 
+        // List 2
+        $pdf->SetY(140);
         foreach($_POST['list__2'] as $list2) {
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list2_pos, '- ' . $list2, 0, 0, 'L');
