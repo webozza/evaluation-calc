@@ -989,8 +989,8 @@
 
         $pdf->Output($filename, "F"); 
         $attachment = array($filename);
-        // wp_mail( $email, $subject, $body, $headers, $attachment );
-        // unlink($filename);
+        wp_mail( $email, $subject, $body, $headers, $attachment );
+        unlink($filename);
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
