@@ -974,7 +974,7 @@
 
         // The Content
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, $_POST['output_1'], 0, 0, 'L');
+        $pdf->Cell(176, -105, $_GET['output_1'], 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
