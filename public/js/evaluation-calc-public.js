@@ -226,6 +226,15 @@
     `);
   };
 
+  let list1 = () => {
+    $(".list-1 li").each(function () {
+      let getList1 = $(this).text();
+      $(".time-estimate form").append(`
+          <input type="hidden" name="list__1" value="${getList1}">
+      `);
+    });
+  };
+
   // Functions fired on initialization
   $(window).on("load", function () {
     // do_evaluation();
@@ -238,6 +247,7 @@
     labelClickable();
     resubmitForm();
     loadingScreen();
+    list1();
   });
 
   // ENDS

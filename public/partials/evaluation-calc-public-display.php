@@ -640,7 +640,7 @@
                 <div class="left-box">
                     <div class="evaluation-outputs">
                         We have <?= $output_1 ?>, and our team requires: <br>                        
-                        <ul>
+                        <ul class="list-1">
                             <?php 
                                 foreach($answer_2 as $answer) {
                                     if($answer == "a") {
@@ -972,9 +972,14 @@
         $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
         $pdf->Ln();
 
-        // The Heading
+        // Output 1
         $pdf->SetFont('helvetica','',12);
         $pdf->Cell(176, -105, $_POST['output__1'], 0, 0, 'L');
+        $pdf->Ln();
+
+        // List 1
+        $pdf->SetFont('helvetica','',12);
+        $pdf->Cell(176, -105, $_POST['list__1'], 0, 0, 'L');
         $pdf->Ln();
 
         $separator = md5(time());
