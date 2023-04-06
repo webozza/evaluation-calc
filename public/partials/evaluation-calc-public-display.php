@@ -1043,7 +1043,7 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
-    <?= $_POST['list__1'] ?>
+    <?php var_dump($_POST['list__1']) ?>
 <?php } ?>
 
 
