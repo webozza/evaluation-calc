@@ -968,7 +968,7 @@
         $pdf->Ln(0.1);
 
         // Add the Meter
-        $pdf->Image( $tmpFilename, 25, 0, 100);
+        $pdf->Image( $tmpFilename, 25, 0, 100, 'PNG');
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
