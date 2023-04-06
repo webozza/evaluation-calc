@@ -979,7 +979,7 @@
 
         // List 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, $_POST['list__1'], 0, 0, 'L');
+        $pdf->Cell(180, -100, '-' . $_POST['list__1'], 0, 0, 'L');
         $pdf->Ln();
 
         $separator = md5(time());
@@ -989,8 +989,8 @@
 
         $pdf->Output($filename, "F"); 
         $attachment = array($filename);
-        // wp_mail( $email, $subject, $body, $headers, $attachment );
-        // unlink($filename);
+        wp_mail( $email, $subject, $body, $headers, $attachment );
+        unlink($filename);
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
