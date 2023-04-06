@@ -989,7 +989,7 @@
         foreach($_POST['list__1'] as $list1) {
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
-            $pdf->MultiCell(150, 5, '&#8226; ' . $list1);
+            $pdf->MultiCell(150, 5, '• ' . $list1);
         }
 
         // Output 2
@@ -1003,7 +1003,7 @@
         foreach($_POST['list__2'] as $list2) {
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list2_pos, '- ' . $list2, 0, 0, 'L');
-            $pdf->MultiCell(150, 5, '&#8226; ' . $list2);
+            $pdf->MultiCell(150, 5, '• ' . $list2);
         }
         
         // $separator = md5(time());
