@@ -971,8 +971,8 @@
         $list1_pos = 150;
         foreach($_POST['list__1'] as $list1) {
             $list1_pos = $list1_pos + 10;
-            $pdf->SetFont('helvetica','',10);
-            $pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
+            $pdf->SetFont('helvetica','',12);
+            $pdf->MultiCell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
             $pdf->Ln(0.1);
         }
         
