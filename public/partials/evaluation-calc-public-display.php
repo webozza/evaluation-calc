@@ -970,7 +970,7 @@
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
+        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS '. $o1 .'', 0, 0, 'L');
         $pdf->Ln();
 
         // O1
