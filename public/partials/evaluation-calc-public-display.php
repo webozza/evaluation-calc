@@ -992,7 +992,7 @@
         }
 
         // List 1
-        $pdf->SetY(170);
+        $pdf->SetY(90);
 
         // Output 2
         $pdf->SetFont('helvetica','',12);
