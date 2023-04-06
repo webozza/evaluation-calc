@@ -952,6 +952,7 @@
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
         $pdf->AddPage();
+        $lineBreak = 0.21;
 
         // Add the Logo
         $pdf->Image( $logo, 55, 5, 100 );
@@ -969,9 +970,11 @@
 
         // List 1
         foreach($_POST['list__1'] as $list1) {
+            $pdf->SetMargins(0.2,0.2,0.2);
             $pdf->SetFont('helvetica','',12);
-            $pdf->Cell(180, 125, '- ' . $list1, 0, 0, 'L');
-            $pdf->Ln();
+            $pdf->SetXY(0.2,0.3);
+            //$pdf->Cell(180, 125, '- ' . $list1, 0, 0, 'L');
+            $pdf->Cell(0,0,'-' . $list1,0,1,'L',false);
         }
         
         $separator = md5(time());
