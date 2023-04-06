@@ -968,16 +968,11 @@
         $pdf->Ln(0.1);
 
         // List 1
-        $list1_pos = 150;
-        $y = $pdf->GetY();
-        $pdf->SetY($y);
-
+        $pdf->SetY(80);
         foreach($_POST['list__1'] as $list1) {
-            $list1_pos = $list1_pos + 10;
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
             $pdf->MultiCell(176, 5, '- ' . $list1);
-            
         }
         
         // $separator = md5(time());
