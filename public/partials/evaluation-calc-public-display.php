@@ -1003,7 +1003,8 @@
         }
 
         // Output 2
-        $pdf->SetY(130);
+        $y = $pdf->GetY();
+        $pdf->SetY($y + 10);
         $pdf->SetFont('helvetica','',12);
         $pdf->MultiCell(150, 5, $_POST['output__2']);
 
