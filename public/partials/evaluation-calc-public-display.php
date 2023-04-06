@@ -1017,7 +1017,7 @@
 
         // }
 
-        $pdf->writeHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>');
+        $pdf->WriteHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>');
         //$pdf->MultiCell(176, 5, );
         
         // $separator = md5(time());
