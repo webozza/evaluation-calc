@@ -1045,6 +1045,11 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
+    <?php 
+        foreach($_POST['list__1'] as $list1) {
+            echo $list1 . '<br>';
+        }
+    ?>
 <?php } ?>
 
 
