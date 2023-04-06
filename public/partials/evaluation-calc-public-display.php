@@ -973,9 +973,7 @@
             $list1_pos = $list1_pos + 10;
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
-            $x=$pdf->GetX();
-            $y=$pdf->GetY();
-            $pdf->SetXY($x, $y + 10);
+            $pdf->SetY($list1_pos + 10);
             $pdf->MultiCell(176, 4, '-' . $list1);
             $pdf->Ln(0.1);
         }
