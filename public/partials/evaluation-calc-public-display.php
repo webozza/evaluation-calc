@@ -920,6 +920,7 @@
                     meterImg = dataURL;
                 });
                 $('[name="the_meter"]').val(meterImg);
+                console.log('check', meterImg);
 
                 // Show the loader
                 $(window).scrollTop(0);
