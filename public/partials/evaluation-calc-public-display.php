@@ -969,7 +969,8 @@
 
         // List 1
         $list1_pos = 150;
-        $pdf->SetY(100);
+        $y = $pdf->GetY();
+        $pdf->SetY($y);
 
         foreach($_POST['list__1'] as $list1) {
             $list1_pos = $list1_pos + 10;
