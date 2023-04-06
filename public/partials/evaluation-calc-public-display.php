@@ -809,6 +809,7 @@
                         </div>
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>                        
                     </form>
@@ -832,6 +833,7 @@
                         </div>
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
@@ -855,6 +857,7 @@
                         </div>
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
@@ -981,12 +984,18 @@
         $pdf->Ln(0.1);
 
         // List 1
-        $pdf->SetY(85);
+        $pdf->SetY(88);
         foreach($_POST['list__1'] as $list1) {
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
             $pdf->MultiCell(150, 5, '- ' . $list1);
         }
+        $pdf->Ln(0.1);
+
+        // Output 1
+        $pdf->SetFont('helvetica','',12);
+        $pdf->Cell(176, 145, $_POST['output__2'], 0, 0, 'L');
+        $pdf->Ln(0.1);
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
@@ -1059,11 +1068,6 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
-    <?php 
-        foreach($_POST['list__1'] as $list1) {
-            echo $list1 . '<br>';
-        }
-    ?>
 <?php } ?>
 
 
