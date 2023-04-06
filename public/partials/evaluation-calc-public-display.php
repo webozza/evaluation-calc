@@ -988,9 +988,10 @@
         $headers .= "Content-Transfer-Encoding: 7bit";
 
         $pdf->Output($filename, "F"); 
-        $attachment = array($filename);
-        wp_mail( $email, $subject, $body, $headers, $attachment );
-        unlink($filename);
+        $pdf->Close();
+        // $attachment = array($filename);
+        // wp_mail( $email, $subject, $body, $headers, $attachment );
+        // unlink($filename);
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
