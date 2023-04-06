@@ -968,7 +968,7 @@
         $pdf->Ln(0.1);
 
         // List 1
-        $pdf->SetY(80);
+        $pdf->SetY(90);
         foreach($_POST['list__1'] as $list1) {
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
