@@ -975,7 +975,7 @@
 
         // O1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, $o1, 0, 0, 'L');
+        $pdf->Cell(176, -105, 'fasfasdfasdfsadfasdfasfd', 0, 0, 'L');
         $pdf->Ln();
 
         // O2
