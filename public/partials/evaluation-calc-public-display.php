@@ -993,8 +993,9 @@
         $pdf->Ln(0.1);
 
         // Output 1
+        $pdf->SetY(160);
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, 145, $_POST['output__2'], 0, 0, 'L');
+        $pdf->MultiCell(150, 10, $_POST['output__2'], 0, 0, 'L');
         $pdf->Ln(0.1);
         
         // $separator = md5(time());
