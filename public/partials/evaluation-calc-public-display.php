@@ -955,17 +955,17 @@
 
         // Add the Logo
         $pdf->Image( $logo, 55, 5, 100 );
-        //$pdf->Ln();
+        $pdf->Ln();
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
         $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
-        //$pdf->Ln();
+        $pdf->Ln();
 
         // Output 1
         $pdf->SetFont('helvetica','B',16);
         $pdf->Cell(176, 135, $_POST['output__1'], 0, 0, 'L');
-        //$pdf->Ln();
+        $pdf->Ln();
 
         // List 1
         // foreach($_POST['list__1'] as $list1) {
