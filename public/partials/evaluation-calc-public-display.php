@@ -965,18 +965,13 @@
         $pdf->AddPage();
 
         // Add the Logo
-        $pdf->Image( $logo, 55, 5, 100 );
-        $pdf->Ln();
+        // $pdf->Image( $logo, 55, 5, 100 );
+        // $pdf->Ln();
 
         // The Heading
-        $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS XXXX', 0, 0, 'L');
-        $pdf->Ln();
-
-        // The Heading
-        $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 135, 'MONITORING AND EVALUATION PLAN REQUIREMENTS '.$o1.'', 0, 0, 'L');
-        $pdf->Ln();
+        // $pdf->SetFont('helvetica','B',16);
+        // $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
+        // $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
         // Check if the "mobile" word exists in User-Agent 
