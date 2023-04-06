@@ -958,6 +958,7 @@
         // $tmpFilename = $metaDatas['uri'];
 
         $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.png';
+        $o1 = $_GET['output_1'];
 
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
@@ -972,9 +973,14 @@
         $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
         $pdf->Ln();
 
-        // The Content
+        // O1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, $_GET['output_1'], 0, 0, 'L');
+        $pdf->Cell(176, -105, $o1, 0, 0, 'L');
+        $pdf->Ln();
+
+        // O2
+        $pdf->SetFont('helvetica','',12);
+        $pdf->Cell(176, -105, 'gdfgadsfsafd', 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
