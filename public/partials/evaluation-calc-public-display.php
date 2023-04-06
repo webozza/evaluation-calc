@@ -1044,9 +1044,7 @@
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
     <?php 
-        foreach($_POST['list__1'] as $key) {
-            echo $key;
-        }
+        var_dump($_POST['list__1']);
     ?>
 <?php } ?>
 
