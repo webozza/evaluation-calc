@@ -951,33 +951,30 @@
 
         $pdf = new FPDF();
         $pdf->AddFont('Helvetica','','helvetica.php');
-        $pdf->AddPage();
-        $lineBreak = 0.21;
+        $pdf->AddPage();    
 
         // Add the Logo
         $pdf->Image( $logo, 55, 5, 100 );
-        $pdf->Ln();
+        //$pdf->Ln();
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
         $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
-        $pdf->Ln();
+        //$pdf->Ln();
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
         $pdf->Cell(176, -105, $_POST['output__1'], 0, 0, 'L');
-        $pdf->Ln();
+        //$pdf->Ln();
 
         // List 1
-        foreach($_POST['list__1'] as $list1) {
-            $pdf->SetMargins(0.2,0.2,0.2);
-            $pdf->SetFont('helvetica','',12);
-            $pdf->SetXY(0.2,0.3);
-            //$pdf->Cell(180, 125, '- ' . $list1, 0, 0, 'L');
-            $pdf->Cell(0,0,'-' . $list1,0,1,'L',false);
-        }
+        // foreach($_POST['list__1'] as $list1) {
+        //     $pdf->SetFont('helvetica','',12);
+        //     $pdf->Cell(180, 125, '- ' . $list1, 0, 0, 'L');
+        //     $pdf->Ln();
+        // }
         
-        $separator = md5(time());
+        // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
         $headers .= "Content-Transfer-Encoding: 7bit";
