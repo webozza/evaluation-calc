@@ -15,7 +15,7 @@
  * Plugin Name:       Evaluation Calculator
  * Plugin URI:        https://webozza.com
  * Description:       Custom plugin developed by @webozza
- * Version:           7.7.20
+ * Version:           7.7.21
  * Author:            Webozza
  * Author URI:        https://webozza.com
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'EVALUATION_CALC_VERSION', '7.7.20' );
+define( 'EVALUATION_CALC_VERSION', '7.7.21' );
 
 /**
  * The code that runs during plugin activation.
