@@ -964,7 +964,7 @@
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, 5, $_POST['output__1'], 0, 0, 'L');
+        $pdf->Cell(176, 130, $_POST['output__1'], 0, 0, 'L');
         $pdf->Ln(0.1);
 
         // List 1
