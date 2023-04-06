@@ -955,7 +955,7 @@
         $tempfile = tmpfile(); // create temporary file
         fwrite($tempfile, $image_content); // fill data to temporary file
         $metaDatas = stream_get_meta_data($tempfile);
-        $tmpFilename = $metaDatas['uri'];
+        $theMeter = $metaDatas['uri'];
 
         $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.png';
 
@@ -968,7 +968,7 @@
         $pdf->Ln(0.1);
 
         // Add the Meter
-        $pdf->Image( $tmpFilename, 0, 0, 30, 0, 'PNG');
+        $pdf->Image( $theMeter, 176, 50, 30, 0, 'PNG');
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
