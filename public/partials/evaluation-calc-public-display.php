@@ -765,7 +765,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="right-box" id="timeMeter">
+                <div class="right-box">
                     <h5> Time estimate </h5>
                     <div class="outer-meter">
                         <div class="ev-meter">
@@ -912,9 +912,10 @@
                 $('.calculated-evalution-container').css('padding-top', '10px');
 
                 // Generate image from meter
-                html2canvas('timeMeter').then((canvas) => {
+                let timeMeter = $('.right-box')[0];
+                html2canvas(timeMeter).then((canvas) => {
                     let dataURL = canvas.toDataURL();
-                    console.log(dataURL);
+                    $('[name="the_meter"]').val(dataURL);
                 });
 
                 // Show the loader
