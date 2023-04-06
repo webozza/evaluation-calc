@@ -979,7 +979,7 @@
 
         // List 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(180, -95, 'lalalala', 0, 0, 'L');
+        $pdf->Cell(180, 125, 'lalalala', 0, 0, 'L');
         $pdf->Ln();
 
         $separator = md5(time());
