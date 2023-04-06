@@ -807,6 +807,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
@@ -831,6 +832,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
@@ -855,6 +857,7 @@
                             <label>Your email contact</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
@@ -1005,6 +1008,16 @@
             //$pdf->Cell(180, $list2_pos, '- ' . $list2, 0, 0, 'L');
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list2);
         }
+
+        // Output 2
+        $pdf->SetY(170);
+        $pdf->SetFont('helvetica','',12);
+
+        // if($_POST['total_hours'] <= 70) {
+
+        // }
+
+        $pdf->MultiCell(176, 5, $pdf->writeHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>'));
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
