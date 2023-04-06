@@ -807,6 +807,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="time_info" value="">
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
@@ -832,6 +833,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="time_info" value="">
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
@@ -857,6 +859,7 @@
                             <label>Your email contact</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="time_info" value="">
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
@@ -916,6 +919,10 @@
                 let dataURL = canvas.toDataURL();
                 $('[name="the_meter"]').val(dataURL);
             });
+
+            // Throw in the value for time info
+            let timeInfo = $('.for-pdf p:last-child').text();
+            $('[name="time_info"]').val(timeInfo);
 
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
@@ -1009,16 +1016,10 @@
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list2);
         }
 
-        // Output 2
+        // Time INfo
         $pdf->SetY(170);
         $pdf->SetFont('helvetica','',12);
-
-        // if($_POST['total_hours'] <= 70) {
-
-        // }
-
-        $pdf->WriteHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>');
-        //$pdf->MultiCell(176, 5, );
+        $pdf->MultiCell(176, 5, $_POST['time_info']);
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
