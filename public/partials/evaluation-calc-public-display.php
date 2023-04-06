@@ -904,20 +904,19 @@
 
     <script>
         jQuery(document).ready(async function($) {
+            // Generate image from meter
+            let timeMeter = $('.right-box')[0];
+            html2canvas(timeMeter).then((canvas) => {
+                let dataURL = canvas.toDataURL();
+                $('[name="the_meter"]').val(dataURL);
+            });
+
             $('.evaluation-output form').on('submit', async function(e) {
                 e.preventDefault();
 
                 // Prepare the PDF
                 $('.time-estimate').hide();
                 $('.calculated-evalution-container').css('padding-top', '10px');
-
-                // Generate image from meter
-                let timeMeter = $('.right-box')[0];
-                html2canvas(timeMeter).then((canvas) => {
-                    let dataURL = canvas.toDataURL();
-                    $('[name="the_meter"]').val(dataURL);
-                    $('body').append(`<img src="${dataURL}">`);
-                });
 
                 // Show the loader
                 $(window).scrollTop(0);
@@ -951,12 +950,12 @@
         $subject = 'Your Evaluation is Ready';
         $body = 'Please find your attached evaluation.';
 
-        // $dataURI = $_POST['the_report'];
-        // $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
-        // $tempfile = tmpfile(); // create temporary file
-        // fwrite($tempfile, $image_content); // fill data to temporary file
-        // $metaDatas = stream_get_meta_data($tempfile);
-        // $tmpFilename = $metaDatas['uri'];
+        $dataURI = $_POST['the_meter'];
+        $image_content = base64_decode(str_replace("data:image/png;base64,","",$dataURI)); // remove "data:image/png;base64,"
+        $tempfile = tmpfile(); // create temporary file
+        fwrite($tempfile, $image_content); // fill data to temporary file
+        $metaDatas = stream_get_meta_data($tempfile);
+        $tmpFilename = $metaDatas['uri'];
 
         $logo = 'https://wp.webozza.com/wp-content/plugins/evaluation-calc/public/img/logo.png';
 
@@ -967,6 +966,9 @@
         // Add the Logo
         $pdf->Image( $logo, 55, 5, 100 );
         $pdf->Ln(0.1);
+
+        // Add the Meter
+        $pdf->Image( $tmpFilename, 25, 0, 100);
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
