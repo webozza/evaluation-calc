@@ -993,7 +993,7 @@
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->MultiCell(150, 5, $_POST['output__2'], 0, 0, 'L');
+        $pdf->MultiCell(150, 25, $_POST['output__2']);
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
