@@ -1017,7 +1017,8 @@
 
         // }
 
-        $pdf->MultiCell(176, 5, $pdf->writeHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>'));
+        $pdf->writeHTML('Vfjasifjsdif. <b>fsdjifjsdifjdsijf</b>');
+        //$pdf->MultiCell(176, 5, );
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
