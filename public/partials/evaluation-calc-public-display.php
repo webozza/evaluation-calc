@@ -25,7 +25,7 @@
 <?php if(isset($_POST['do_evaluation']) != 1 && isset($_POST['time_estimate']) != 1 ) { ?>
     <div class="initial--content">
         <img src="<?= $plugin_dir . '/public/img/logo.jpeg' ?>">
-        <h4>XX Monitoring and Evaluation (M&E) Plan Estimator</h4>
+        <h4>Monitoring and Evaluation (M&E) Plan Estimator</h4>
         <p>This M&E Plan Estimator provides guidance on what is required in terms of developing an M&E plan. The result is only an estimate, but your responses to these 9 questions are vital to form an initial view of what may be required.</p>
     </div>
     <div class="evaluation-form-container">
