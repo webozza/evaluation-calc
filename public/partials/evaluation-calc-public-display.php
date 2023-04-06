@@ -807,7 +807,6 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
-                        <input type="hidden" name="the_report" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>                        
@@ -830,7 +829,6 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
-                        <input type="hidden" name="the_report" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
@@ -853,7 +851,6 @@
                             <label>Your email contact</label>
                             <input required type="email" name="client_email" value="">
                         </div>
-                        <input type="hidden" name="the_report" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
@@ -910,13 +907,6 @@
                 // Prepare the PDF
                 $('.time-estimate').hide();
                 $('.calculated-evalution-container').css('padding-top', '10px');
-
-                // Print the PDF
-                let snapShot = $('.evaluation-output');
-                html2canvas(snapShot[0]).then(function(canvas) {
-                let imageFile = canvas.toDataURL("image/png");
-                    $('[name="the_report"]').val(imageFile);
-                });
 
                 // Show the loader
                 $(window).scrollTop(0);
@@ -978,10 +968,9 @@
         $pdf->Ln();
 
         // List 1
-        $list1_array = $_POST['list__1'];
         foreach($list1_array as $list1) {
             $pdf->SetFont('helvetica','',12);
-            $pdf->Cell(180, 125, '-' . $list1, 0, 0, 'L');
+            $pdf->Cell(180, 125, $_POST['list__1'], 0, 0, 'L');
             $pdf->Ln();
         }
         
