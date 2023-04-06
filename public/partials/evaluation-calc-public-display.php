@@ -640,6 +640,7 @@
                 <div class="left-box">
                     <div class="evaluation-outputs">
                         We have <?= $output_1 ?>, and our team requires: <br>
+                        <input type="hidden" name="output_1" value="We have <?= $output_1 ?>, and our team requires:">
                         <ul>
                             <?php 
                                 foreach($answer_2 as $answer) {
@@ -971,8 +972,7 @@
 
         // The Content
         $pdf->SetFont('helvetica','',12);
-        $pdf_output_1 = 'We have '.$global_output_1.', and our team requires:';
-        $pdf->Cell(176, -105, $output_1, 0, 0, 'L');
+        $pdf->Cell(176, -105, $_POST['output_1'], 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
