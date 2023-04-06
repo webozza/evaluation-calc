@@ -961,13 +961,13 @@
         $pdf->AddPage();
 
         // Add the Logo
-        // $pdf->Image( $logo, 55, 5, 100 );
-        // $pdf->Ln();
+        $pdf->Image( $logo, 55, 5, 100 );
+        $pdf->Ln();
 
         // The Heading
-        // $pdf->SetFont('helvetica','B',16);
-        // $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
-        // $pdf->Ln();
+        $pdf->SetFont('helvetica','B',16);
+        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
+        $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
         // Check if the "mobile" word exists in User-Agent 
@@ -978,7 +978,7 @@
         //     $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
         // }
 
-        //$separator = md5(time());
+        $separator = md5(time());
 
         $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
@@ -988,9 +988,9 @@
 
         $attachment = array($filename);
 
-        // wp_mail( $email, $subject, $body, $headers, $attachment );
+        wp_mail( $email, $subject, $body, $headers, $attachment );
 
-        // unlink($filename); // Deletion of the created file.
+        unlink($filename); // Deletion of the created file.
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
