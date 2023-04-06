@@ -639,8 +639,7 @@
             <div class="main-calc">
                 <div class="left-box">
                     <div class="evaluation-outputs">
-                        We have <?= $output_1 ?>, and our team requires: <br>
-                        <input type="hidden" name="output_1" value="We have <?= $output_1 ?>, and our team requires:">
+                        We have <?= $output_1 ?>, and our team requires: <br>                        
                         <ul>
                             <?php 
                                 foreach($answer_2 as $answer) {
@@ -809,8 +808,9 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
-                        <button type="submit">Submit</button>
                         <input type="hidden" name="time_estimate" value="1">
+                        <input type="hidden" name="output_1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <button type="submit">Submit</button>                        
                     </form>
             <?php } elseif($total_hours > 70 && $total_hours < 121) { ?>
                     <p>It looks like your team would require some contribution to get you to an agreed M&E framework and plan. We estimate that you'd require <strong><?= $total_hours ?> hours</strong> of an evaluation specialist's time to finalise a plan for your evaluand.</p>
@@ -831,8 +831,9 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
-                        <button type="submit">Submit</button>
                         <input type="hidden" name="time_estimate" value="1">
+                        <input type="hidden" name="output_1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <button type="submit">Submit</button>
                     </form>
             <?php } elseif($total_hours > 120) { ?>
                     <p>It looks like your team would require significant design and facilitation support to get you to an agreed M&E framework and plan. We estimate that you'd require <strong><?= $total_hours ?> hours</strong> of an evaluation specialist's time to finalise a plan for your evaluand.</p>
@@ -853,8 +854,9 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
-                        <button type="submit">Submit</button>
                         <input type="hidden" name="time_estimate" value="1">
+                        <input type="hidden" name="output_1" value="We have <?= $output_1 ?>, and our team requires:">
+                        <button type="submit">Submit</button>
                     </form>
             <?php } ?>
         </div>
@@ -928,8 +930,6 @@
         });
     </script>
 <?php } ?>
-
-<?= $_POST['output_1'] ?>
 
 <!-- EMAIL FUNC TO USER -->
 <?php if ( isset($_POST['time_estimate']) == 1 ) {
