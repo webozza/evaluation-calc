@@ -765,7 +765,7 @@
                         </div> -->
                     </div>
                 </div>
-                <div class="right-box">
+                <div class="right-box" id="timeMeter">
                     <h5> Time estimate </h5>
                     <div class="outer-meter">
                         <div class="ev-meter">
@@ -807,6 +807,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>                        
@@ -829,6 +830,7 @@
                             <label>Your Email</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
@@ -851,6 +853,7 @@
                             <label>Your email contact</label>
                             <input required type="email" name="client_email" value="">
                         </div>
+                        <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
@@ -907,6 +910,12 @@
                 // Prepare the PDF
                 $('.time-estimate').hide();
                 $('.calculated-evalution-container').css('padding-top', '10px');
+
+                // Generate image from meter
+                html2canvas('timeMeter').then((canvas) => {
+                    let dataURL = canvas.toDataURL();
+                    console.log(dataURL);
+                });
 
                 // Show the loader
                 $(window).scrollTop(0);
