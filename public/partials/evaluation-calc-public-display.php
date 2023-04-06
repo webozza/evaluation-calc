@@ -986,7 +986,7 @@
         // List 1
         $pdf->SetY(88);
         foreach($_POST['list__1'] as $list1) {
-            $pdf->SetX(50);
+            $pdf->SetX(15);
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list1_pos, '- ' . $list1, 0, 0, 'L');
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list1);
@@ -1000,7 +1000,7 @@
         // List 2
         $pdf->SetY(145);
         foreach($_POST['list__2'] as $list2) {
-            $pdf->SetX(50);
+            $pdf->SetX(15);
             $pdf->SetFont('helvetica','',12);
             //$pdf->Cell(180, $list2_pos, '- ' . $list2, 0, 0, 'L');
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list2);
