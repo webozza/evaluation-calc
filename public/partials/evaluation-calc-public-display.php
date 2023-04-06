@@ -732,7 +732,7 @@
                         </div> -->
                         <div class="evaluation-outputs">
                             We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist: <br>
-                            <ul>
+                            <ul class="list-2">
                                 <li><?= $output_6 . ', involving ' . $output_7 ?></li>
                                 <?= $output_4 ?>
                                 <li><?= $output_8 ?></li>
@@ -991,9 +991,17 @@
             $pdf->MultiCell(150, 5, '- ' . $list1);
         }
 
-        // Output 1
+        // Output 2
         $pdf->SetFont('helvetica','',12);
-        $pdf->MultiCell(150, 25, $_POST['output__2']);
+        $pdf->MultiCell(150, 5, $_POST['output__2']);
+
+        // List 1
+        // $pdf->SetY(88);
+        foreach($_POST['list__2'] as $list2) {
+            $pdf->SetFont('helvetica','',12);
+            //$pdf->Cell(180, $list2_pos, '- ' . $list2, 0, 0, 'L');
+            $pdf->MultiCell(150, 5, '- ' . $list2);
+        }
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 

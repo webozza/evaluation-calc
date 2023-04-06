@@ -233,6 +233,12 @@
           <input type="hidden" name="list__1[]" value="${getList1}">
       `);
     });
+    $(".list-2 li").each(function () {
+      let getList2 = $(this).text();
+      $(".time-estimate form").append(`
+          <input type="hidden" name="list__2[]" value="${getList2}">
+      `);
+    });
   };
 
   // Functions fired on initialization
