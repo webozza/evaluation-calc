@@ -959,12 +959,12 @@
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
+        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 5, 'L');
         $pdf->Ln();
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, 5, $_POST['output__1'], 0, 0, 'L');
+        $pdf->Cell(176, 5, $_POST['output__1'], 0, 5, 'L');
         $pdf->Ln();
 
         // List 1
