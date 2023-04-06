@@ -808,6 +808,7 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
+                        <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>                        
                     </form>
@@ -830,6 +831,7 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
+                        <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
@@ -852,6 +854,7 @@
                             <input required type="email" name="client_email" value="">
                         </div>
                         <input type="hidden" name="the_report" value="">
+                        <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
@@ -971,7 +974,7 @@
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, 'XXXXXXXX', 0, 0, 'L');
+        $pdf->Cell(176, 125, $_POST['output__1'], 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
