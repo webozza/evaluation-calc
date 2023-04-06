@@ -1020,7 +1020,7 @@
 
         // Time INfo
         $y = $pdf->GetY();
-        $pdf->SetY($y + 5);
+        $pdf->SetY($y + 10);
         $pdf->SetFont('helvetica','',12);
         $pdf->MultiCell(176, 5, $_POST['time_info']);
         
