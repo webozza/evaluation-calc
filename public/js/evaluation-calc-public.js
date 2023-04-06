@@ -230,7 +230,7 @@
     $(".list-1 li").each(function () {
       let getList1 = $(this).text();
       $(".time-estimate form").append(`
-          <input type="hidden" name="list__1" value="${getList1}">
+          <input type="hidden" name="list__1[]" value="${getList1}">
       `);
     });
   };
