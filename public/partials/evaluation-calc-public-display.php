@@ -978,10 +978,13 @@
         $pdf->Ln();
 
         // List 1
-        $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(180, 125, 'lalalala', 0, 0, 'L');
-        $pdf->Ln();
-
+        $list1_array = $_POST['list__1'];
+        foreach($list1_array as $list1) {
+            $pdf->SetFont('helvetica','',12);
+            $pdf->Cell(180, 125, '-' . $list1, 0, 0, 'L');
+            $pdf->Ln();
+        }
+        
         $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
