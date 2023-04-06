@@ -968,9 +968,11 @@
         $pdf->Ln();
 
         // List 1
-        $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(180, 125, '-' . $_POST['list__1'], 0, 0, 'L');
-        $pdf->Ln();
+        foreach($_POST['list__1'] as $list1) {
+            $pdf->SetFont('helvetica','',12);
+            $pdf->Cell(180, 125, '-' . $list1, 0, 0, 'L');
+            $pdf->Ln();
+        }
         
         $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
@@ -1043,9 +1045,6 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
-    <?php 
-        var_dump($_POST['list__1']);
-    ?>
 <?php } ?>
 
 
