@@ -913,10 +913,12 @@
 
                 // Generate image from meter
                 let timeMeter = $('.right-box')[0];
+                let meterImg;
                 html2canvas(timeMeter).then((canvas) => {
                     let dataURL = canvas.toDataURL();
-                    $('[name="the_meter"]').val(dataURL);
+                    meterImg = dataURL;
                 });
+                $('[name="the_meter"]').val(meterImg);
 
                 // Show the loader
                 $(window).scrollTop(0);
