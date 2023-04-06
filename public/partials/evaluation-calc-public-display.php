@@ -970,17 +970,12 @@
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS '. $o1 .'', 0, 0, 'L');
+        $pdf->Cell(176, 125, 'MONITORING AND EVALUATION PLAN REQUIREMENTS XXXX', 0, 0, 'L');
         $pdf->Ln();
 
-        // O1
-        $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, 'fasfasdfasdfsadfasdfasfd', 0, 0, 'L');
-        $pdf->Ln();
-
-        // O2
-        $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, -105, 'gdfgadsfsafd', 0, 0, 'L');
+        // The Heading
+        $pdf->SetFont('helvetica','B',16);
+        $pdf->Cell(176, 135, 'MONITORING AND EVALUATION PLAN REQUIREMENTS '.$o1.'', 0, 0, 'L');
         $pdf->Ln();
 
         //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
