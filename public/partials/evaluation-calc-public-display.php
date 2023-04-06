@@ -973,32 +973,19 @@
         $pdf->Ln();
 
         // The Heading
-        $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 125, $_POST['output__1'], 0, 0, 'L');
+        $pdf->SetFont('helvetica','',12);
+        $pdf->Cell(176, -105, $_POST['output__1'], 0, 0, 'L');
         $pdf->Ln();
 
-        //$pdf->Image($tmpFilename, 0, 0, 210, 297, 'PNG');
-        // Check if the "mobile" word exists in User-Agent 
-        // $isMob = is_numeric(strpos(strtolower($_SERVER["HTTP_USER_AGENT"]), "mobile"));
-        // if ( $isMob ) { 
-        //     $pdf->Image($tmpFilename, 0, 0, 110, 0, 'PNG');
-        // } else { 
-        //     $pdf->Image($tmpFilename, 0, 0, 210, 0, 'PNG');
-        // }
-
         $separator = md5(time());
-
         $headers = "MIME-Version: 1.0"; 
         $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
         $headers .= "Content-Transfer-Encoding: 7bit";
 
-        $pdf->Output($filename, "F"); // "F" is for saving the file on the server
-
+        $pdf->Output($filename, "F"); 
         $attachment = array($filename);
-
-        wp_mail( $email, $subject, $body, $headers, $attachment );
-
-        unlink($filename); // Deletion of the created file.
+        // wp_mail( $email, $subject, $body, $headers, $attachment );
+        // unlink($filename);
 
         /* Email to Admin
         ---------------------------------------------------------------------------*/
