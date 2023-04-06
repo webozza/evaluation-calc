@@ -964,14 +964,14 @@
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, 135, $_POST['output__1'], 0, 0, 'L');
+        $pdf->Cell(176, 145, $_POST['output__1'], 0, 0, 'L');
         $pdf->Ln(0.1);
 
         // List 1
         foreach($_POST['list__1'] as $list1) {
             $pdf->SetFont('helvetica','',12);
-            $pdf->Cell(180, 145 + 5, '- ' . $list1, 0, 0, 'L');
-            $pdf->Ln();
+            $pdf->Cell(180, 155, '- ' . $list1, 0, 0, 'L');
+            $pdf->Ln(0.1);
         }
         
         // $separator = md5(time());
