@@ -729,7 +729,8 @@
                             </ul>
                         </div> -->
                         <div class="evaluation-outputs">
-                            We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist: <br>
+                            <p>We would likely need a/an <?= $output_6 ?>.</p>
+                            <p>To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:</p>
                             <ul class="list-2">
                                 <li><?= $output_6 . ', involving ' . $output_7 ?></li>
                                 <?= $output_4 ?>
