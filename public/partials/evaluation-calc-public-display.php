@@ -729,8 +729,7 @@
                             </ul>
                         </div> -->
                         <div class="evaluation-outputs">
-                            <p>We would likely need a/an <?= $output_6 ?>.</p>
-                            <p>To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:</p>
+                            We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist: <br>
                             <ul class="list-2">
                                 <li><?= $output_6 . ', involving ' . $output_7 ?></li>
                                 <?= $output_4 ?>
@@ -836,7 +835,8 @@
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
-                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
+                        <input type="hidden" name="output__2a" value="We would likely need a/an <?= $output_6 ?>.">
+                        <input type="hidden" name="output__2b" value="To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
@@ -1001,11 +1001,17 @@
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list1);
         }
 
-        // Output 2
+        // Output 2a
         $y = $pdf->GetY();
         $pdf->SetY($y + 10);
         $pdf->SetFont('helvetica','',12);
-        $pdf->MultiCell(150, 5, $_POST['output__2']);
+        $pdf->MultiCell(150, 5, $_POST['output__2a']);
+
+        // Output 2b
+        $y = $pdf->GetY();
+        $pdf->SetY($y + 10);
+        $pdf->SetFont('helvetica','',12);
+        $pdf->MultiCell(150, 5, $_POST['output__2b']);
 
         // List 2
         $y = $pdf->GetY();
