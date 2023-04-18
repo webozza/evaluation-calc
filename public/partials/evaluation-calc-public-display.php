@@ -975,7 +975,7 @@
         $pdf->AddPage();    
 
         // Add the Logo
-        $pdf->Image( $logo, 105, 0, 50 );
+        $pdf->Image( $logo, 55, 5, 100 );
         $pdf->Ln(0.1);
 
         // Add the Meter
