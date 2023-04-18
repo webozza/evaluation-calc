@@ -975,7 +975,7 @@
         $pdf->AddPage();    
 
         // Add the Logo
-        $pdf->Image( $logo, 65, 5, 60 );
+        $pdf->Image( $logo, 68, 5, 60 );
         $pdf->Ln(0.1);
 
         // Add the Meter
@@ -983,12 +983,12 @@
 
         // The Heading
         $pdf->SetFont('helvetica','B',16);
-        $pdf->Cell(176, 75, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
+        $pdf->Cell(176, 80, 'MONITORING AND EVALUATION PLAN REQUIREMENTS', 0, 0, 'L');
         $pdf->Ln(0.1);
 
         // Output 1
         $pdf->SetFont('helvetica','',12);
-        $pdf->Cell(176, 145, $_POST['output__1'], 0, 0, 'L');
+        $pdf->Cell(176, 100, $_POST['output__1'], 0, 0, 'L');
         $pdf->Ln(0.1);
 
         // List 1
