@@ -653,6 +653,7 @@
                         We have <?= $output_1 ?>, and our team requires: <br>                        
                         <ul class="list-1">
                             <?php 
+                                $duration_2a = 0;
                                 foreach($answer_2 as $answer) {
                                     if($answer == "a") {
                                         echo $result2_a;
