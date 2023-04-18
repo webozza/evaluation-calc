@@ -1024,7 +1024,7 @@
         }
 
         $timeInfo = str_replace("’",chr(39),$_POST['time_info']);
-        $timeInfo = str_replace('hours', '<b>hours</b>', $timeInfo);
+        $timeInfo = str_replace('hours', '\033[1mhours\033[0m', $timeInfo);
 
         // Time Info
         $y = $pdf->GetY();
