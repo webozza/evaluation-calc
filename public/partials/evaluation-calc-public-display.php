@@ -910,6 +910,8 @@
         </div>
     </div>
 
+    <?php $timeInfo = str_replace("'",'``',$_POST['time_info']); echo $timeInfo; ?>
+
     <script>
         jQuery(document).ready(async function($) {
             // Generate image from meter
