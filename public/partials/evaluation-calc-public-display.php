@@ -659,11 +659,14 @@
 
                                         // Time Calculation if a
                                         if( $answer_1 == "a" ) {
-                                            $duration_2a1a = 27;
+                                            $duration_2a = 27;
+                                            // $duration_2a1a = 27;
                                         } elseif( $answer_1 == "b" ) {
-                                            $duration_2a1b = 34;
+                                            $duration_2a = 34;
+                                            // $duration_2a1b = 34;
                                         } elseif( $answer_1 == "c" ) {
-                                            $duration_2a1c = 40;
+                                            $duration_2a = 40;
+                                            // $duration_2a1c = 40;
                                         }
                                     } elseif($answer == "b") {
                                         echo $result2_b;
@@ -712,7 +715,8 @@
                                     }
                                 }
 
-                                $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
+                                // $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
+                                $duration_2 = $duration_2a;
                             ?>
                         </ul>
                         <!-- <div class="evaluation-outputs">
