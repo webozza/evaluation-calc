@@ -700,19 +700,6 @@
                                 $duration_2 = $duration_2a1a + $duration_2a1b + $duration_2a1c + $duration_2b1a + $duration_2b1b + $duration_2b1c + $duration_2c1a + $duration_2c1b + $duration_2c1c + $duration_2d1a + $duration_2d1b + $duration_2d1c + $duration_2e1a + $duration_2e1b + $duration_2e1c;
 
                                 $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
-
-                                ?>
-                                    <div>
-                                        <h5>Testing Hours</h5>
-                                        (Q1 & Q2) = <?= $duration_2 ?><br>
-                                        (Q1 & Q4) = <?= $duration_4 ?><br>
-                                        (Q6 & Q7) = <?= $duration_7 ?><br>
-                                        (Q7 & Q8) = <?= $duration_8 ?><br>
-                                        (Q7 & Q9) = <?= $duration_9 ?><br>
-                                        (Q1 & Q10) = <?= $duration_10 ?><br>
-                                        (Q1 & Q11) = <?= $duration_11 ?><br>
-                                    </div>
-                                <?php
                             ?>
                         </ul>
                         <!-- <div class="evaluation-outputs">
