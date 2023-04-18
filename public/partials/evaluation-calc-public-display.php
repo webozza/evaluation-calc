@@ -625,6 +625,17 @@
             }
     ?>
 
+    <div>
+        <h5>Testing Hours</h5>
+        (Q1 & Q2) = <?= $duration_2 ?><br>
+        (Q1 & Q4) = <?= $duration_4 ?><br>
+        (Q6 & Q7) = <?= $duration_7 ?><br>
+        (Q7 & Q8) = <?= $duration_8 ?><br>
+        (Q7 & Q9) = <?= $duration_9 ?><br>
+        (Q1 & Q10) = <?= $duration_10 ?><br>
+        (Q1 & Q11) = <?= $duration_11 ?><br>
+    </div>
+
     <?php
         $total_hours = $duration_2 + $duration_4 + $duration_7 + $duration_8 + $duration_9 + $duration_10 + $duration_11;
     ?>
