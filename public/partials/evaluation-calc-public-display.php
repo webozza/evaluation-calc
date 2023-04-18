@@ -1023,7 +1023,8 @@
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list2);
         }
 
-        $timeInfo = str_replace ("’",chr(39),$_POST['time_info']);
+        $timeInfo = str_replace("’",chr(39),$_POST['time_info']);
+        $timeInfo = str_replace('hours', '<b>hours</b>', $timeInfo);
 
         // Time Info
         $y = $pdf->GetY();
