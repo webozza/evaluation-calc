@@ -1023,11 +1023,13 @@
             $pdf->MultiCell(150, 5, chr(127) . ' ' . $list2);
         }
 
+        $timeInfo = str_replace("'",chr(39),$_POST['time_info']);
+
         // Time Info
         $y = $pdf->GetY();
         $pdf->SetY($y + 10);
         $pdf->SetFont('helvetica','',12);
-        $pdf->MultiCell(150, 5, $_POST['time_info']);
+        $pdf->MultiCell(150, 5, $timeInfo);
         
         // $separator = md5(time());
         $headers = "MIME-Version: 1.0"; 
