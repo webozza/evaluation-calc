@@ -1071,8 +1071,6 @@
     <div class="tu btn-refresh">
         <a data-back-count="-2" href="javascript:void(0)">Try again</a>
     </div>
-
-    <?php $timeInfo = str_replace ("’","\'",$_POST['time_info']); echo $timeInfo; ?>
 <?php } ?>
 
 
