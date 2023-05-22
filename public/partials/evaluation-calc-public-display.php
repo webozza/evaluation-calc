@@ -809,7 +809,8 @@
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
-                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
+                        <input type="hidden" name="output__2a" value="We would likely need a/an <?= $output_6 ?>.">
+                        <input type="hidden" name="output__2b" value="To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>                        
                     </form>
@@ -862,7 +863,8 @@
                         <input type="hidden" name="total_hours" value="<?= $total_hours ?>">
                         <input type="hidden" name="the_meter" value="">
                         <input type="hidden" name="output__1" value="We have <?= $output_1 ?>, and our team requires:">
-                        <input type="hidden" name="output__2" value="We would likely need a/an <?= $output_6 ?>. To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
+                        <input type="hidden" name="output__2a" value="We would likely need a/an <?= $output_6 ?>.">
+                        <input type="hidden" name="output__2b" value="To develop an M&E plan, we will likely need (or not require) from an evaluation specialist:">
                         <input type="hidden" name="time_estimate" value="1">
                         <button type="submit">Submit</button>
                     </form>
